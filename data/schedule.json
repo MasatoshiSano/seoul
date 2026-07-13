@@ -1,0 +1,54 @@
+[
+  {
+    "date": "2026-08-27",
+    "weekday": "木",
+    "label": "Day 1 ・ 到着＆明洞さんぽ",
+    "emoji": "✈️",
+    "items": [
+      { "time": "13:00", "title": "仁川国際空港 到着", "place": "Incheon Airport (ICN)", "map": "https://maps.google.com/?q=Incheon+International+Airport", "memo": "入国審査・両替・SIM/eSIM受取。空港鉄道(AREX)かリムジンバスで市内へ", "icon": "✈️" },
+      { "time": "15:00", "title": "ホテルにチェックイン", "place": "明洞エリア", "map": "https://maps.google.com/?q=Myeongdong+Seoul", "memo": "荷物を置いて身軽に。T-money(交通カード)を購入", "icon": "🏨" },
+      { "time": "16:30", "title": "明洞ショッピング", "place": "明洞通り", "map": "https://maps.google.com/?q=Myeongdong+Shopping+Street", "memo": "コスメ・ファッション。屋台グルメもつまみ食い", "icon": "🛍️" },
+      { "time": "19:00", "title": "夕食：韓国焼肉", "place": "明洞の焼肉店", "map": "https://maps.google.com/?q=Korean+BBQ+Myeongdong", "memo": "サムギョプサルで初日の乾杯🍻", "icon": "🍖" },
+      { "time": "21:00", "title": "南山公園の夜景（任意）", "place": "南山ケーブルカー", "map": "https://maps.google.com/?q=Namsan+Cable+Car", "memo": "元気があればNソウルタワーへ", "icon": "🌃" }
+    ]
+  },
+  {
+    "date": "2026-08-28",
+    "weekday": "金",
+    "label": "Day 2 ・ 王宮＆伝統の街",
+    "emoji": "🏯",
+    "items": [
+      { "time": "09:30", "title": "景福宮", "place": "Gyeongbokgung Palace", "map": "https://maps.google.com/?q=Gyeongbokgung+Palace", "memo": "韓服レンタルで入場無料＆写真映え。守門将交代式もチェック", "icon": "🏯" },
+      { "time": "12:00", "title": "昼食：参鶏湯 or カルグクス", "place": "西村/三清洞", "map": "https://maps.google.com/?q=Samcheongdong", "memo": "王宮近くの名店で伝統料理", "icon": "🍲" },
+      { "time": "13:30", "title": "北村韓屋村さんぽ", "place": "Bukchon Hanok Village", "map": "https://maps.google.com/?q=Bukchon+Hanok+Village", "memo": "静かな住宅地。マナーを守って撮影を", "icon": "📸" },
+      { "time": "15:30", "title": "仁寺洞でお茶＆雑貨", "place": "Insadong", "map": "https://maps.google.com/?q=Insadong", "memo": "伝統茶カフェ、韓国雑貨・お土産探し", "icon": "🫖" },
+      { "time": "18:00", "title": "夕食：広蔵市場グルメ", "place": "Gwangjang Market", "map": "https://maps.google.com/?q=Gwangjang+Market", "memo": "ユッケ・ピンデトク・マヨッキンパ。市場の熱気を楽しむ", "icon": "🥘" }
+    ]
+  },
+  {
+    "date": "2026-08-29",
+    "weekday": "土",
+    "label": "Day 3 ・ 弘大＆東大門",
+    "emoji": "🎨",
+    "items": [
+      { "time": "10:30", "title": "弘大(ホンデ)エリア", "place": "Hongdae", "map": "https://maps.google.com/?q=Hongdae+Seoul", "memo": "若者の街。ストリートパフォーマンスやショップ巡り", "icon": "🎨" },
+      { "time": "12:30", "title": "昼食：話題のグルメ＆カフェ", "place": "弘大の人気カフェ", "map": "https://maps.google.com/?q=Hongdae+Cafe", "memo": "おしゃれカフェでひと休み☕", "icon": "☕" },
+      { "time": "15:00", "title": "延南洞さんぽ（任意）", "place": "Yeonnam-dong", "map": "https://maps.google.com/?q=Yeonnam-dong", "memo": "京義線숲길（森の小道）でのんびり", "icon": "🌳" },
+      { "time": "18:00", "title": "東大門デザインプラザ(DDP)", "place": "Dongdaemun Design Plaza", "map": "https://maps.google.com/?q=Dongdaemun+Design+Plaza", "memo": "近未来建築＆夜のLEDバラ園", "icon": "🌹" },
+      { "time": "20:00", "title": "東大門ナイトショッピング", "place": "東大門ファッションタウン", "map": "https://maps.google.com/?q=Dongdaemun+Market", "memo": "深夜まで営業。掘り出し物探し", "icon": "🛍️" }
+    ]
+  },
+  {
+    "date": "2026-08-30",
+    "weekday": "日",
+    "label": "Day 4 ・ お土産＆出発",
+    "emoji": "🎁",
+    "items": [
+      { "time": "10:00", "title": "チェックアウト・荷物預け", "place": "ホテル", "map": "", "memo": "フロントに荷物を預けて最後の散策へ", "icon": "🧳" },
+      { "time": "10:30", "title": "お土産まとめ買い", "place": "明洞 / ロッテマート ソウル駅店", "map": "https://maps.google.com/?q=Lotte+Mart+Seoul+Station", "memo": "お菓子・海苔・ラーメンなどバラマキ土産", "icon": "🎁" },
+      { "time": "13:00", "title": "昼食：締めの一杯", "place": "ソウル駅周辺", "map": "https://maps.google.com/?q=Seoul+Station", "memo": "冷麺やビビンバでラスト韓国メシ", "icon": "🍜" },
+      { "time": "14:30", "title": "空港へ移動", "place": "AREX / リムジンバス", "map": "https://maps.google.com/?q=Seoul+Station+AREX", "memo": "出発2〜3時間前には空港着を目安に", "icon": "🚄" },
+      { "time": "17:00", "title": "仁川空港から出発", "place": "Incheon Airport (ICN)", "map": "https://maps.google.com/?q=Incheon+International+Airport", "memo": "免税店で最後のお買い物。おつかれさま！", "icon": "✈️" }
+    ]
+  }
+]

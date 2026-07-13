@@ -1,0 +1,238 @@
+:root {
+  --pink: #ff9fb2;
+  --pink-soft: #ffe4ea;
+  --mint: #9fe0d3;
+  --mint-soft: #e2f7f2;
+  --lav: #c9b8f0;
+  --cream: #fffaf6;
+  --ink: #4a4453;
+  --ink-dim: #8b8494;
+  --card: #ffffff;
+  --shadow: 0 6px 20px rgba(120, 90, 130, 0.10);
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Segoe UI", sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 40px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--pink-soft) 0%, var(--mint-soft) 100%);
+  padding: 34px 20px 28px;
+  text-align: center;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+}
+.hero-flag { font-size: 30px; letter-spacing: 4px; }
+.hero h1 {
+  font-size: 30px;
+  margin-top: 6px;
+  color: var(--ink);
+  letter-spacing: 1px;
+}
+.hero-sub { font-size: 15px; color: var(--ink); margin-top: 6px; font-weight: 600; }
+.hero-note {
+  font-size: 12.5px;
+  color: var(--ink-dim);
+  margin: 12px auto 0;
+  max-width: 440px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 8px 14px;
+  border-radius: 14px;
+}
+
+/* ---------- Tabs ---------- */
+.tabs {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 14px 12px 4px;
+  max-width: 720px;
+  margin: 0 auto;
+  -webkit-overflow-scrolling: touch;
+}
+.tab {
+  flex: 0 0 auto;
+  border: none;
+  background: #fff;
+  color: var(--ink-dim);
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 9px 15px;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform .12s, background .2s, color .2s;
+  white-space: nowrap;
+}
+.tab:hover { transform: translateY(-1px); }
+.tab.active { background: var(--pink); color: #fff; }
+
+/* ---------- Panels ---------- */
+main { max-width: 720px; margin: 0 auto; padding: 18px 14px; }
+.panel { display: none; animation: fade .3s ease; }
+.panel.active { display: block; }
+@keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+
+/* ---------- Schedule ---------- */
+.day-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 22px 4px 12px;
+}
+.day-badge {
+  background: var(--mint);
+  color: #fff;
+  font-weight: 800;
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.day-title { font-size: 16px; font-weight: 800; }
+.day-date { font-size: 12.5px; color: var(--ink-dim); }
+
+.timeline { position: relative; padding-left: 8px; }
+.tl-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  margin-bottom: 10px;
+  border-left: 4px solid var(--pink);
+}
+.tl-time {
+  flex: 0 0 46px;
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--pink);
+}
+.tl-body { flex: 1; min-width: 0; }
+.tl-title { font-weight: 700; font-size: 15px; }
+.tl-title .ic { margin-right: 4px; }
+.tl-place { font-size: 12.5px; color: var(--ink-dim); margin-top: 2px; }
+.tl-memo { font-size: 12.5px; margin-top: 5px; }
+.map-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--mint);
+  font-weight: 700;
+  text-decoration: none;
+}
+.map-link:hover { text-decoration: underline; }
+
+/* ---------- Places ---------- */
+.cat-head { font-size: 17px; font-weight: 800; margin: 8px 4px 10px; }
+.place-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #eee;
+}
+.place-row:last-child { border-bottom: none; }
+.place-check {
+  width: 22px; height: 22px;
+  flex: 0 0 auto;
+  border-radius: 7px;
+  border: 2px solid var(--pink);
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  margin-top: 2px;
+  transition: background .15s;
+}
+.place-check.done { background: var(--pink); }
+.place-info { flex: 1; }
+.place-name { font-weight: 700; font-size: 14.5px; }
+.place-name.done { text-decoration: line-through; color: var(--ink-dim); }
+.place-desc { font-size: 12.5px; color: var(--ink-dim); }
+.place-area {
+  font-size: 11px;
+  background: var(--lav);
+  color: #fff;
+  padding: 1px 8px;
+  border-radius: 999px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* ---------- Packing ---------- */
+.pack-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 4px;
+}
+.pack-box {
+  width: 22px; height: 22px;
+  border-radius: 7px;
+  border: 2px solid var(--mint);
+  background: #fff;
+  cursor: pointer;
+  display: grid; place-items: center;
+  color: #fff; font-size: 13px;
+  flex: 0 0 auto;
+  transition: background .15s;
+}
+.pack-box.done { background: var(--mint); }
+.pack-label { font-size: 14.5px; }
+.pack-label.done { text-decoration: line-through; color: var(--ink-dim); }
+.progress {
+  height: 8px;
+  background: #eee;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 4px 4px 14px;
+}
+.progress-bar { height: 100%; background: var(--mint); width: 0; transition: width .3s; }
+
+/* ---------- Booking ---------- */
+.kv { display: flex; justify-content: space-between; gap: 10px; padding: 5px 0; font-size: 13.5px; }
+.kv .k { color: var(--ink-dim); flex: 0 0 auto; }
+.kv .v { text-align: right; font-weight: 600; }
+.budget-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.budget-table th, .budget-table td { padding: 8px 6px; text-align: right; border-bottom: 1px solid #f0f0f0; }
+.budget-table th { color: var(--ink-dim); font-weight: 700; }
+.budget-table td:first-child, .budget-table th:first-child { text-align: left; }
+.budget-total { font-weight: 800; color: var(--pink); }
+.rate-hint { font-size: 12px; color: var(--ink-dim); margin-top: 8px; }
+.reset-btn {
+  display: block;
+  margin: 6px auto 0;
+  font-size: 12px;
+  color: var(--ink-dim);
+  background: none;
+  border: 1px solid #ddd;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* ---------- Footer ---------- */
+.foot { text-align: center; margin-top: 24px; font-size: 12px; color: var(--ink-dim); }
+.foot code { background: #f0ebf5; padding: 1px 6px; border-radius: 6px; }
+.foot-dim { margin-top: 6px; }

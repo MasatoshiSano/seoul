@@ -1,0 +1,16 @@
+{
+  "flights": [
+    { "type": "往路", "route": "成田(NRT) → 仁川(ICN)", "date": "2026-08-27", "time": "10:00 → 12:40", "airline": "航空会社（未定）", "flightNo": "○○000", "confirm": "予約番号を記入" },
+    { "type": "復路", "route": "仁川(ICN) → 成田(NRT)", "date": "2026-08-30", "time": "17:00 → 19:30", "airline": "航空会社（未定）", "flightNo": "○○000", "confirm": "予約番号を記入" }
+  ],
+  "hotels": [
+    { "name": "ホテル名（明洞エリア・未定）", "checkin": "2026-08-27", "checkout": "2026-08-30", "address": "ソウル市 中区 明洞", "confirm": "予約番号を記入", "map": "https://maps.google.com/?q=Myeongdong+Hotel" }
+  ],
+  "budget": [
+    { "item": "航空券", "planKrw": 0, "planJpy": 40000, "memo": "1人あたり目安" },
+    { "item": "宿泊（3泊）", "planKrw": 360000, "planJpy": 39000, "memo": "1泊12万ウォン想定" },
+    { "item": "食事", "planKrw": 200000, "planJpy": 22000, "memo": "1日5万ウォン×4日" },
+    { "item": "交通", "planKrw": 50000, "planJpy": 5500, "memo": "T-money＋空港往復" },
+    { "item": "ショッピング・お土産", "planKrw": 200000, "planJpy": 22000, "memo": "お好みで" }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "category": "グルメ",
+    "emoji": "🍽️",
+    "spots": [
+      { "name": "広蔵市場", "desc": "屋台グルメの宝庫。ユッケ・ピンデトク", "area": "鍾路", "map": "https://maps.google.com/?q=Gwangjang+Market" },
+      { "name": "明洞餃子", "desc": "カルグクス＆マンドゥの老舗", "area": "明洞", "map": "https://maps.google.com/?q=Myeongdong+Kyoja" },
+      { "name": "土俗村 参鶏湯", "desc": "行列必至の参鶏湯名店", "area": "西村", "map": "https://maps.google.com/?q=Tosokchon+Samgyetang" },
+      { "name": "聖水洞カフェ通り", "desc": "話題のおしゃれカフェ密集エリア", "area": "聖水", "map": "https://maps.google.com/?q=Seongsu+Cafe+Street" }
+    ]
+  },
+  {
+    "category": "ショッピング",
+    "emoji": "🛍️",
+    "spots": [
+      { "name": "明洞", "desc": "コスメ＆ファッションの定番", "area": "中区", "map": "https://maps.google.com/?q=Myeongdong" },
+      { "name": "東大門ファッションタウン", "desc": "深夜まで営業の卸＆小売天国", "area": "東大門", "map": "https://maps.google.com/?q=Dongdaemun+Market" },
+      { "name": "オリーブヤング 明洞本店", "desc": "K-コスメまとめ買いはここ", "area": "明洞", "map": "https://maps.google.com/?q=Olive+Young+Myeongdong" },
+      { "name": "ザ・現代ソウル", "desc": "映えるデパート。屋内庭園あり", "area": "汝矣島", "map": "https://maps.google.com/?q=The+Hyundai+Seoul" }
+    ]
+  },
+  {
+    "category": "観光",
+    "emoji": "📸",
+    "spots": [
+      { "name": "景福宮", "desc": "朝鮮王朝の正宮。韓服で映え", "area": "鍾路", "map": "https://maps.google.com/?q=Gyeongbokgung+Palace" },
+      { "name": "北村韓屋村", "desc": "伝統家屋が並ぶ路地", "area": "三清洞", "map": "https://maps.google.com/?q=Bukchon+Hanok+Village" },
+      { "name": "Nソウルタワー", "desc": "南山の夜景スポット", "area": "南山", "map": "https://maps.google.com/?q=N+Seoul+Tower" },
+      { "name": "東大門デザインプラザ(DDP)", "desc": "近未来建築＆LEDバラ園", "area": "東大門", "map": "https://maps.google.com/?q=Dongdaemun+Design+Plaza" }
+    ]
+  }
+]
