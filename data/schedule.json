@@ -2,14 +2,15 @@
   {
     "date": "2026-08-27",
     "weekday": "木",
-    "label": "Day 1 ・ 到着＆明洞さんぽ",
+    "label": "Day 1 ・ 夕方着＆東大門の夜",
     "emoji": "✈️",
     "items": [
-      { "time": "13:00", "title": "仁川国際空港 到着", "place": "Incheon Airport (ICN)", "map": "https://maps.google.com/?q=Incheon+International+Airport", "memo": "入国審査・両替・SIM/eSIM受取。空港鉄道(AREX)かリムジンバスで市内へ", "icon": "✈️" },
-      { "time": "15:00", "title": "ホテルにチェックイン", "place": "明洞エリア", "map": "https://maps.google.com/?q=Myeongdong+Seoul", "memo": "荷物を置いて身軽に。T-money(交通カード)を購入", "icon": "🏨" },
-      { "time": "16:30", "title": "明洞ショッピング", "place": "明洞通り", "map": "https://maps.google.com/?q=Myeongdong+Shopping+Street", "memo": "コスメ・ファッション。屋台グルメもつまみ食い", "icon": "🛍️" },
-      { "time": "19:00", "title": "夕食：韓国焼肉", "place": "明洞の焼肉店", "map": "https://maps.google.com/?q=Korean+BBQ+Myeongdong", "memo": "サムギョプサルで初日の乾杯🍻", "icon": "🍖" },
-      { "time": "21:00", "title": "南山公園の夜景（任意）", "place": "南山ケーブルカー", "map": "https://maps.google.com/?q=Namsan+Cable+Car", "memo": "元気があればNソウルタワーへ", "icon": "🌃" }
+      { "time": "18:00", "title": "仁川国際空港 到着（MM743）", "place": "Incheon Airport (ICN)", "map": "https://maps.google.com/?q=Incheon+International+Airport", "memo": "関西16:05発→仁川18:00着。空港では大きな両替はせず、カードで移動券購入 or WOWPASS空港セット(T-money1万W入り)を受取", "icon": "✈️" },
+      { "time": "19:00", "title": "空港から東大門へ移動", "place": "AREX＋地下鉄4号線 / リムジンバス", "map": "https://maps.google.com/?q=Incheon+Airport+Railroad", "memo": "AREX＋4号線でソウル駅乗換→東大門歴史文化公園駅（約60分）。楽ならリムジンバス（約90分）", "icon": "🚄" },
+      { "time": "20:15", "title": "ホテル チェックイン", "place": "ハイ メイト トンデムン", "map": "https://maps.google.com/?q=Hi+Mate+Dongdaemun+Seoul", "memo": "荷物を置いて身軽に。全室 専用バスルーム付き", "icon": "🏨" },
+      { "time": "20:45", "title": "両替（東大門）", "place": "APM前 無人両替機（24h）/ Money Box東大門店", "map": "https://maps.google.com/?q=APM+Dongdaemun", "memo": "APM無人機は24時間・日本語対応。日本円→ウォン両替→WOWPASSにチャージ。少額の現金も確保", "icon": "💱" },
+      { "time": "21:15", "title": "遅めの夕食：東大門", "place": "タッカンマリ横丁 など（夜遅くまで営業）", "map": "https://maps.google.com/?q=Dongdaemun+Dakhanmari+Alley", "memo": "東大門は夜型エリア。タッカンマリやコプチャンで初日の乾杯🍻", "icon": "🍲" },
+      { "time": "22:30", "title": "東大門ナイトショッピング（任意）", "place": "東大門ファッションタウン / DDP", "map": "https://maps.google.com/?q=Dongdaemun+Design+Plaza", "memo": "元気があれば深夜まで営業のショッピングモールやDDPの夜景へ", "icon": "🌃" }
     ]
   },
   {
@@ -41,14 +42,15 @@
   {
     "date": "2026-08-30",
     "weekday": "日",
-    "label": "Day 4 ・ お土産＆出発",
-    "emoji": "🎁",
+    "label": "Day 4 ・ 早朝出発",
+    "emoji": "✈️",
     "items": [
-      { "time": "10:00", "title": "チェックアウト・荷物預け", "place": "ホテル", "map": "", "memo": "フロントに荷物を預けて最後の散策へ", "icon": "🧳" },
-      { "time": "10:30", "title": "お土産まとめ買い", "place": "明洞 / ロッテマート ソウル駅店", "map": "https://maps.google.com/?q=Lotte+Mart+Seoul+Station", "memo": "お菓子・海苔・ラーメンなどバラマキ土産", "icon": "🎁" },
-      { "time": "13:00", "title": "昼食：締めの一杯", "place": "ソウル駅周辺", "map": "https://maps.google.com/?q=Seoul+Station", "memo": "冷麺やビビンバでラスト韓国メシ", "icon": "🍜" },
-      { "time": "14:30", "title": "空港へ移動", "place": "AREX / リムジンバス", "map": "https://maps.google.com/?q=Seoul+Station+AREX", "memo": "出発2〜3時間前には空港着を目安に", "icon": "🚄" },
-      { "time": "17:00", "title": "仁川空港から出発", "place": "Incheon Airport (ICN)", "map": "https://maps.google.com/?q=Incheon+International+Airport", "memo": "免税店で最後のお買い物。おつかれさま！", "icon": "✈️" }
+      { "time": "06:30", "title": "起床・お土産の買い忘れチェック", "place": "ホテル / 東大門のコンビニ", "map": "https://maps.google.com/?q=Dongdaemun+Convenience+Store", "memo": "11:25発と早いので前夜までにお土産は済ませておくのが安心", "icon": "🎁" },
+      { "time": "07:00", "title": "チェックアウト", "place": "ハイ メイト トンデムン", "map": "https://maps.google.com/?q=Hi+Mate+Dongdaemun+Seoul", "memo": "早朝チェックアウト。忘れ物に注意", "icon": "🧳" },
+      { "time": "07:15", "title": "空港へ移動（東大門→仁川）", "place": "AREX＋地下鉄 / リムジンバス", "map": "https://maps.google.com/?q=Dongdaemun+History+Culture+Park+Station", "memo": "東大門歴史文化公園駅→ソウル駅乗換→AREX（約60分）。リムジンなら約90分。始発時間に注意", "icon": "🚄" },
+      { "time": "08:30", "title": "仁川空港 着・チェックイン/荷物預け", "place": "Incheon Airport (ICN)", "map": "https://maps.google.com/?q=Incheon+International+Airport", "memo": "Peachは国際線。出発2〜2.5時間前を目安に手続き。WOWPASS残高は使い切るか調整", "icon": "🛂" },
+      { "time": "09:00", "title": "朝食＆免税店", "place": "仁川空港内", "map": "https://maps.google.com/?q=Incheon+Airport+Duty+Free", "memo": "空港で軽く朝食。最後のお買い物", "icon": "🍜" },
+      { "time": "11:25", "title": "仁川空港から出発（MM736）", "place": "Incheon Airport (ICN)", "map": "https://maps.google.com/?q=Incheon+International+Airport", "memo": "仁川11:25発→関西13:10着。おつかれさま！", "icon": "✈️" }
     ]
   }
 ]
