@@ -65,7 +65,9 @@ window.DATA = {
       { name: "미성옥（味成屋／ミソンオク）", area: "明洞", desc: "路地裏の名店。ソルロンタン", map: "https://maps.app.goo.gl/ya7VqwFwBxAM8psx8?g_st=ic" },
       { name: "히죽히죽（喜粥喜粥）", area: "忠武路", desc: "朝ごはんに鮑がゆが超人気店", map: "https://maps.app.goo.gl/HN1puTrr6XJkkqhe7?g_st=ic" },
       { name: "瑞源（ソウォン）", area: "中区", desc: "こっちも同じく！（鮑がゆ）", map: "https://maps.app.goo.gl/j221vrBfMLTVBa3G8?g_st=ic" },
-      { name: "대한곱창 明洞店（大韓コプチャン）", area: "明洞", desc: "コプチャン！人気店", map: "https://maps.app.goo.gl/tngzxThRkVnZNLV48?g_st=ic" }
+      { name: "대한곱창 明洞店（大韓コプチャン）", area: "明洞", desc: "コプチャン！人気店", map: "https://maps.app.goo.gl/tngzxThRkVnZNLV48?g_st=ic" },
+      { name: "진미식당（真味食堂／チンミシクタン）", area: "麻浦・孔徳", desc: "カンジャンケジャンの“通の一択”。ミシュラン掲載の老舗。게장정식 約₩45,000。Day3(弘大)と好相性", map: "https://maps.google.com/?q=진미식당+마포+공덕+간장게장" },
+      { name: "큰기와집（クンギワジプ）", area: "鍾路・安国", desc: "自家仕込み朝鮮醤油の高級カンジャンケジャン。ミシュラン掲載。安国駅すぐでDay2(景福宮・北村)の動線上", map: "https://maps.google.com/?q=큰기와집+안국+간장게장" }
     ]},
     { category: "ショッピング", tag: "買う", spots: [
       { name: "明洞", area: "中区", desc: "コスメ＆ファッションの定番", map: "https://maps.google.com/?q=Myeongdong" },
