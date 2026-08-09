@@ -135,6 +135,8 @@
         <div class="kv"><span class="k">人数</span><span class="v">${esc(h.guests)}</span></div>
         <div class="kv"><span class="k">リクエスト</span><span class="v">${esc(h.requests)}</span></div>
         <div class="kv"><span class="k">予約ID</span><span class="v">${esc(h.id)}</span></div>
+        ${h.price ? `<div class="kv"><span class="k">料金</span><span class="v">${esc(h.price)}</span></div>` : ""}
+        ${h.payDate ? `<div class="kv"><span class="k">支払予定日</span><span class="v">${esc(h.payDate)}</span></div>` : ""}
         ${h.note ? `<div class="kv"><span class="k">注意</span><span class="v">${esc(h.note)}</span></div>` : ""}
         <div style="margin-top:10px"><a class="maplink" href="${esc(h.map)}" target="_blank" rel="noopener">地図で見る</a></div>
       </div>`).join("");

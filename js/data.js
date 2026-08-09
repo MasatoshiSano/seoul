@@ -4,7 +4,7 @@ window.DATA = {
     subtitle: "2026.8.27 (木) 〜 8.30 (日)",
     nights: "3泊4日",
     note: "チュソク連休は 9/24〜26 で今回の日程には重なりません。お店の一斉休業やラッシュの心配なし！",
-    rate: "1,000ウォン ≒ 約109円（目安）。現地レートは変動します。"
+    rate: "1,000ウォン ≒ 約109円（目安）。現地レートは変動します。※ホテル代は支払予定日（8/22・8/23）の当日レートで日本円に換算されます。"
   },
   schedule: [
     { date: "2026-08-27", day: "27", weekday: "木", label: "1日目 ・ 夕方着＆東大門の夜", items: [
@@ -71,12 +71,12 @@ window.DATA = {
     { type: "復路", route: "ソウル 仁川(ICN) → 大阪 関西(KIX)", date: "2026-08-30", time: "11:25 → 13:10", airline: "Peach (MM)", no: "MM736" }
   ],
   hotels: [
-    { name: "ホテル ミリオレ ソウル", short: "1泊目（8/27）", checkin: "2026-08-27（15:00〜）", checkout: "2026-08-28（11:00まで）", room: "デラックスツイン（バスタブ有無はランダム）", guests: "大人2名", requests: "高層階・静かな部屋／到着予定 20:00-21:00", id: "1755518948", map: "https://maps.google.com/?q=Hotel+Migliore+Seoul+Dongdaemun" },
-    { name: "ナインツリー バイ パルナス ソウル 東大門", short: "2〜3泊目（8/28・8/29）", checkin: "2026-08-28（15:00〜）", checkout: "2026-08-30（12:00まで）", room: "スタンダードダブル", guests: "大人2名", requests: "高層階・静かな部屋／到着予定 10:00-11:00", id: "1755517778", note: "歯ブラシ・歯磨き粉・カミソリの提供なし（政府方針）／駐車場なし", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun" }
+    { name: "ホテル ミリオレ ソウル", short: "1泊目（8/27）", checkin: "2026-08-27（15:00〜）", checkout: "2026-08-28（11:00まで）", room: "デラックスツイン（バスタブ有無はランダム）", guests: "大人2名", requests: "高層階・静かな部屋／到着予定 20:00-21:00", id: "1755518948", price: "₩116,729（税・サ込）", payDate: "2026-08-22（当日レートで円換算）", map: "https://maps.google.com/?q=Hotel+Migliore+Seoul+Dongdaemun" },
+    { name: "ナインツリー バイ パルナス ソウル 東大門", short: "2〜3泊目（8/28・8/29）", checkin: "2026-08-28（15:00〜）", checkout: "2026-08-30（12:00まで）", room: "スタンダードダブル", guests: "大人2名", requests: "高層階・静かな部屋／到着予定 10:00-11:00", id: "1755517778", price: "₩402,410（税・サ込）", payDate: "2026-08-23（当日レートで円換算）", note: "歯ブラシ・歯磨き粉・カミソリの提供なし（政府方針）／駐車場なし", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun" }
   ],
   budget: [
     { item: "航空券（Peach 往復）", krw: 0, jpy: 35000, memo: "MM743/MM736・1人あたり目安" },
-    { item: "宿泊（3泊）", krw: 480000, jpy: 52000, memo: "ミリオレ1泊＋ナインツリー2泊（東大門）・実額は予約控えで" },
+    { item: "宿泊（2ホテル・確定）", krw: 519139, jpy: 56600, memo: "ミリオレ ₩116,729 ＋ ナインツリー ₩402,410（税・サ込／円は支払日レート）" },
     { item: "食事", krw: 200000, jpy: 22000, memo: "1日5万ウォン×4日" },
     { item: "交通", krw: 50000, jpy: 5500, memo: "T-money＋空港往復" },
     { item: "ショッピング・お土産", krw: 200000, jpy: 22000, memo: "お好みで" }
