@@ -47,6 +47,26 @@ window.DATA = {
       { name: "土俗村 参鶏湯", area: "西村", desc: "行列必至の参鶏湯名店", map: "https://maps.google.com/?q=Tosokchon+Samgyetang" },
       { name: "聖水洞カフェ通り", area: "聖水", desc: "話題のおしゃれカフェ密集エリア", map: "https://maps.google.com/?q=Seongsu+Cafe+Street" }
     ]},
+    { category: "グルメ候補", tag: "候補", spots: [
+      { name: "조조칼국수（ジョジョ カルグクス）", area: "聖水", desc: "カルグクスおすすめ！人気店", map: "https://maps.app.goo.gl/9EoFGSzGQgjn4evFA?g_st=ic" },
+      { name: "테낙식당（テナッ食堂）聖水直営店", area: "聖水", desc: "ホルモンと鶏肉鍋 おすすめ！", map: "https://maps.app.goo.gl/HRGWETSTT8dBSWxX9?g_st=ic" },
+      { name: "패밀리손칼국수보쌈（ファミリーソン カルグクスポッサム）", area: "聖水", desc: "ポッサム！", map: "https://maps.app.goo.gl/XRqRPmWxiHKoXX666?g_st=ic" },
+      { name: "ヨンチョンヨンファ", area: "江南（狎鴎亭）", desc: "ユッケビビンパ", map: "https://maps.app.goo.gl/Jx8h24kw9fsafjtv6?g_st=ic" },
+      { name: "제주흑돈옥탑 BLACK BBQ（済州黒豚屋上BBQ）", area: "江南", desc: "豚肉ショルダーラックがよき。行くならキャッチテーブルで予約すべし！", map: "https://maps.app.goo.gl/tzTvNtXb7zGZNfrX8?g_st=ic" },
+      { name: "오다리집 간장게장 江南直営店（オダリチプ カンジャンケジャン）", area: "江南", desc: "チェーン店のカンジャンケジャン。ここ以外にもあるよ。日本人に人気", map: "https://maps.app.goo.gl/GmG82dD7Np1NUbX57?g_st=ic" },
+      { name: "강남막국수（江南マックス）", area: "江南", desc: "マッククスがおいしい", map: "https://maps.app.goo.gl/SfSMVueGW97RNnu99?g_st=ic" },
+      { name: "금돼지식당（金豚食堂／クムテジシッタン）", area: "中区", desc: "17時ごろに予約だけ行かないと入れない人気店。日本人に人気で行く価値あり。サムギョプサル", map: "https://maps.app.goo.gl/CA5cfhqYQsac7GXG9?g_st=ic" },
+      { name: "해남낙지（ヘナムナクチ）", area: "中区", desc: "チュクミとかタコ料理", map: "https://maps.app.goo.gl/o7kjpNQPxBV1tCMHA?g_st=ic" },
+      { name: "죽통령삼겹살 東大門店（竹統領サムギョプサル）", area: "東大門", desc: "ここのサムギョプサルも美味しい", map: "https://maps.app.goo.gl/KnHUXTihXx9ii4RS8?g_st=ic" },
+      { name: "진옥화할매원조닭한마리（陳玉華ハルメ元祖タッカンマリ）", area: "鍾路（タッカンマリ横丁）", desc: "タッカンマリならここか隣のお店。日本人に人気で美味しい", map: "https://maps.app.goo.gl/69e462x9FhnV8k5V6?g_st=ic" },
+      { name: "부촌육회본점（プチョン ユッケ本店）", area: "鍾路", desc: "超人気店 ユッケ", map: "https://maps.app.goo.gl/BBz1g5j47iXw9k8Y7?g_st=ic" },
+      { name: "송정보쌈 鍾路店（ソンジョン ポッサム）", area: "鍾路", desc: "ポッサム！", map: "https://maps.app.goo.gl/v27FHS1rSDW5wDqf7?g_st=ic" },
+      { name: "남포면옥（南浦麺屋）", area: "中区（乙支路）", desc: "ビビン麺 ミシュラン", map: "https://maps.app.goo.gl/ATZkmGPyKodgxrQc7?g_st=ic" },
+      { name: "미성옥（味成屋／ミソンオク）", area: "明洞", desc: "路地裏の名店。ソルロンタン", map: "https://maps.app.goo.gl/ya7VqwFwBxAM8psx8?g_st=ic" },
+      { name: "히죽히죽（喜粥喜粥）", area: "忠武路", desc: "朝ごはんに鮑がゆが超人気店", map: "https://maps.app.goo.gl/HN1puTrr6XJkkqhe7?g_st=ic" },
+      { name: "瑞源（ソウォン）", area: "中区", desc: "こっちも同じく！（鮑がゆ）", map: "https://maps.app.goo.gl/j221vrBfMLTVBa3G8?g_st=ic" },
+      { name: "대한곱창 明洞店（大韓コプチャン）", area: "明洞", desc: "コプチャン！人気店", map: "https://maps.app.goo.gl/tngzxThRkVnZNLV48?g_st=ic" }
+    ]},
     { category: "ショッピング", tag: "買う", spots: [
       { name: "明洞", area: "中区", desc: "コスメ＆ファッションの定番", map: "https://maps.google.com/?q=Myeongdong" },
       { name: "東大門ファッションタウン", area: "東大門", desc: "深夜まで営業の卸＆小売天国", map: "https://maps.google.com/?q=Dongdaemun+Market" },
