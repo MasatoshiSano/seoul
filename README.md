@@ -1,95 +1,64 @@
-# 🧳 ソウル旅行 2026
+# 🧳 ソウル旅のしおり 2026
 
-同行者とURLで共有できる、かわいい旅のしおり＆スケジュール管理サイトです。
-スマホで見やすく、日程・行きたい場所・持ち物・予約&予算をまとめて管理できます。
+同行者とURLで共有できる、**Apple.com風**の複数ページ構成の旅のしおりサイトです。
+スマホで見やすく、日程・行きたい場所・お金/交通・持ち物・予約&予算をまとめて確認できます。
 
-**期間：2026.8.27 (木) 〜 8.30 (日) ・ 3泊4日**
+**期間：2026.8.27 (木) 〜 8.30 (日) ・ 3泊4日 ／ Peach MM743・MM736（関西⇄仁川）**
 
 ---
 
-## 📱 できること
+## 📄 ページ構成
 
-| タブ | 内容 |
-|------|------|
-| 📅 **日程** | 日ごとのタイムライン。時刻・場所・メモ・地図リンク |
-| 📍 **行きたい場所** | グルメ / ショッピング / 観光をカテゴリ別に管理。行ったら✓（端末に保存） |
-| ✅ **持ち物** | チェックリスト。進捗バー付き。旅行前に何度でも使える（端末に保存） |
-| ✈️💰 **予約 & 予算** | フライト・ホテルの予約情報 ＋ 予算メモ（ウォン⇔円） |
+| ページ | ファイル | 内容 |
+|--------|---------|------|
+| トップ | `index.html` | 旅の概要・各ページ入口 |
+| 日程 | `schedule.html` | 4日間のタイムライン |
+| 行きたい場所 | `places.html` | グルメ / ショッピング / 観光（訪問チェック） |
+| お金・交通 | `guide.html` | 両替所・WOWPASS・CHECK iN SEOUL・気候同行カード・空港アクセス・東大門豆知識 |
+| 持ち物 | `packing.html` | チェックリスト（進捗バー） |
+| 予約 & 予算 | `booking.html` | フライト・ホテル・予算 |
 
-> ✓ のチェック状態は各自のブラウザ（端末）に保存されます。共有はされないので、自分専用のチェックとして使えます。
+チェック状態は各自のブラウザ（端末）に保存されます。
 
 ---
 
 ## ✏️ 内容の編集方法
 
-日程やお店の情報は `data/` 内のJSONファイルを編集するだけで更新できます。
+日程・お店・持ち物・予約などのデータは **`js/data.js` の1ファイル**にまとまっています。
+ここを編集すると、全ページに反映されます。
 
-### 日程を追加・変更する → `data/schedule.json`
-1日ぶんの予定を1ブロックとして、`items` に予定を足していきます。
-
-```json
-{
-  "time": "14:00",
-  "title": "カフェでひと休み",
-  "place": "聖水洞のカフェ",
-  "map": "https://maps.google.com/?q=Seongsu+Cafe",
-  "memo": "映えスイーツを食べる",
-  "icon": "☕"
-}
+```js
+// 例：js/data.js の schedule に予定を追加
+{ time: "14:00", icon: "☕", title: "カフェ休憩", place: "聖水洞", map: "https://maps.google.com/?q=Seongsu", memo: "映えスイーツ" }
 ```
 
-- `map` は Google マップの検索URL（`https://maps.google.com/?q=場所名`）でOK。空 `""` でも可
-- `icon` は好きな絵文字
-
-### 行きたい場所を追加する → `data/places.json`
-```json
-{ "name": "店名", "desc": "ひとこと説明", "area": "エリア", "map": "https://maps.google.com/?q=..." }
-```
-
-### 持ち物を追加する → `data/packing.json`
-`items` の配列に文字列を足すだけ。
-
-### 予約・予算を編集する → `data/booking.json`
-フライト便名・ホテルの予約番号・予算金額を書き換えます。
-
-### 旅行のタイトルや注意書き → `data/trip.json`
+デザイン（色・レイアウト）は `css/style.css`、表示ロジックは `js/app.js` です。
 
 ---
 
-## 🌐 GitHub Pages で公開する（URL共有）
+## 🌐 GitHub Pages で公開する
 
-1. GitHub のリポジトリページで **Settings → Pages** を開く
-2. **Source** を「Deploy from a branch」にする
-3. Branch を `main`（または公開したいブランチ）、フォルダを `/ (root)` にして **Save**
-4. 数分後、`https://<ユーザー名>.github.io/seoul/` で公開されます 🎉
-5. このURLを同行者に共有すればOK
+1. リポジトリの **Settings → Pages** を開く（直リンク：`https://github.com/<user>/seoul/settings/pages`）
+2. **Source** =「Deploy from a branch」
+3. **Branch** = `main`、フォルダ = `/ (root)` → **Save**
+4. 数分後 `https://<user>.github.io/seoul/` で公開されます
 
 ---
 
 ## 💻 ローカルで確認する
 
-JSONを `fetch` で読み込むため、HTMLファイルを直接ダブルクリックで開くと表示されません。
-簡易サーバー経由で開いてください。
-
 ```bash
-# Python がある場合
 python3 -m http.server 8000
-# → ブラウザで http://localhost:8000 を開く
+# → http://localhost:8000 を開く
 ```
-
----
 
 ## 🗂️ ファイル構成
 
 ```
-index.html          サイト本体
-css/style.css       デザイン
-js/app.js           表示ロジック（JSON読み込み・チェック保存）
-data/trip.json      旅行タイトル・注意書き・為替目安
-data/schedule.json  日程（ここを編集）
-data/places.json    行きたい場所リスト
-data/packing.json   持ち物リスト
-data/booking.json   予約情報・予算
+index.html / schedule.html / places.html / guide.html / packing.html / booking.html
+css/style.css   デザイン（Apple風・ライト/ダーク対応）
+js/data.js      すべてのデータ（ここを編集）
+js/app.js       表示ロジック
 ```
 
-Have a nice trip! 🇰🇷✈️
+よい旅を！🇰🇷✈️

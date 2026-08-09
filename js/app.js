@@ -1,235 +1,176 @@
 "use strict";
+(function () {
+  const D = window.DATA || {};
+  const $ = (s, el = document) => el.querySelector(s);
+  const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+  const esc = (s) => String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const yen = (n) => "¥" + Number(n).toLocaleString("ja-JP");
+  const won = (n) => Number(n).toLocaleString("ja-JP") + "₩";
+  const store = {
+    get(k) { try { return JSON.parse(localStorage.getItem(k)) || {}; } catch { return {}; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+  };
 
-/* ---------- helpers ---------- */
-const $ = (sel, el = document) => el.querySelector(sel);
-const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
-const esc = (s) => String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-const yen = (n) => "¥" + Number(n).toLocaleString("ja-JP");
-const won = (n) => Number(n).toLocaleString("ja-JP") + "₩";
+  function fillHero() {
+    const dates = $("#hero-dates");
+    if (dates && D.trip) dates.textContent = D.trip.subtitle + " ・ " + D.trip.nights;
+    const note = $("#hero-note");
+    if (note && D.trip) note.innerHTML = "<b>✓ 安心</b> " + esc(D.trip.note);
+  }
 
-/* localStorage-backed checkbox state */
-const store = {
-  get(key) {
-    try { return JSON.parse(localStorage.getItem(key)) || {}; }
-    catch { return {}; }
-  },
-  set(key, obj) { localStorage.setItem(key, JSON.stringify(obj)); },
-};
-
-async function load(path) {
-  const res = await fetch(path, { cache: "no-store" });
-  if (!res.ok) throw new Error(`${path}: ${res.status}`);
-  return res.json();
-}
-
-/* ---------- Tabs ---------- */
-$$("#tabs .tab").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    $$("#tabs .tab").forEach((b) => b.classList.remove("active"));
-    $$(".panel").forEach((p) => p.classList.remove("active"));
-    btn.classList.add("active");
-    $("#" + btn.dataset.tab).classList.add("active");
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-});
-
-/* ---------- Trip meta ---------- */
-async function renderTrip() {
-  try {
-    const t = await load("data/trip.json");
-    $("#trip-title").textContent = t.title || "旅行";
-    $("#trip-subtitle").textContent = t.subtitle || "";
-    $("#trip-note").textContent = t.note || "";
-    document.title = (t.title || "旅行") + " 🇰🇷";
-    window.__rate = t.exchangeRate || null;
-  } catch (e) { console.error(e); }
-}
-
-/* ---------- Schedule ---------- */
-async function renderSchedule() {
-  const wrap = $("#schedule");
-  try {
-    const days = await load("data/schedule.json");
-    wrap.innerHTML = days.map((d) => `
-      <div class="day-head">
-        <span class="day-badge">${esc(d.emoji || "📅")} ${esc(d.weekday || "")}</span>
-        <div>
-          <div class="day-title">${esc(d.label || "")}</div>
-          <div class="day-date">${esc(d.date || "")}</div>
+  function renderSchedule() {
+    const wrap = $("#schedule"); if (!wrap) return;
+    wrap.innerHTML = D.schedule.map((d) => `
+      <div class="day">
+        <div class="day-head">
+          <div class="day-num">${esc(d.day)}</div>
+          <div class="day-meta">
+            <div class="day-title">${esc(d.label)}</div>
+            <div class="day-sub">${esc(d.date)}（${esc(d.weekday)}）</div>
+          </div>
         </div>
-      </div>
-      <div class="timeline">
-        ${(d.items || []).map((it) => `
-          <div class="tl-item">
-            <div class="tl-time">${esc(it.time || "")}</div>
-            <div class="tl-body">
-              <div class="tl-title"><span class="ic">${esc(it.icon || "•")}</span>${esc(it.title || "")}</div>
-              ${it.place ? `<div class="tl-place">📍 ${esc(it.place)}</div>` : ""}
-              ${it.memo ? `<div class="tl-memo">${esc(it.memo)}</div>` : ""}
-              ${it.map ? `<a class="map-link" href="${esc(it.map)}" target="_blank" rel="noopener">🗺️ 地図で見る</a>` : ""}
-            </div>
-          </div>`).join("")}
+        <div class="tl">
+          ${d.items.map((it) => `
+            <div class="tl-item">
+              <div class="tl-time">${esc(it.time)}</div>
+              <div class="tl-body">
+                <div class="tl-title">${esc(it.icon)} ${esc(it.title)}</div>
+                ${it.place ? `<div class="tl-place">📍 ${esc(it.place)}</div>` : ""}
+                ${it.memo ? `<div class="tl-memo">${esc(it.memo)}</div>` : ""}
+                ${it.map ? `<a class="maplink" href="${esc(it.map)}" target="_blank" rel="noopener">地図で見る</a>` : ""}
+              </div>
+            </div>`).join("")}
+        </div>
       </div>`).join("");
-  } catch (e) {
-    wrap.innerHTML = errCard(e);
   }
-}
 
-/* ---------- Places (with visited checkbox) ---------- */
-async function renderPlaces() {
-  const wrap = $("#places");
-  try {
-    const cats = await load("data/places.json");
-    const state = store.get("places-visited");
-    wrap.innerHTML = cats.map((c) => `
-      <div class="card">
-        <div class="cat-head">${esc(c.emoji || "")} ${esc(c.category || "")}</div>
-        ${(c.spots || []).map((s) => {
-          const id = `${c.category}::${s.name}`;
-          const done = !!state[id];
-          return `
-          <div class="place-row">
-            <button class="place-check ${done ? "done" : ""}" data-id="${esc(id)}">${done ? "✓" : ""}</button>
-            <div class="place-info">
-              <span class="place-name ${done ? "done" : ""}">${esc(s.name)}</span>
-              ${s.area ? `<span class="place-area">${esc(s.area)}</span>` : ""}
-              <div class="place-desc">${esc(s.desc || "")}</div>
-              ${s.map ? `<a class="map-link" href="${esc(s.map)}" target="_blank" rel="noopener">🗺️ 地図で見る</a>` : ""}
-            </div>
-          </div>`;
-        }).join("")}
-      </div>`).join("");
-
-    $$(".place-check", wrap).forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const st = store.get("places-visited");
-        const id = btn.dataset.id;
-        st[id] = !st[id];
-        store.set("places-visited", st);
-        btn.classList.toggle("done", st[id]);
-        btn.textContent = st[id] ? "✓" : "";
-        const name = btn.parentElement.querySelector(".place-name");
-        name.classList.toggle("done", st[id]);
-      });
-    });
-  } catch (e) {
-    wrap.innerHTML = errCard(e);
-  }
-}
-
-/* ---------- Packing (with checkbox + progress) ---------- */
-async function renderPacking() {
-  const wrap = $("#packing");
-  try {
-    const cats = await load("data/packing.json");
-    const state = store.get("packing-checked");
-    const total = cats.reduce((n, c) => n + (c.items || []).length, 0);
-
-    wrap.innerHTML = `
-      <div class="progress"><div class="progress-bar" id="pack-bar"></div></div>
-      ${cats.map((c) => `
-        <div class="card">
-          <div class="cat-head">${esc(c.emoji || "")} ${esc(c.category || "")}</div>
-          ${(c.items || []).map((item) => {
-            const id = `${c.category}::${item}`;
-            const done = !!state[id];
-            return `
-            <div class="pack-item">
-              <button class="pack-box ${done ? "done" : ""}" data-id="${esc(id)}">${done ? "✓" : ""}</button>
-              <span class="pack-label ${done ? "done" : ""}">${esc(item)}</span>
+  function renderPlaces() {
+    const wrap = $("#places"); if (!wrap) return;
+    const draw = () => {
+      const st = store.get("seoul-places");
+      wrap.innerHTML = D.places.map((c) => `
+        <div class="cat">
+          <div class="cat-head">${esc(c.category)} <span class="tag">${esc(c.tag)}</span></div>
+          <div class="card">
+          ${c.spots.map((s) => {
+            const id = c.category + "::" + s.name, done = !!st[id];
+            return `<div class="row">
+              <button class="check" data-id="${esc(id)}" aria-pressed="${done}" aria-label="訪問済みにする">${done ? "✓" : ""}</button>
+              <div class="row-body">
+                <span class="row-name ${done ? "done" : ""}">${esc(s.name)}</span><span class="row-area">${esc(s.area)}</span>
+                <div class="row-desc">${esc(s.desc)}</div>
+                <a class="maplink" href="${esc(s.map)}" target="_blank" rel="noopener">地図で見る</a>
+              </div>
             </div>`;
           }).join("")}
-        </div>`).join("")}
-      <button class="reset-btn" id="pack-reset">チェックをリセット</button>`;
-
-    const updateBar = () => {
-      const st = store.get("packing-checked");
-      const done = Object.values(st).filter(Boolean).length;
-      $("#pack-bar").style.width = total ? (done / total * 100) + "%" : "0%";
+          </div>
+        </div>`).join("");
+      $$(".check", wrap).forEach((b) => b.addEventListener("click", () => {
+        const st = store.get("seoul-places"), id = b.dataset.id;
+        st[id] = !st[id]; store.set("seoul-places", st);
+        b.setAttribute("aria-pressed", st[id]); b.textContent = st[id] ? "✓" : "";
+        b.parentElement.querySelector(".row-name").classList.toggle("done", st[id]);
+      }));
     };
-    updateBar();
-
-    $$(".pack-box", wrap).forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const st = store.get("packing-checked");
-        const id = btn.dataset.id;
-        st[id] = !st[id];
-        store.set("packing-checked", st);
-        btn.classList.toggle("done", st[id]);
-        btn.textContent = st[id] ? "✓" : "";
-        btn.nextElementSibling.classList.toggle("done", st[id]);
-        updateBar();
-      });
-    });
-    $("#pack-reset").addEventListener("click", () => {
-      store.set("packing-checked", {});
-      renderPacking();
-    });
-  } catch (e) {
-    wrap.innerHTML = errCard(e);
+    draw();
   }
-}
 
-/* ---------- Booking & Budget ---------- */
-async function renderBooking() {
-  const wrap = $("#booking");
-  try {
-    const b = await load("data/booking.json");
-    const flights = (b.flights || []).map((f) => `
-      <div class="card">
-        <div class="cat-head">✈️ ${esc(f.type || "フライト")}</div>
-        <div class="kv"><span class="k">区間</span><span class="v">${esc(f.route || "")}</span></div>
-        <div class="kv"><span class="k">日付</span><span class="v">${esc(f.date || "")}</span></div>
-        <div class="kv"><span class="k">時刻</span><span class="v">${esc(f.time || "")}</span></div>
-        <div class="kv"><span class="k">便名</span><span class="v">${esc(f.airline || "")} ${esc(f.flightNo || "")}</span></div>
-        <div class="kv"><span class="k">予約番号</span><span class="v">${esc(f.confirm || "")}</span></div>
+  function renderPacking() {
+    const wrap = $("#packing"); if (!wrap) return;
+    const total = D.packing.reduce((n, c) => n + c.items.length, 0);
+    const draw = () => {
+      const st = store.get("seoul-packing");
+      wrap.innerHTML = `
+        <p class="progress-label" id="pk-label"></p>
+        <div class="progress"><span id="pk-bar"></span></div>
+        ${D.packing.map((c) => `
+          <div class="cat">
+            <div class="cat-head" style="font-size:19px">${esc(c.category)}</div>
+            <div class="card">
+            ${c.items.map((item) => {
+              const id = c.category + "::" + item, done = !!st[id];
+              return `<div class="row">
+                <button class="check good" data-id="${esc(id)}" aria-pressed="${done}" aria-label="用意した">${done ? "✓" : ""}</button>
+                <div class="row-body"><span class="row-name ${done ? "done" : ""}">${esc(item)}</span></div>
+              </div>`;
+            }).join("")}
+            </div>
+          </div>`).join("")}
+        <button class="reset" id="pk-reset">チェックをリセット</button>`;
+      const bar = () => {
+        const st = store.get("seoul-packing"), done = Object.values(st).filter(Boolean).length;
+        $("#pk-bar").style.width = total ? (done / total * 100) + "%" : "0%";
+        $("#pk-label").textContent = `準備 ${done} / ${total} 個`;
+      };
+      bar();
+      $$(".check", wrap).forEach((b) => b.addEventListener("click", () => {
+        const st = store.get("seoul-packing"), id = b.dataset.id;
+        st[id] = !st[id]; store.set("seoul-packing", st);
+        b.setAttribute("aria-pressed", st[id]); b.textContent = st[id] ? "✓" : "";
+        b.parentElement.querySelector(".row-name").classList.toggle("done", st[id]);
+        bar();
+      }));
+      $("#pk-reset").addEventListener("click", () => { store.set("seoul-packing", {}); draw(); });
+    };
+    draw();
+  }
+
+  function renderBooking() {
+    const wrap = $("#booking"); if (!wrap) return;
+    const flights = D.flights.map((x) => `
+      <div class="ticket">
+        <h3>✈️ ${esc(x.type)} ・ ${esc(x.no)}</h3>
+        <div class="kv"><span class="k">区間</span><span class="v">${esc(x.route)}</span></div>
+        <div class="kv"><span class="k">日付</span><span class="v">${esc(x.date)}</span></div>
+        <div class="kv"><span class="k">時刻</span><span class="v">${esc(x.time)}</span></div>
+        <div class="kv"><span class="k">便名</span><span class="v">${esc(x.airline)} ${esc(x.no)}</span></div>
       </div>`).join("");
-
-    const hotels = (b.hotels || []).map((h) => `
-      <div class="card">
-        <div class="cat-head">🏨 ${esc(h.name || "宿泊")}</div>
-        <div class="kv"><span class="k">チェックイン</span><span class="v">${esc(h.checkin || "")}</span></div>
-        <div class="kv"><span class="k">チェックアウト</span><span class="v">${esc(h.checkout || "")}</span></div>
-        <div class="kv"><span class="k">住所</span><span class="v">${esc(h.address || "")}</span></div>
-        <div class="kv"><span class="k">予約番号</span><span class="v">${esc(h.confirm || "")}</span></div>
-        ${h.map ? `<a class="map-link" href="${esc(h.map)}" target="_blank" rel="noopener">🗺️ 地図で見る</a>` : ""}
-      </div>`).join("");
-
-    const budget = b.budget || [];
-    const totalKrw = budget.reduce((n, r) => n + (Number(r.planKrw) || 0), 0);
-    const totalJpy = budget.reduce((n, r) => n + (Number(r.planJpy) || 0), 0);
-    const budgetCard = `
-      <div class="card">
-        <div class="cat-head">💰 予算メモ</div>
-        <table class="budget-table">
+    const h = D.hotel;
+    const hotel = `
+      <div class="ticket">
+        <h3>🏨 ${esc(h.name)}</h3>
+        <div class="kv"><span class="k">チェックイン</span><span class="v">${esc(h.checkin)}</span></div>
+        <div class="kv"><span class="k">チェックアウト</span><span class="v">${esc(h.checkout)}</span></div>
+        <div class="kv"><span class="k">住所</span><span class="v">${esc(h.address)}</span></div>
+        <div style="margin-top:10px"><a class="maplink" href="${esc(h.map)}" target="_blank" rel="noopener">地図で見る</a></div>
+      </div>`;
+    const tk = D.budget.reduce((n, r) => n + (r.krw || 0), 0);
+    const tj = D.budget.reduce((n, r) => n + (r.jpy || 0), 0);
+    const budget = `
+      <div class="ticket">
+        <h3>💰 予算メモ</h3>
+        <table class="budget">
           <thead><tr><th>項目</th><th>ウォン</th><th>円</th></tr></thead>
           <tbody>
-            ${budget.map((r) => `<tr>
-              <td>${esc(r.item)}${r.memo ? `<br><span class="place-desc">${esc(r.memo)}</span>` : ""}</td>
-              <td>${r.planKrw ? won(r.planKrw) : "—"}</td>
-              <td>${r.planJpy ? yen(r.planJpy) : "—"}</td>
+            ${D.budget.map((r) => `<tr>
+              <td>${esc(r.item)}${r.memo ? `<br><span class="sub">${esc(r.memo)}</span>` : ""}</td>
+              <td>${r.krw ? won(r.krw) : "—"}</td>
+              <td>${r.jpy ? yen(r.jpy) : "—"}</td>
             </tr>`).join("")}
-            <tr><td class="budget-total">合計</td><td class="budget-total">${won(totalKrw)}</td><td class="budget-total">${yen(totalJpy)}</td></tr>
+            <tr class="total"><td>合計</td><td>${won(tk)}</td><td>${yen(tj)}</td></tr>
           </tbody>
         </table>
-        ${window.__rate ? `<p class="rate-hint">💱 ${esc(window.__rate.hint || "")}</p>` : ""}
+        <p class="rate">💱 ${esc(D.trip.rate)}</p>
       </div>`;
-
-    wrap.innerHTML = flights + hotels + budgetCard;
-  } catch (e) {
-    wrap.innerHTML = errCard(e);
+    wrap.innerHTML = flights + hotel + budget;
   }
-}
 
-function errCard(e) {
-  return `<div class="card">読み込みに失敗しました 😢<br><span class="place-desc">${esc(e.message)}</span><br><span class="place-desc">※ローカルで開く場合は簡易サーバー経由で表示してください（README参照）</span></div>`;
-}
+  function themeToggle() {
+    const btn = $("#themebtn"); if (!btn) return;
+    const root = document.documentElement;
+    btn.addEventListener("click", () => {
+      const dark = root.getAttribute("data-theme") === "dark"
+        || (!root.getAttribute("data-theme") && matchMedia("(prefers-color-scheme: dark)").matches);
+      root.setAttribute("data-theme", dark ? "light" : "dark");
+    });
+  }
 
-/* ---------- boot ---------- */
-(async function main() {
-  await renderTrip();
-  renderSchedule();
-  renderPlaces();
-  renderPacking();
-  renderBooking();
+  document.addEventListener("DOMContentLoaded", () => {
+    fillHero();
+    renderSchedule();
+    renderPlaces();
+    renderPacking();
+    renderBooking();
+    themeToggle();
+  });
 })();
