@@ -15,7 +15,7 @@
     const dates = $("#hero-dates");
     if (dates && D.trip) dates.textContent = D.trip.subtitle + " ・ " + D.trip.nights;
     const note = $("#hero-note");
-    if (note && D.trip) note.innerHTML = "<b>✓ 安心</b> " + esc(D.trip.note);
+    if (note && D.trip) note.innerHTML = window.ICON("check") + " <b>安心</b> " + esc(D.trip.note);
   }
 
   function renderSchedule() {
@@ -34,8 +34,8 @@
             <div class="tl-item">
               <div class="tl-time">${esc(it.time)}</div>
               <div class="tl-body">
-                <div class="tl-title">${esc(it.icon)} ${esc(it.title)}</div>
-                ${it.place ? `<div class="tl-place">📍 ${esc(it.place)}</div>` : ""}
+                <div class="tl-title">${window.ICON(it.icon)} ${esc(it.title)}</div>
+                ${it.place ? `<div class="tl-place">${window.ICON("place")} ${esc(it.place)}</div>` : ""}
                 ${it.memo ? `<div class="tl-memo">${esc(it.memo)}</div>` : ""}
                 ${it.map ? `<a class="maplink" href="${esc(it.map)}" target="_blank" rel="noopener">地図で見る</a>` : ""}
               </div>
@@ -119,7 +119,7 @@
     const wrap = $("#booking"); if (!wrap) return;
     const flights = D.flights.map((x) => `
       <div class="ticket">
-        <h3>✈️ ${esc(x.type)} ・ ${esc(x.no)}</h3>
+        <h3>${window.ICON("flight")} ${esc(x.type)} ・ ${esc(x.no)}</h3>
         <div class="kv"><span class="k">区間</span><span class="v">${esc(x.route)}</span></div>
         <div class="kv"><span class="k">日付</span><span class="v">${esc(x.date)}</span></div>
         <div class="kv"><span class="k">時刻</span><span class="v">${esc(x.time)}</span></div>
@@ -128,7 +128,7 @@
     const h = D.hotel;
     const hotel = `
       <div class="ticket">
-        <h3>🏨 ${esc(h.name)}</h3>
+        <h3>${window.ICON("hotel")} ${esc(h.name)}</h3>
         <div class="kv"><span class="k">チェックイン</span><span class="v">${esc(h.checkin)}</span></div>
         <div class="kv"><span class="k">チェックアウト</span><span class="v">${esc(h.checkout)}</span></div>
         <div class="kv"><span class="k">住所</span><span class="v">${esc(h.address)}</span></div>
@@ -138,7 +138,7 @@
     const tj = D.budget.reduce((n, r) => n + (r.jpy || 0), 0);
     const budget = `
       <div class="ticket">
-        <h3>💰 予算メモ</h3>
+        <h3>${window.ICON("payments")} 予算メモ</h3>
         <table class="budget">
           <thead><tr><th>項目</th><th>ウォン</th><th>円</th></tr></thead>
           <tbody>
@@ -171,6 +171,7 @@
     renderPlaces();
     renderPacking();
     renderBooking();
+    if (window.injectIcons) window.injectIcons();
     themeToggle();
   });
 })();

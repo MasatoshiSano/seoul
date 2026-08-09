@@ -207,4 +207,18 @@ table.budget td { font-variant-numeric: tabular-nums; }
 
 .themebtn { position: fixed; right: 16px; bottom: 16px; z-index: 50; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--text); font-size: 18px; cursor: pointer; box-shadow: var(--shadow-lg); }
 
+/* ---------- icons ---------- */
+.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -0.14em; flex: 0 0 auto; }
+.tl-title .ico { width: 19px; height: 19px; color: var(--accent-ink); margin-right: 5px; vertical-align: -3px; }
+.tile .ic { display: inline-flex; }
+.tile .ic .ico { width: 40px; height: 40px; color: var(--accent-ink); }
+.guide h2 .ic, .guide h3 .ic { display: inline-flex; vertical-align: -4px; margin-right: 4px; }
+.guide h2 .ic .ico { width: 26px; height: 26px; color: var(--accent-ink); }
+.guide h3 .ic .ico { width: 20px; height: 20px; color: var(--accent-ink); }
+.ticket h3 .ico { width: 18px; height: 18px; color: var(--accent-ink); }
+.route .pl { display: inline-flex; }
+.route .pl .ico { width: 22px; height: 22px; color: var(--accent-ink); }
+.callout .ico { width: 16px; height: 16px; color: var(--good); vertical-align: -2px; margin-right: 2px; }
+.tl-place .ico { width: 13px; height: 13px; color: var(--text-2); vertical-align: -2px; margin-right: 2px; }
+
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
