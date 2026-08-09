@@ -125,15 +125,19 @@
         <div class="kv"><span class="k">時刻</span><span class="v">${esc(x.time)}</span></div>
         <div class="kv"><span class="k">便名</span><span class="v">${esc(x.airline)} ${esc(x.no)}</span></div>
       </div>`).join("");
-    const h = D.hotel;
-    const hotel = `
+    const hotel = (D.hotels || []).map((h) => `
       <div class="ticket">
         <h3>${window.ICON("hotel")} ${esc(h.name)}</h3>
+        ${h.short ? `<div class="kv"><span class="k">泊数</span><span class="v">${esc(h.short)}</span></div>` : ""}
         <div class="kv"><span class="k">チェックイン</span><span class="v">${esc(h.checkin)}</span></div>
         <div class="kv"><span class="k">チェックアウト</span><span class="v">${esc(h.checkout)}</span></div>
-        <div class="kv"><span class="k">住所</span><span class="v">${esc(h.address)}</span></div>
+        <div class="kv"><span class="k">部屋</span><span class="v">${esc(h.room)}</span></div>
+        <div class="kv"><span class="k">人数</span><span class="v">${esc(h.guests)}</span></div>
+        <div class="kv"><span class="k">リクエスト</span><span class="v">${esc(h.requests)}</span></div>
+        <div class="kv"><span class="k">予約ID</span><span class="v">${esc(h.id)}</span></div>
+        ${h.note ? `<div class="kv"><span class="k">注意</span><span class="v">${esc(h.note)}</span></div>` : ""}
         <div style="margin-top:10px"><a class="maplink" href="${esc(h.map)}" target="_blank" rel="noopener">地図で見る</a></div>
-      </div>`;
+      </div>`).join("");
     const tk = D.budget.reduce((n, r) => n + (r.krw || 0), 0);
     const tj = D.budget.reduce((n, r) => n + (r.jpy || 0), 0);
     const budget = `
