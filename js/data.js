@@ -12,24 +12,25 @@ window.DATA = {
       { time: "19:00", icon: "train", title: "空港から東大門へ移動", place: "AREX＋地下鉄4号線 / リムジンバス", map: "https://maps.google.com/?q=Incheon+Airport+Railroad", memo: "AREX＋4号線でソウル駅乗換→東大門歴史文化公園駅（約60分）。楽ならリムジンバス（約90分）" },
       { time: "20:15", icon: "hotel", title: "ホテル ミリオレ ソウル チェックイン", place: "ホテル ミリオレ ソウル（東大門）", map: "https://maps.google.com/?q=Hotel+Migliore+Seoul+Dongdaemun", memo: "1泊目。到着予定20〜21時。高層階・静かな部屋をリクエスト。デラックスツイン（バスタブ有無はランダム）。予約ID 1755518948" },
       { time: "20:45", icon: "exchange", title: "両替（東大門）", place: "APM前 無人両替機（24h）/ Money Box東大門店", map: "https://maps.google.com/?q=APM+Dongdaemun", memo: "APM無人機は24時間・日本語対応。日本円→ウォン両替→WOWPASSにチャージ。少額の現金も確保" },
-      { time: "21:15", icon: "restaurant", title: "遅めの夕食：東大門", place: "タッカンマリ横丁 など（夜遅くまで営業）", map: "https://maps.google.com/?q=Dongdaemun+Dakhanmari+Alley", memo: "東大門は夜型エリア。タッカンマリやコプチャンで初日の乾杯🍻" },
+      { time: "21:00", icon: "restaurant", title: "夕食：대성식당 の なっこぷせ", place: "대성식당（鍾路3街）", map: "https://maps.google.com/?q=대성식당+낙곱새+종로3가", memo: "낙곱새（タコ・ホルモン・エビの辛鍋）の人気店。東大門から地下鉄で近い。予約不要だが閉店時間に注意して早めに🍲" },
       { time: "22:30", icon: "nightlife", title: "東大門ナイトショッピング（任意）", place: "東大門ファッションタウン / DDP", map: "https://maps.google.com/?q=Dongdaemun+Design+Plaza", memo: "元気があれば深夜まで営業のショッピングモールやDDPの夜景へ" }
     ]},
-    { date: "2026-08-28", day: "28", weekday: "金", label: "2日目 ・ 王宮＆伝統の街", items: [
-      { time: "09:00", icon: "luggage", title: "ミリオレ チェックアウト → ナインツリーへ荷物移動", place: "東大門（ミリオレ → ナインツリー）", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun", memo: "11時までにミリオレをチェックアウト。ナインツリーは同じ東大門エリア。到着予定10-11時に荷物を預けて身軽に（正式チェックインは15時〜）" },
-      { time: "10:00", icon: "temple", title: "景福宮", place: "Gyeongbokgung Palace", map: "https://maps.google.com/?q=Gyeongbokgung+Palace", memo: "韓服レンタルで入場無料＆写真映え。守門将交代式もチェック" },
-      { time: "12:00", icon: "restaurant", title: "昼食：参鶏湯 or カルグクス", place: "西村 / 三清洞", map: "https://maps.google.com/?q=Samcheongdong", memo: "王宮近くの名店で伝統料理" },
-      { time: "13:30", icon: "camera", title: "北村韓屋村さんぽ", place: "Bukchon Hanok Village", map: "https://maps.google.com/?q=Bukchon+Hanok+Village", memo: "静かな住宅地。マナーを守って撮影を" },
-      { time: "15:30", icon: "cafe", title: "仁寺洞でお茶＆雑貨", place: "Insadong", map: "https://maps.google.com/?q=Insadong", memo: "伝統茶カフェ、韓国雑貨・お土産探し" },
-      { time: "18:00", icon: "restaurant", title: "夕食：広蔵市場グルメ", place: "Gwangjang Market", map: "https://maps.google.com/?q=Gwangjang+Market", memo: "ユッケ・ピンデトク・マヨッキンパ。市場の熱気を楽しむ" },
-      { time: "20:00", icon: "hotel", title: "ナインツリー チェックイン", place: "ナインツリー バイ パルナス 東大門", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun", memo: "高層階・静かな部屋をリクエスト。歯ブラシ・歯磨き粉・カミソリは提供なしなので持参を。予約ID 1755517778" }
+    { date: "2026-08-28", day: "28", weekday: "金", label: "2日目 ・ 王宮＆安国グルメ", items: [
+      { time: "09:00", icon: "luggage", title: "ミリオレ チェックアウト → ナインツリーへ荷物移動", place: "東大門（ミリオレ → ナインツリー）", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun", memo: "11時までにミリオレをチェックアウト。荷物をナインツリーに預けて身軽に（正式チェックインは15時〜）" },
+      { time: "09:45", icon: "cafe", title: "朝食：ARTIST BAKERY の 塩パン", place: "ARTIST BAKERY（安国駅1番出口すぐ）", map: "https://maps.google.com/?q=Artist+Bakery+Anguk", memo: "ロンドンベーグルミュージアム系列の塩パン専門。景福宮の前に安国で朝パン＆コーヒー" },
+      { time: "10:30", icon: "temple", title: "景福宮（韓服レンタル）", place: "Gyeongbokgung Palace", map: "https://maps.google.com/?q=Gyeongbokgung+Palace", memo: "韓服で入場無料＆写真映え。守門将交代式もチェック" },
+      { time: "12:30", icon: "restaurant", title: "昼食：큰기와집 カンジャンケジャン ★要予約", place: "큰기와집（安国）", map: "https://maps.google.com/?q=큰기와집+안국+간장게장", memo: "ミシュラン掲載・自家仕込み朝鮮醤油の名店。安国＝景福宮の動線上。事前予約を!" },
+      { time: "14:30", icon: "camera", title: "北村韓屋村・仁寺洞さんぽ", place: "Bukchon / Insadong", map: "https://maps.google.com/?q=Bukchon+Hanok+Village", memo: "伝統家屋と雑貨・伝統茶。安国からそのまま徒歩圏" },
+      { time: "16:30", icon: "hotel", title: "ナインツリー チェックイン・小休憩", place: "ナインツリー バイ パルナス 東大門", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun", memo: "高層階・静かな部屋リクエスト。歯ブラシ等は持参。予約ID 1755517778" },
+      { time: "18:30", icon: "restaurant", title: "夕食：금돼지식당 サムギョプサル ★要予約", place: "금돼지식당（薬水）", map: "https://maps.google.com/?q=금돼지식당+약수", memo: "ミシュラン・ビブグルマンの名店。薬水は東大門から地下鉄近め。CatchTableで予約 or 17時に受付を!" }
     ]},
-    { date: "2026-08-29", day: "29", weekday: "土", label: "3日目 ・ 弘大＆東大門", items: [
-      { time: "10:30", icon: "palette", title: "弘大(ホンデ)エリア", place: "Hongdae", map: "https://maps.google.com/?q=Hongdae+Seoul", memo: "若者の街。ストリートパフォーマンスやショップ巡り" },
-      { time: "12:30", icon: "cafe", title: "昼食：話題のグルメ＆カフェ", place: "弘大の人気カフェ", map: "https://maps.google.com/?q=Hongdae+Cafe", memo: "おしゃれカフェでひと休み" },
-      { time: "15:00", icon: "park", title: "延南洞さんぽ（任意）", place: "Yeonnam-dong", map: "https://maps.google.com/?q=Yeonnam-dong", memo: "京義線숲길（森の小道）でのんびり" },
-      { time: "18:00", icon: "sparkle", title: "東大門デザインプラザ(DDP)", place: "Dongdaemun Design Plaza", map: "https://maps.google.com/?q=Dongdaemun+Design+Plaza", memo: "近未来建築＆夜のLEDバラ園" },
-      { time: "20:00", icon: "shopping", title: "東大門ナイトショッピング", place: "東大門ファッションタウン", map: "https://maps.google.com/?q=Dongdaemun+Market", memo: "深夜まで営業。掘り出し物探し" }
+    { date: "2026-08-29", day: "29", weekday: "土", label: "3日目 ・ 江南グルメ＆買い物", items: [
+      { time: "10:30", icon: "train", title: "江南エリアへ移動", place: "東大門 → 江南（地下鉄）", map: "https://maps.google.com/?q=Gangnam+Station", memo: "東大門から地下鉄で江南へ。フード＆ショッピングの1日" },
+      { time: "11:30", icon: "restaurant", title: "昼食：강남막국수앤보쌈（エゴママックス＆ポッサム）", place: "강남 막국수앤보쌈（江南駅1番出口）", map: "https://maps.google.com/?q=강남+막국수+보쌈+강남역", memo: "話題のエゴマ(荏胡麻)막국수＋ポッサム。開店直後が並ばず◎" },
+      { time: "13:30", icon: "shopping", title: "가로수길・オリーブヤングで買い物", place: "가로수길 / オリーブヤング江南", map: "https://maps.google.com/?q=Olive+Young+Gangnam", memo: "K-コスメまとめ買い（オリーブヤング）＋가로수길さんぽ" },
+      { time: "16:00", icon: "cafe", title: "ザ・現代ソウル or カフェ休憩", place: "The Hyundai Seoul / 江南のカフェ", map: "https://maps.google.com/?q=The+Hyundai+Seoul", memo: "映えデパートでひと休み（任意）" },
+      { time: "18:00", icon: "restaurant", title: "夕食：영천영화（よんちょんふぁ）육회・육회비빔밥 ★予約推奨", place: "영천영화 清潭店（狎鴎亭ロデオ）", map: "https://maps.google.com/?q=영천영화+청담", memo: "한우육회＆육회비빔밥の名店（24時間）。“セリユッケ”もこちらで想定。混むので予約推奨" },
+      { time: "20:30", icon: "shopping", title: "東大門へ戻ってナイトショッピング（任意）", place: "東大門ファッションタウン", map: "https://maps.google.com/?q=Dongdaemun+Market", memo: "深夜まで営業。最終日前の買い物" }
     ]},
     { date: "2026-08-30", day: "30", weekday: "日", label: "4日目 ・ 早朝出発", items: [
       { time: "06:30", icon: "gift", title: "起床・お土産の買い忘れチェック", place: "ホテル / 東大門のコンビニ", map: "https://maps.google.com/?q=Dongdaemun+Convenience+Store", memo: "11:25発と早いので前夜までにお土産は済ませておくのが安心" },
@@ -67,7 +68,9 @@ window.DATA = {
       { name: "瑞源（ソウォン）", area: "中区", desc: "こっちも同じく！（鮑がゆ）", map: "https://maps.app.goo.gl/j221vrBfMLTVBa3G8?g_st=ic" },
       { name: "대한곱창 明洞店（大韓コプチャン）", area: "明洞", desc: "コプチャン！人気店", map: "https://maps.app.goo.gl/tngzxThRkVnZNLV48?g_st=ic" },
       { name: "진미식당（真味食堂／チンミシクタン）", area: "麻浦・孔徳", desc: "カンジャンケジャンの“通の一択”。ミシュラン掲載の老舗。게장정식 約₩45,000。Day3(弘大)と好相性", map: "https://maps.google.com/?q=진미식당+마포+공덕+간장게장" },
-      { name: "큰기와집（クンギワジプ）", area: "鍾路・安国", desc: "自家仕込み朝鮮醤油の高級カンジャンケジャン。ミシュラン掲載。安国駅すぐでDay2(景福宮・北村)の動線上", map: "https://maps.google.com/?q=큰기와집+안국+간장게장" }
+      { name: "큰기와집（クンギワジプ）", area: "鍾路・安国", desc: "自家仕込み朝鮮醤油の高級カンジャンケジャン。ミシュラン掲載。安国駅すぐでDay2(景福宮・北村)の動線上", map: "https://maps.google.com/?q=큰기와집+안국+간장게장" },
+      { name: "대성식당（テソン食堂）", area: "鍾路3街", desc: "なっこぷせ（낙곱새＝タコ・ホルモン・エビの辛鍋）の人気店。東大門から近い", map: "https://maps.google.com/?q=대성식당+낙곱새+종로3가" },
+      { name: "ARTIST BAKERY（アーティストベーカリー）", area: "安国", desc: "塩パン専門。ロンドンベーグルミュージアム系列。安国駅1番出口すぐ・景福宮の前に", map: "https://maps.google.com/?q=Artist+Bakery+Anguk" }
     ]},
     { category: "ショッピング", tag: "買う", spots: [
       { name: "明洞", area: "中区", desc: "コスメ＆ファッションの定番", map: "https://maps.google.com/?q=Myeongdong" },
