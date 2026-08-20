@@ -24,12 +24,13 @@ window.DATA = {
       { time: "16:30", icon: "hotel", title: "ナインツリー チェックイン・小休憩", place: "ナインツリー バイ パルナス 東大門", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun", memo: "高層階・静かな部屋リクエスト。歯ブラシ等は持参。予約ID 1755517778" },
       { time: "18:30", icon: "restaurant", title: "夕食：금돼지식당 サムギョプサル ★要予約", place: "금돼지식당（薬水）", map: "https://maps.google.com/?q=금돼지식당+약수", memo: "ミシュラン・ビブグルマンの名店。薬水は東大門から地下鉄近め。CatchTableで予約 or 17時に受付を!" }
     ]},
-    { date: "2026-08-29", day: "29", weekday: "土", label: "3日目 ・ 江南グルメ＆買い物", items: [
-      { time: "10:30", icon: "train", title: "江南エリアへ移動", place: "東大門 → 江南（地下鉄）", map: "https://maps.google.com/?q=Gangnam+Station", memo: "東大門から地下鉄で江南へ。フード＆ショッピングの1日" },
-      { time: "11:30", icon: "restaurant", title: "昼食：강남막국수앤보쌈（エゴママックス＆ポッサム）", place: "강남 막국수앤보쌈（江南駅1番出口）", map: "https://maps.google.com/?q=강남+막국수+보쌈+강남역", memo: "話題のエゴマ(荏胡麻)막국수＋ポッサム。開店直後が並ばず◎" },
-      { time: "13:30", icon: "shopping", title: "가로수길・オリーブヤングで買い物", place: "가로수길 / オリーブヤング江南", map: "https://maps.google.com/?q=Olive+Young+Gangnam", memo: "K-コスメまとめ買い（オリーブヤング）＋가로수길さんぽ" },
-      { time: "16:00", icon: "cafe", title: "ザ・現代ソウル or カフェ休憩", place: "The Hyundai Seoul / 江南のカフェ", map: "https://maps.google.com/?q=The+Hyundai+Seoul", memo: "映えデパートでひと休み（任意）" },
-      { time: "18:00", icon: "restaurant", title: "夕食：영천영화（よんちょんふぁ）육회・육회비빔밥 ★予約推奨", place: "영천영화 清潭店（狎鴎亭ロデオ）", map: "https://maps.google.com/?q=영천영화+청담", memo: "한우육회＆육회비빔밥の名店（24時間）。“セリユッケ”もこちらで想定。混むので予約推奨" },
+    { date: "2026-08-29", day: "29", weekday: "土", label: "3日目 ・ 聖水＆江南グルメ", items: [
+      { time: "09:30", icon: "restaurant", title: "朝食：능동미나리 聖水店（セリユッケ）", place: "능동미나리 聖水店（聖水）", map: "https://maps.google.com/?q=능동미나리+성수", memo: "미나리곰탕＋육회비빔밥の名店（09:30〜24:00）。東大門から2号線で近い。朝から육회＆さっぱり곰탕" },
+      { time: "11:00", icon: "cafe", title: "聖水カフェ通りさんぽ（任意）", place: "Seongsu Cafe Street", map: "https://maps.google.com/?q=Seongsu+Cafe+Street", memo: "話題のカフェ密集エリアでコーヒー" },
+      { time: "12:30", icon: "train", title: "江南エリアへ移動", place: "聖水 → 江南（地下鉄2号線）", map: "https://maps.google.com/?q=Gangnam+Station", memo: "2号線で江南へ。フード＆ショッピング" },
+      { time: "13:30", icon: "restaurant", title: "遅め昼：강남막국수앤보쌈（エゴママックス＆ポッサム）", place: "강남 막국수앤보쌈（江南駅1番出口）", map: "https://maps.google.com/?q=강남+막국수+보쌈+강남역", memo: "話題のエゴマ(荏胡麻)막국수＋ポッサム。막국수は軽いので곰탕の後でもOK" },
+      { time: "15:30", icon: "shopping", title: "가로수길・オリーブヤングで買い物", place: "가로수길 / オリーブヤング江南", map: "https://maps.google.com/?q=Olive+Young+Gangnam", memo: "K-コスメまとめ買い（オリーブヤング）＋가로수길さんぽ" },
+      { time: "18:00", icon: "restaurant", title: "夕食：영천영화（よんちょんふぁ）육회・한우 ★予約推奨", place: "영천영화 清潭店（狎鴎亭ロデオ）", map: "https://maps.google.com/?q=영천영화+청담", memo: "한우육회＆焼き（살치살・갈비살）＋육회비빔밥の名店（24時間）。混むので予約推奨" },
       { time: "20:30", icon: "shopping", title: "東大門へ戻ってナイトショッピング（任意）", place: "東大門ファッションタウン", map: "https://maps.google.com/?q=Dongdaemun+Market", memo: "深夜まで営業。最終日前の買い物" }
     ]},
     { date: "2026-08-30", day: "30", weekday: "日", label: "4日目 ・ 早朝出発", items: [
@@ -70,7 +71,8 @@ window.DATA = {
       { name: "진미식당（真味食堂／チンミシクタン）", area: "麻浦・孔徳", desc: "カンジャンケジャンの“通の一択”。ミシュラン掲載の老舗。게장정식 約₩45,000。Day3(弘大)と好相性", map: "https://maps.google.com/?q=진미식당+마포+공덕+간장게장" },
       { name: "큰기와집（クンギワジプ）", area: "鍾路・安国", desc: "自家仕込み朝鮮醤油の高級カンジャンケジャン。ミシュラン掲載。安国駅すぐでDay2(景福宮・北村)の動線上", map: "https://maps.google.com/?q=큰기와집+안국+간장게장" },
       { name: "대성식당（テソン食堂）", area: "鍾路3街", desc: "なっこぷせ（낙곱새＝タコ・ホルモン・エビの辛鍋）の人気店。東大門から近い", map: "https://maps.google.com/?q=대성식당+낙곱새+종로3가" },
-      { name: "ARTIST BAKERY（アーティストベーカリー）", area: "安国", desc: "塩パン専門。ロンドンベーグルミュージアム系列。安国駅1番出口すぐ・景福宮の前に", map: "https://maps.google.com/?q=Artist+Bakery+Anguk" }
+      { name: "ARTIST BAKERY（アーティストベーカリー）", area: "安国", desc: "塩パン専門。ロンドンベーグルミュージアム系列。安国駅1番出口すぐ・景福宮の前に", map: "https://maps.google.com/?q=Artist+Bakery+Anguk" },
+      { name: "능동미나리 聖水店（ヌンドンミナリ）", area: "聖水", desc: "セリユッケ＝미나리곰탕＋육회비빔밥の名店。09:30〜24:00。東大門から2号線で近い", map: "https://maps.google.com/?q=능동미나리+성수" }
     ]},
     { category: "ショッピング", tag: "買う", spots: [
       { name: "明洞", area: "中区", desc: "コスメ＆ファッションの定番", map: "https://maps.google.com/?q=Myeongdong" },
