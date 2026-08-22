@@ -59,7 +59,17 @@ function scheduleInfoFor(spot) {
   return { visitDate: `${md}(${hit.weekday})`, visitOrder: String(hit.order) };
 }
 
-const rows = [["店名", "カテゴリ", "エリア", "順位", "メモ", "営業時間", "予約可否", "訪問日", "その日の順番", "検索用住所", "Naverで開く", "Googleで開く"]];
+// My Mapsのピンはタイトル列の文字がそのまま地図上に表示される（クリック不要）。
+// 訪問日・順番を先頭に埋め込んだ表示名を作り、タイトル列としてこちらを選んでもらう。
+const CIRCLED = ["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩"];
+function pinLabel(spot, visitDate, visitOrder) {
+  if (!visitDate) return spot.name;
+  const dateOnly = visitDate.split("(")[0];
+  const badge = CIRCLED[Number(visitOrder) - 1] || `(${visitOrder})`;
+  return `${dateOnly}${badge} ${spot.name}`;
+}
+
+const rows = [["ピン表示名（タイトルに選択）", "店名", "カテゴリ", "エリア", "順位", "メモ", "営業時間", "予約可否", "訪問日", "その日の順番", "検索用住所", "Naverで開く", "Googleで開く"]];
 
 for (const cat of DATA.places) {
   const isGourmet = cat.category.startsWith("グルメ");
@@ -67,7 +77,7 @@ for (const cat of DATA.places) {
     const q = searchTextFrom(s);
     // ショッピング等は今回のscheduleに登場しないため突き合わせ自体を行わない（誤マッチ防止）
     const { visitDate, visitOrder } = isGourmet ? scheduleInfoFor(s) : { visitDate: "", visitOrder: "" };
-    rows.push([s.name, cat.category, s.area, s.rank ? `No.${s.rank}` : "", s.desc, s.hours || "", s.reserve || "", visitDate, visitOrder, q, naverLink(q), googleLink(q)]);
+    rows.push([pinLabel(s, visitDate, visitOrder), s.name, cat.category, s.area, s.rank ? `No.${s.rank}` : "", s.desc, s.hours || "", s.reserve || "", visitDate, visitOrder, q, naverLink(q), googleLink(q)]);
   }
 }
 
@@ -76,7 +86,7 @@ for (const h of DATA.hotels) {
     ? decodeURIComponent(h.map.replace("https://maps.google.com/?q=", "")).replace(/\+/g, " ")
     : h.name;
   const memo = `${h.short}。${h.room}。${h.requests}。予約ID ${h.id}`;
-  rows.push([h.name, "🏨 ホテル", h.checkin.split("（")[0] + "〜", "", memo, "", "", "", "", q, naverLink(q), googleLink(q)]);
+  rows.push([h.name, h.name, "🏨 ホテル", h.checkin.split("（")[0] + "〜", "", memo, "", "", "", "", q, naverLink(q), googleLink(q)]);
 }
 
 const csv = rows.map((r) => r.map(csvEscape).join(",")).join("\n") + "\n";
