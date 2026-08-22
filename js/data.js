@@ -47,7 +47,7 @@ window.DATA = {
       { rank: 1, name: "남포면옥（南浦麺屋）", area: "中区（乙支路）", desc: "ビビン麺 ミシュラン掲載", map: "https://maps.app.goo.gl/ATZkmGPyKodgxrQc7?g_st=ic" },
       { rank: 2, name: "明洞餃子", area: "明洞", desc: "カルグクス＆マンドゥの老舗", map: "https://maps.google.com/?q=Myeongdong+Kyoja" },
       { rank: 3, name: "조조칼국수（ジョジョ カルグクス）", area: "聖水", desc: "カルグクスおすすめ！人気店", map: "https://maps.app.goo.gl/9EoFGSzGQgjn4evFA?g_st=ic" },
-      { rank: 4, name: "강남막국수（江南マックス）", area: "江南", desc: "マッククスがおいしい", map: "https://maps.app.goo.gl/SfSMVueGW97RNnu99?g_st=ic" }
+      { rank: 4, name: "강남 막국수앤보쌈（江南マックス＆ポッサム）", area: "江南駅1番出口", desc: "エゴマ(荏胡麻)막국수＋ポッサム。Day3昼食で訪問予定", map: "https://maps.google.com/?q=강남+막국수+보쌈+강남역" }
     ]},
     { category: "グルメ：サムギョプサル・豚肉", tag: "豚肉", spots: [
       { rank: 1, name: "금돼지식당（金豚食堂／クムテジシッタン）", area: "中区", desc: "ミシュラン・ビブグルマンの名店。17時ごろに予約だけ行かないと入れない人気店。日本人に人気で行く価値あり", map: "https://maps.app.goo.gl/CA5cfhqYQsac7GXG9?g_st=ic" },
