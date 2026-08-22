@@ -61,8 +61,8 @@ window.DATA = {
     ]},
     { category: "グルメ：ユッケ・육회비빔밥", tag: "ユッケ", spots: [
       { rank: 1, name: "ヨンチョンヨンファ（영천영화）", area: "江南（狎鴎亭）", desc: "한우 육회＆육회비빔밥の名店（24時間）。“韓牛の聖地”とも称される。混むので予約推奨", map: "https://maps.app.goo.gl/Jx8h24kw9fsafjtv6?g_st=ic" },
-      { rank: 3, name: "부촌육회본점（プチョン ユッケ本店）", area: "鍾路", desc: "超人気店 ユッケ", map: "https://maps.app.goo.gl/BBz1g5j47iXw9k8Y7?g_st=ic" },
-      { rank: 1, name: "능동미나리 聖水店（ヌンドンミナリ）", area: "聖水", desc: "セリユッケ＝미나리곰탕＋육회비빔밥の名店。09:30〜24:00。東大門から2号線で近い", map: "https://maps.google.com/?q=능동미나리+성수" }
+      { rank: 1, name: "능동미나리 聖水店（ヌンドンミナリ）", area: "聖水", desc: "セリユッケ＝미나리곰탕＋육회비빔밥の名店。09:30〜24:00。東大門から2号線で近い", map: "https://maps.google.com/?q=능동미나리+성수" },
+      { rank: 3, name: "부촌육회본점（プチョン ユッケ本店）", area: "鍾路", desc: "超人気店 ユッケ", map: "https://maps.app.goo.gl/BBz1g5j47iXw9k8Y7?g_st=ic" }
     ]},
     { category: "グルメ：ポッサム", tag: "ポッサム", spots: [
       { rank: 1, name: "패밀리손칼국수보쌈（ファミリーソン カルグクスポッサム）", area: "聖水", desc: "ポッサム！カルグクスとの組み合わせも楽しめる", map: "https://maps.app.goo.gl/XRqRPmWxiHKoXX666?g_st=ic" },
