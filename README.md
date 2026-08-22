@@ -62,23 +62,22 @@ index.html / schedule.html / places.html / guide.html / packing.html / booking.h
 css/style.css          デザイン（Apple風・ライト/ダーク対応）
 js/data.js             すべてのデータ（ここを編集）
 js/app.js              表示ロジック
-seoul_gourmet_map.csv  Google My Maps インポート用（js/data.js から自動生成）
+seoul_map_day1_0827.csv 〜 day4_0830.csv  日ごとの実ルート（Google My Maps インポート用・自動生成）
+seoul_map_wishlist.csv  行きたい場所のうち日程未定の候補（Google My Maps インポート用・自動生成）
+scripts/gen_csv.js      上記CSV一式の生成スクリプト
 ```
 
 ### 🗺️ Google My Maps 用CSVについて
 
-`seoul_gourmet_map.csv` は `js/data.js` の内容（グルメ・ショッピング・ホテル）を
-[Google My Maps](https://mymaps.google.com) にインポートして地図表示するためのファイルです。
-`js/data.js` を更新したら、このCSVも作り直して同期させてください。
+`js/data.js` の内容から `scripts/gen_csv.js` で複数のCSVを生成しています。
+`js/data.js` を更新したら `node scripts/gen_csv.js` を実行して作り直してください。
 
-実際にscheduleへ組み込まれている店には「訪問日」「その日の順番」列が自動で入ります
-（例：`8/28(金)` / `3`）。クリックしなくても地図上でひと目でわかるようにするには：
+- `seoul_map_day1_0827.csv` 〜 `seoul_map_day4_0830.csv`：その日の実際のルート（ホテル/空港→立寄り店→ホテル/空港、訪問順）
+- `seoul_map_wishlist.csv`：「行きたい場所」のうち、まだ日程に組み込まれていない候補（グルメ＋ショッピング）
 
-1. インポート時、マーカーのタイトルに使う列として **「ピン表示名（タイトルに選択）」** を選ぶ
-   → 地図上のピンの横に `8/28② 店名` のように日付＋丸数字の順番がそのまま表示される
-2. レイヤーのスタイル設定で **「訪問日」** 列を選んで「個々のスタイルを設定」にする
-   → 日付ごとにピンの色が自動で変わる（スケジュール外の候補店は空欄扱いでグレー等にまとまる）
-
-この2つを組み合わせると、クリックせずに「いつ・何番目に行く店か」が地図上で判別できます。
+[Google My Maps](https://mymaps.google.com) には、この5枚をそれぞれ**別レイヤーとして**インポートしてください。
+レイヤーごとに自動で異なる色が割り当てられるため、日ごと・候補用で色分けされた地図になります。
+インポート時、マーカーのタイトルに使う列として日ごとのCSVでは **「ピン表示名（タイトルに選択）」** を選ぶと、
+`①07:00 店名` のように丸数字＋時刻がピンの横にそのまま表示され、クリックしなくても訪問順がわかります。
 
 よい旅を！🇰🇷✈️
