@@ -18,9 +18,41 @@
     if (note && D.trip) note.innerHTML = window.ICON("check") + " <b>安心</b> " + esc(D.trip.note);
   }
 
+  function queryFromMapField(mapUrl, fallbackText) {
+    if (mapUrl && mapUrl.startsWith("https://maps.google.com/?q=")) {
+      return decodeURIComponent(mapUrl.replace("https://maps.google.com/?q=", "")).replace(/\+/g, " ");
+    }
+    return fallbackText || "";
+  }
+
+  function buildDayRoute(d) {
+    const stops = [];
+    if (d.startPlace) stops.push({ label: d.startPlace.name, query: queryFromMapField(d.startPlace.map, d.startPlace.name), map: d.startPlace.map });
+    for (const it of d.items) {
+      if (it.icon !== "restaurant" && it.icon !== "cafe") continue;
+      const label = it.place || it.title;
+      stops.push({ label, query: queryFromMapField(it.map, label), map: it.map });
+    }
+    if (d.endPlace) stops.push({ label: d.endPlace.name, query: queryFromMapField(d.endPlace.map, d.endPlace.name), map: d.endPlace.map });
+    return stops;
+  }
+
+  function directionsUrl(stops) {
+    if (stops.length < 2) return null;
+    const origin = encodeURIComponent(stops[0].query);
+    const destination = encodeURIComponent(stops[stops.length - 1].query);
+    const mid = stops.slice(1, -1).map((s) => encodeURIComponent(s.query)).join("|");
+    let url = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&travelmode=transit`;
+    if (mid) url += `&waypoints=${mid}`;
+    return url;
+  }
+
   function renderSchedule() {
     const wrap = $("#schedule"); if (!wrap) return;
-    wrap.innerHTML = D.schedule.map((d) => `
+    wrap.innerHTML = D.schedule.map((d) => {
+      const stops = buildDayRoute(d);
+      const allUrl = directionsUrl(stops);
+      return `
       <div class="day">
         <div class="day-head">
           <div class="day-num">${esc(d.day)}</div>
@@ -29,6 +61,16 @@
             <div class="day-sub">${esc(d.date)}（${esc(d.weekday)}）</div>
           </div>
         </div>
+        ${stops.length >= 2 ? `
+        <div class="route">
+          <div class="route-head">
+            <span>${window.ICON("place")} この日のルート（ホテル→お店→ホテル）</span>
+            ${allUrl ? `<a class="route-all" href="${esc(allUrl)}" target="_blank" rel="noopener">まとめて地図で見る ›</a>` : ""}
+          </div>
+          <div class="route-chain">
+            ${stops.map((s, i) => `${i > 0 ? '<span class="route-arrow">→</span>' : ""}<a class="route-chip" href="${esc(s.map || "#")}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join("")}
+          </div>
+        </div>` : ""}
         <div class="tl">
           ${d.items.map((it) => `
             <div class="tl-item">
@@ -41,7 +83,8 @@
               </div>
             </div>`).join("")}
         </div>
-      </div>`).join("");
+      </div>`;
+    }).join("");
   }
 
   function renderPlaces() {

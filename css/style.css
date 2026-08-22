@@ -137,6 +137,15 @@ h1.big {
 .day-num { font-size: 46px; font-weight: 700; letter-spacing: -0.03em; color: var(--accent-ink); line-height: 1; font-variant-numeric: tabular-nums; }
 .day-meta .day-title { font-size: 21px; font-weight: 700; letter-spacing: -0.02em; }
 .day-meta .day-sub { font-size: 13px; color: var(--text-2); font-variant-numeric: tabular-nums; }
+.route { background: var(--accent-soft); border-radius: var(--radius); padding: 14px 18px; margin-bottom: 14px; }
+.route-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; font-size: 13px; font-weight: 600; color: var(--accent-ink); margin-bottom: 10px; }
+.route-head .ico { width: 16px; height: 16px; vertical-align: -3px; margin-right: 2px; }
+.route-all { font-size: 13px; font-weight: 500; color: var(--accent-ink); white-space: nowrap; }
+.route-all:hover { text-decoration: underline; }
+.route-chain { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.route-chip { font-size: 13px; font-weight: 500; color: var(--text); background: var(--card); border-radius: 999px; padding: 6px 13px; white-space: nowrap; box-shadow: var(--shadow); }
+.route-chip:hover { color: var(--accent-ink); }
+.route-arrow { color: var(--text-2); font-size: 14px; }
 .tl { display: flex; flex-direction: column; gap: 12px; }
 .tl-item { display: flex; gap: 16px; background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px 18px; }
 .tl-time { flex: 0 0 52px; font-size: 15px; font-weight: 700; color: var(--accent-ink); font-variant-numeric: tabular-nums; padding-top: 1px; }
