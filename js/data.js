@@ -44,69 +44,69 @@ window.DATA = {
   ],
   places: [
     { category: "グルメ：麺（カルグクス・マッククス・ビビン麺）", tag: "麺", spots: [
-      { rank: 1, name: "남포면옥（南浦麺屋）", area: "中区（乙支路）", desc: "ビビン麺 ミシュラン掲載", map: "https://maps.app.goo.gl/ATZkmGPyKodgxrQc7?g_st=ic" },
-      { rank: 2, name: "明洞餃子", area: "明洞", desc: "カルグクス＆マンドゥの老舗", map: "https://maps.google.com/?q=Myeongdong+Kyoja" },
-      { rank: 3, name: "조조칼국수（ジョジョ カルグクス）", area: "聖水", desc: "カルグクスおすすめ！人気店", map: "https://maps.app.goo.gl/9EoFGSzGQgjn4evFA?g_st=ic" },
-      { rank: 4, name: "강남 막국수앤보쌈（江南マックス＆ポッサム）", area: "江南駅1番出口", desc: "エゴマ(荏胡麻)막국수＋ポッサム。Day3昼食で訪問予定", map: "https://maps.google.com/?q=강남+막국수+보쌈+강남역" }
+      { rank: 1, name: "남포면옥（南浦麺屋）", area: "中区（乙支路）", desc: "ビビン麺 ミシュラン掲載", map: "https://maps.app.goo.gl/ATZkmGPyKodgxrQc7?g_st=ic", hours: "平日11:30〜22:00・土日11:30〜21:00", reserve: "電話予約可" },
+      { rank: 2, name: "明洞餃子", area: "明洞", desc: "カルグクス＆マンドゥの老舗", map: "https://maps.google.com/?q=Myeongdong+Kyoja", hours: "10:30〜21:00(LO20:30)", reserve: "不要（回転率が高く行列は短め）" },
+      { rank: 3, name: "조조칼국수（ジョジョ カルグクス）", area: "聖水", desc: "カルグクスおすすめ！人気店", map: "https://maps.app.goo.gl/9EoFGSzGQgjn4evFA?g_st=ic", hours: "10:00〜21:30(LO21:00)", reserve: "不要（CatchTable予約も可）" },
+      { rank: 4, name: "강남 막국수앤보쌈（江南マックス＆ポッサム）", area: "江南駅1番出口", desc: "エゴマ(荏胡麻)막국수＋ポッサム。Day3昼食で訪問予定", map: "https://maps.google.com/?q=강남+막국수+보쌈+강남역", hours: "10:30〜21:00", reserve: "不要（CatchTable予約も可）" }
     ]},
     { category: "グルメ：サムギョプサル・豚肉", tag: "豚肉", spots: [
-      { rank: 2, name: "금돼지식당（金豚食堂／クムテジシッタン）", area: "中区", desc: "ミシュラン・ビブグルマンの名店。17時ごろに予約だけ行かないと入れない人気店。日本人に人気で行く価値あり", map: "https://maps.app.goo.gl/CA5cfhqYQsac7GXG9?g_st=ic" },
-      { rank: 3, name: "제주흑돈옥탑 BLACK BBQ（済州黒豚屋上BBQ）", area: "江南", desc: "豚肉ショルダーラックがよき。行くならキャッチテーブルで予約すべし！", map: "https://maps.app.goo.gl/tzTvNtXb7zGZNfrX8?g_st=ic" },
-      { rank: 1, name: "죽통령삼겹살 東大門店（竹統領サムギョプサル）", area: "東大門", desc: "ここのサムギョプサルも美味しい", map: "https://maps.app.goo.gl/KnHUXTihXx9ii4RS8?g_st=ic" }
+      { rank: 2, name: "금돼지식당（金豚食堂／クムテジシッタン）", area: "中区", desc: "ミシュラン・ビブグルマンの名店。17時ごろに予約だけ行かないと入れない人気店。日本人に人気で行く価値あり", map: "https://maps.app.goo.gl/CA5cfhqYQsac7GXG9?g_st=ic", hours: "11:30〜23:00(LO22:15頃)", reserve: "電話・オンライン予約不可。現地整理券／CatchTable・에그다이닝アプリで受付、웨이팅約2時間の人気店" },
+      { rank: 3, name: "제주흑돈옥탑 BLACK BBQ（済州黒豚屋上BBQ）", area: "江南", desc: "豚肉ショルダーラックがよき。行くならキャッチテーブルで予約すべし！", map: "https://maps.app.goo.gl/tzTvNtXb7zGZNfrX8?g_st=ic", hours: "11:00〜翌2:00(休憩15:00〜16:00)", reserve: "推奨・CatchTable予約可" },
+      { rank: 1, name: "죽통령삼겹살 東大門店（竹統領サムギョプサル）", area: "東大門", desc: "ここのサムギョプサルも美味しい", map: "https://maps.app.goo.gl/KnHUXTihXx9ii4RS8?g_st=ic", hours: "11:40〜23:00", reserve: "不要" }
     ]},
     { category: "グルメ：カンジャンケジャン", tag: "ケジャン", spots: [
-      { rank: 1, name: "수라게장 明洞2号店（スラケジャン）", area: "明洞", desc: "宮中料理仕立ての上品なカンジャンケジャン専門店。1号店より空いていて落ち着いた雰囲気。11:00〜22:00", map: "https://maps.app.goo.gl/gCyQcUKeqb8wA68QA" },
-      { rank: 2, name: "오다리집 간장게장 明洞直営店（オダリチプ カンジャンケジャン）", area: "明洞", desc: "チェーン店のカンジャンケジャン。日本人に人気", map: "https://maps.app.goo.gl/oDSj8qHvPZfuLRB38" },
-      { rank: 3, name: "함초간장게장（ハムチョ・カンジャンケジャン）", area: "明洞", desc: "看板は전복장（アワビ醤油漬け）。薬草と一緒に熟成。塩辛すぎず「ご飯泥棒」の異名。明洞駅5/9/10番出口 徒歩1分・11:00〜22:00(LO21:30)", map: "https://maps.app.goo.gl/Udsw9d3YZL27von39" }
+      { rank: 1, name: "수라게장 明洞2号店（スラケジャン）", area: "明洞", desc: "宮中料理仕立ての上品なカンジャンケジャン専門店。1号店より空いていて落ち着いた雰囲気。11:00〜22:00", map: "https://maps.app.goo.gl/gCyQcUKeqb8wA68QA", hours: "10:00〜24:00", reserve: "インスタDM予約可（@sura_gejang）" },
+      { rank: 2, name: "오다리집 간장게장 明洞直営店（オダリチプ カンジャンケジャン）", area: "明洞", desc: "チェーン店のカンジャンケジャン。日本人に人気", map: "https://maps.app.goo.gl/oDSj8qHvPZfuLRB38", hours: "10:00〜21:00", reserve: "不要（電話問い合わせ可）" },
+      { rank: 3, name: "함초간장게장（ハムチョ・カンジャンケジャン）", area: "明洞", desc: "看板は전복장（アワビ醤油漬け）。薬草と一緒に熟成。塩辛すぎず「ご飯泥棒」の異名。明洞駅5/9/10番出口 徒歩1分・11:00〜22:00(LO21:30)", map: "https://maps.app.goo.gl/Udsw9d3YZL27von39", hours: "11:00〜22:00(LO21:30)", reserve: "推奨（웨이팅あり）" }
     ]},
     { category: "グルメ：ユッケ・육회비빔밥", tag: "ユッケ", spots: [
-      { rank: 1, name: "ヨンチョンヨンファ（영천영화）", area: "江南（狎鴎亭）", desc: "한우 육회＆육회비빔밥の名店（24時間）。“韓牛の聖地”とも称される。混むので予約推奨", map: "https://maps.app.goo.gl/Jx8h24kw9fsafjtv6?g_st=ic" },
-      { rank: 1, name: "능동미나리 聖水店（ヌンドンミナリ）", area: "聖水", desc: "セリユッケ＝미나리곰탕＋육회비빔밥の名店。09:30〜24:00。東大門から2号線で近い", map: "https://maps.google.com/?q=능동미나리+성수" },
-      { rank: 3, name: "부촌육회본점（プチョン ユッケ本店）", area: "鍾路", desc: "超人気店 ユッケ", map: "https://maps.app.goo.gl/BBz1g5j47iXw9k8Y7?g_st=ic" }
+      { rank: 1, name: "ヨンチョンヨンファ（영천영화）", area: "江南（狎鴎亭）", desc: "한우 육회＆육회비빔밥の名店（24時間）。“韓牛の聖地”とも称される。混むので予約推奨", map: "https://maps.app.goo.gl/Jx8h24kw9fsafjtv6?g_st=ic", hours: "24時間", reserve: "推奨〜必須（웨이팅長め・CatchTable予約可）" },
+      { rank: 1, name: "능동미나리 聖水店（ヌンドンミナリ）", area: "聖水", desc: "セリユッケ＝미나리곰탕＋육회비빔밥の名店。09:30〜24:00。東大門から2号線で近い", map: "https://maps.google.com/?q=능동미나리+성수", hours: "平日09:30〜24:00・週末09:00〜24:00", reserve: "不可（予約・웨이팅接受なし、先着順）" },
+      { rank: 3, name: "부촌육회본점（プチョン ユッケ本店）", area: "鍾路", desc: "超人気店 ユッケ", map: "https://maps.app.goo.gl/BBz1g5j47iXw9k8Y7?g_st=ic", hours: "10:00〜21:30(LO21:00)", reserve: "不可（先着順、웨이팅あり）" }
     ]},
     { category: "グルメ：ポッサム", tag: "ポッサム", spots: [
-      { rank: 1, name: "송정보쌈 鍾路店（ソンジョン ポッサム）", area: "鍾路", desc: "ポッサム！", map: "https://maps.app.goo.gl/v27FHS1rSDW5wDqf7?g_st=ic" },
-      { rank: 2, name: "패밀리손칼국수보쌈（ファミリーソン カルグクスポッサム）", area: "聖水", desc: "ポッサム！カルグクスとの組み合わせも楽しめる", map: "https://maps.app.goo.gl/XRqRPmWxiHKoXX666?g_st=ic" },
-      { rank: 3, name: "정담은보쌈 北村店（チョンダムンポッサム）", area: "北村（安国）", desc: "韓屋座敷のポッサム専門店。文魚(タコ)ポッサム・カキポッサムが名物。伝統酒とのペアリングも人気。安国駅すぐ", map: "https://maps.app.goo.gl/gNMkDc89G4x66V8d7" },
-      { rank: 4, name: "천하보쌈（チョンハポッサム）", area: "北村（三清洞）", desc: "北村・三清洞のポッサム名店。“ソウル三大ポッサム”の一つとも称される。カキポッサムが名物", map: "https://maps.app.goo.gl/7RJthTLYZgBGbYbG8" }
+      { rank: 1, name: "손정보쌈 鍾路店（ソンジョン ポッサム）", area: "鍾路", desc: "ポッサム！", map: "https://maps.app.goo.gl/v27FHS1rSDW5wDqf7?g_st=ic", hours: "平日11:00〜22:00(休憩14:30〜16:30・LO21:20)・土11:30〜22:00・日休", reserve: "CatchTable予約可" },
+      { rank: 2, name: "패밀리손칼국수보쌈（ファミリーソン カルグクスポッサム）", area: "聖水", desc: "ポッサム！カルグクスとの組み合わせも楽しめる", map: "https://maps.app.goo.gl/XRqRPmWxiHKoXX666?g_st=ic", hours: "11:30〜22:00", reserve: "不要" },
+      { rank: 3, name: "정담은보쌈 北村店（チョンダムンポッサム）", area: "北村（安国）", desc: "韓屋座敷のポッサム専門店。文魚(タコ)ポッサム・カキポッサムが名物。伝統酒とのペアリングも人気。安国駅すぐ", map: "https://maps.app.goo.gl/gNMkDc89G4x66V8d7", hours: "昼11:00〜14:30(LO13:30)・夜16:00〜22:00(LO21:00)", reserve: "CatchTable予約可" },
+      { rank: 4, name: "천하보쌈（チョンハポッサム）", area: "北村（三清洞）", desc: "北村・三清洞のポッサム名店。“ソウル三大ポッサム”の一つとも称される。カキポッサムが名物", map: "https://maps.app.goo.gl/7RJthTLYZgBGbYbG8", hours: "11:00〜21:00(LO20:00)・月4週目の日曜休", reserve: "電話予約可" }
     ]},
     { category: "グルメ：鍋・煮込み", tag: "鍋", spots: [
-      { rank: 1, name: "土俗村 参鶏湯", area: "西村", desc: "行列必至の参鶏湯名店。全国的にも屈指の知名度", map: "https://maps.google.com/?q=Tosokchon+Samgyetang" },
-      { rank: 2, name: "진옥화할매원조닭한마리（陳玉華ハルメ元祖タッカンマリ）", area: "鍾路（タッカンマリ横丁）", desc: "タッカンマリならここか隣のお店。日本人に人気で美味しい", map: "https://maps.app.goo.gl/69e462x9FhnV8k5V6?g_st=ic" },
-      { rank: 3, name: "미성옥（味成屋／ミソンオク）", area: "明洞", desc: "路地裏の名店。ソルロンタン", map: "https://maps.app.goo.gl/ya7VqwFwBxAM8psx8?g_st=ic" },
-      { rank: 4, name: "대성식당（テソン食堂）", area: "鍾路3街", desc: "なっこぷせ（낙곱새＝タコ・ホルモン・エビの辛鍋）の人気店。東大門から近い", map: "https://maps.google.com/?q=대성식당+낙곱새+종로3가" },
-      { rank: 5, name: "테낙식당（テナッ食堂）聖水直営店", area: "聖水", desc: "ホルモンと鶏肉鍋 おすすめ！", map: "https://maps.app.goo.gl/HRGWETSTT8dBSWxX9?g_st=ic" }
+      { rank: 1, name: "土俗村 参鶏湯", area: "西村", desc: "行列必至の参鶏湯名店。全国的にも屈指の知名度", map: "https://maps.google.com/?q=Tosokchon+Samgyetang", hours: "10:00〜22:00(LO21:00)", reserve: "推奨（電話・オンライン予約可）" },
+      { rank: 2, name: "진옥화할매원조닭한마리（陳玉華ハルメ元祖タッカンマリ）", area: "鍾路（タッカンマリ横丁）", desc: "タッカンマリならここか隣のお店。日本人に人気で美味しい", map: "https://maps.app.goo.gl/69e462x9FhnV8k5V6?g_st=ic", hours: "10:30〜翌1:00", reserve: "不要" },
+      { rank: 3, name: "미성옥（味成屋／ミソンオク）", area: "明洞", desc: "路地裏の名店。ソルロンタン", map: "https://maps.app.goo.gl/ya7VqwFwBxAM8psx8?g_st=ic", hours: "06:00〜21:00", reserve: "不要" },
+      { rank: 4, name: "대성식당（テソン食堂）", area: "鍾路3街", desc: "なっこぷせ（낙곱새＝タコ・ホルモン・エビの辛鍋）の人気店。東大門から近い", map: "https://maps.google.com/?q=대성식당+낙곱새+종로3가", hours: "11:30〜21:50頃(LO21:20頃)", reserve: "不要" },
+      { rank: 5, name: "테낙식당（テナッ食堂）聖水直営店", area: "聖水", desc: "ホルモンと鶏肉鍋 おすすめ！", map: "https://maps.app.goo.gl/HRGWETSTT8dBSWxX9?g_st=ic", hours: "情報不明（要現地確認）", reserve: "情報不明" }
     ]},
     { category: "グルメ：タコ・ホルモン系", tag: "ホルモン", spots: [
-      { rank: 1, name: "부촌육회본점（プチョン ユッケ本店）", area: "鍾路", desc: "超人気店 ユッケ", map: "https://maps.app.goo.gl/BBz1g5j47iXw9k8Y7?g_st=ic" },
-      { rank: 2, name: "해남낙지（ヘナムナクチ）", area: "中区", desc: "チュクミとかタコ料理", map: "https://maps.app.goo.gl/o7kjpNQPxBV1tCMHA?g_st=ic" }
+      { rank: 1, name: "부촌육회본점（プチョン ユッケ本店）", area: "鍾路", desc: "超人気店 ユッケ", map: "https://maps.app.goo.gl/BBz1g5j47iXw9k8Y7?g_st=ic", hours: "10:00〜21:30(LO21:00)", reserve: "不可（先着順、웨이팅あり）" },
+      { rank: 2, name: "해남낙지（ヘナムナクチ）", area: "中区", desc: "チュクミとかタコ料理", map: "https://maps.app.goo.gl/o7kjpNQPxBV1tCMHA?g_st=ic", hours: "月〜土11:30〜21:30(休憩15:00〜17:00・LO20:30)・日休", reserve: "不要（電話問い合わせ可）" }
     ]},
     { category: "グルメ：粥", tag: "粥", spots: [
-      { rank: 1, name: "히죽히죽（喜粥喜粥）", area: "忠武路", desc: "朝ごはんに鮑がゆが超人気店", map: "https://maps.app.goo.gl/HN1puTrr6XJkkqhe7?g_st=ic" },
-      { rank: 2, name: "瑞源（ソウォン）", area: "中区", desc: "こっちも同じく！（鮑がゆ）", map: "https://maps.app.goo.gl/j221vrBfMLTVBa3G8?g_st=ic" },
-      { rank: 3, name: "송죽（ソンジュク）", area: "明洞・中区", desc: "キノコ・カキ・エビ粥などが人気の老舗粥専門店。伝統的な朝ごはんに", map: "https://maps.app.goo.gl/KFb1n196VjWeGB91A" }
+      { rank: 1, name: "히죽히죽（喜粥喜粥）", area: "忠武路", desc: "朝ごはんに鮑がゆが超人気店", map: "https://maps.app.goo.gl/HN1puTrr6XJkkqhe7?g_st=ic", hours: "07:00〜22:00(LO20:50)", reserve: "不要" },
+      { rank: 2, name: "瑞源（ソウォン）", area: "中区", desc: "こっちも同じく！（鮑がゆ）", map: "https://maps.app.goo.gl/j221vrBfMLTVBa3G8?g_st=ic", hours: "月〜土07:00〜17:00・日07:00〜14:00・隔週水休", reserve: "不要" },
+      { rank: 3, name: "송죽（ソンジュク）", area: "明洞・中区", desc: "キノコ・カキ・エビ粥などが人気の老舗粥専門店。伝統的な朝ごはんに", map: "https://maps.app.goo.gl/KFb1n196VjWeGB91A", hours: "月〜木07:00〜19:00・金07:00〜15:00・土日07:00〜13:00", reserve: "不要" }
     ]},
     { category: "グルメ：カフェ・ベーカリー", tag: "カフェ", spots: [
-      { rank: 1, name: "ARTIST BAKERY（アーティストベーカリー）", area: "安国", desc: "塩パン専門。ロンドンベーグルミュージアム系列。安国駅1番出口すぐ・景福宮の前に", map: "https://maps.google.com/?q=Artist+Bakery+Anguk" },
-      { rank: 2, name: "聖水洞カフェ通り", area: "聖水", desc: "話題のおしゃれカフェ密集エリア", map: "https://maps.google.com/?q=Seongsu+Cafe+Street" }
+      { rank: 1, name: "ARTIST BAKERY（アーティストベーカリー）", area: "安国", desc: "塩パン専門。ロンドンベーグルミュージアム系列。安国駅1番出口すぐ・景福宮の前に", map: "https://maps.google.com/?q=Artist+Bakery+Anguk", hours: "07:30〜20:00・年中無休", reserve: "不要" },
+      { rank: 2, name: "聖水洞カフェ通り", area: "聖水", desc: "話題のおしゃれカフェ密集エリア", map: "https://maps.google.com/?q=Seongsu+Cafe+Street", hours: "店舗により異なる（目安10:00〜22:00）", reserve: "不要" }
     ]},
     { category: "グルメ：市場・屋台", tag: "市場", spots: [
-      { rank: 1, name: "広蔵市場", area: "鍾路", desc: "屋台グルメの宝庫。ユッケ・ピンデトク", map: "https://maps.google.com/?q=Gwangjang+Market" }
+      { rank: 1, name: "広蔵市場", area: "鍾路", desc: "屋台グルメの宝庫。ユッケ・ピンデトク", map: "https://maps.google.com/?q=Gwangjang+Market", hours: "市場全体09:00〜18:00(日休)・食べ歩き横丁09:00〜23:00(年中無休)", reserve: "不要" }
     ]},
     { category: "ショッピング：東大門（宿から徒歩圏）", tag: "至近", spots: [
-      { name: "東大門ファッションタウン", area: "東大門", desc: "深夜まで営業の卸＆小売天国。エリア一帯の総称", map: "https://maps.google.com/?q=Dongdaemun+Market" },
-      { name: "LOTTE FITIN（ロッテフィッティン）", area: "東大門", desc: "東大門駅直結。1-4Fファッション／5Fボウリング等の娯楽／6F化粧品／7-8Fレストラン。デパート感覚で買いやすい", map: "https://maps.google.com/?q=Lotte+Fitin+Dongdaemun" },
-      { name: "DOOTA MALL（トゥータモール）", area: "東大門", desc: "10:30〜24:00営業の老舗ファッションビル。K-デザイナーブランドが集結（4F）。トレンド重視派に人気", map: "https://maps.google.com/?q=Doota+Mall+Dongdaemun" },
-      { name: "Migliore（ミリオレ東大門）", area: "東大門", desc: "老舗の卸＆小売ビル。3万ウォン以上の購入でパスポート提示の即時免税OK", map: "https://maps.google.com/?q=Migliore+Dongdaemun" },
-      { name: "nyu nyu（ニューニュー）", area: "東大門", desc: "元はアクセサリー特化だったが、今は服・バッグ・雑貨まで扱うファッションビル。個人購入もしやすい", map: "https://maps.google.com/?q=nyu+nyu+Dongdaemun" }
+      { name: "東大門ファッションタウン", area: "東大門", desc: "深夜まで営業の卸＆小売天国。エリア一帯の総称", map: "https://maps.google.com/?q=Dongdaemun+Market", hours: "店舗により異なる（多くは深夜〜早朝まで営業）", reserve: "不要" },
+      { name: "LOTTE FITIN（ロッテフィッティン）", area: "東大門", desc: "東大門駅直結。1-4Fファッション／5Fボウリング等の娯楽／6F化粧品／7-8Fレストラン。デパート感覚で買いやすい", map: "https://maps.google.com/?q=Lotte+Fitin+Dongdaemun", hours: "ショップ10:30〜21:00・飲食11:00〜21:00・カフェ10:30〜23:00", reserve: "不要" },
+      { name: "DOOTA MALL（トゥータモール）", area: "東大門", desc: "10:30〜24:00営業の老舗ファッションビル。K-デザイナーブランドが集結（4F）。トレンド重視派に人気", map: "https://maps.google.com/?q=Doota+Mall+Dongdaemun", hours: "10:30〜24:00", reserve: "不要" },
+      { name: "Migliore（ミリオレ東大門）", area: "東大門", desc: "老舗の卸＆小売ビル。3万ウォン以上の購入でパスポート提示の即時免税OK", map: "https://maps.google.com/?q=Migliore+Dongdaemun", hours: "10:30〜翌2:00・月休", reserve: "不要" },
+      { name: "nyu nyu（ニューニュー）", area: "東大門", desc: "元はアクセサリー特化だったが、今は服・バッグ・雑貨まで扱うファッションビル。個人購入もしやすい", map: "https://maps.google.com/?q=nyu+nyu+Dongdaemun", hours: "11:00〜翌5:00", reserve: "不要" }
     ]},
     { category: "ショッピング：明洞（コスメ定番）", tag: "定番", spots: [
-      { name: "明洞", area: "中区", desc: "コスメ＆ファッション街歩きの定番エリア", map: "https://maps.google.com/?q=Myeongdong" },
-      { name: "オリーブヤング 明洞本店", area: "明洞", desc: "K-コスメまとめ買いはここ", map: "https://maps.google.com/?q=Olive+Young+Myeongdong" }
+      { name: "明洞", area: "中区", desc: "コスメ＆ファッション街歩きの定番エリア", map: "https://maps.google.com/?q=Myeongdong", hours: "店舗により異なる（街区のため定めなし）", reserve: "不要" },
+      { name: "オリーブヤング 明洞本店", area: "明洞", desc: "K-コスメまとめ買いはここ", map: "https://maps.google.com/?q=Olive+Young+Myeongdong", hours: "10:00〜22:30", reserve: "不要" }
     ]},
     { category: "ショッピング：郊外の大型モール", tag: "遠出", spots: [
-      { name: "ザ・現代ソウル", area: "汝矣島", desc: "2021年開業、ソウル最大級の百貨店（売場面積 約8.9万㎡・約600店舗）。ドラマ『涙の女王』ロケ地で近年大人気。タンバリンズ・ジェントルモンスターなど日本人に人気のブランドも", map: "https://maps.google.com/?q=The+Hyundai+Seoul" },
-      { name: "スターフィールド COEXモール", area: "三成", desc: "地下鉄2号線 三成駅直結。300以上の店舗・グルメが入る大型複合施設。新世界系の免税店も併設。雨天・猛暑日でも屋内で楽しめる。Day3の江南〜三成の動線上", map: "https://maps.google.com/?q=Starfield+COEX+Mall" }
+      { name: "ザ・現代ソウル", area: "汝矣島", desc: "2021年開業、ソウル最大級の百貨店（売場面積 約8.9万㎡・約600店舗）。ドラマ『涙の女王』ロケ地で近年大人気。タンバリンズ・ジェントルモンスターなど日本人に人気のブランドも", map: "https://maps.google.com/?q=The+Hyundai+Seoul", hours: "月〜木10:30〜20:00・金〜日10:30〜20:30（レストラン街は〜22:00）", reserve: "不要" },
+      { name: "スターフィールド COEXモール", area: "三成", desc: "地下鉄2号線 三成駅直結。300以上の店舗・グルメが入る大型複合施設。新世界系の免税店も併設。雨天・猛暑日でも屋内で楽しめる。Day3の江南〜三成の動線上", map: "https://maps.google.com/?q=Starfield+COEX+Mall", hours: "10:00〜22:00・年中無休", reserve: "不要" }
     ]}
   ],
   packing: [

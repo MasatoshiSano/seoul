@@ -60,6 +60,7 @@
                 ${s.rank ? `<span class="rank-badge rank-${s.rank <= 3 ? s.rank : "n"}">No.${s.rank}</span>` : ""}
                 <span class="row-name ${done ? "done" : ""}">${esc(s.name)}</span><span class="row-area">${esc(s.area)}</span>
                 <div class="row-desc">${esc(s.desc)}</div>
+                ${s.hours || s.reserve ? `<div class="row-meta">${s.hours ? `<span>🕐 ${esc(s.hours)}</span>` : ""}${s.reserve ? `<span>📅 予約: ${esc(s.reserve)}</span>` : ""}</div>` : ""}
                 <a class="maplink" href="${esc(s.map)}" target="_blank" rel="noopener">地図で見る</a>
               </div>
             </div>`;
