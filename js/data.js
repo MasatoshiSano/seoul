@@ -83,7 +83,8 @@ window.DATA = {
     ]},
     { category: "グルメ：粥", tag: "粥", spots: [
       { rank: 1, name: "히죽히죽（喜粥喜粥）", area: "忠武路", desc: "朝ごはんに鮑がゆが超人気店", map: "https://maps.app.goo.gl/HN1puTrr6XJkkqhe7?g_st=ic" },
-      { rank: 2, name: "瑞源（ソウォン）", area: "中区", desc: "こっちも同じく！（鮑がゆ）", map: "https://maps.app.goo.gl/j221vrBfMLTVBa3G8?g_st=ic" }
+      { rank: 2, name: "瑞源（ソウォン）", area: "中区", desc: "こっちも同じく！（鮑がゆ）", map: "https://maps.app.goo.gl/j221vrBfMLTVBa3G8?g_st=ic" },
+      { rank: 3, name: "송죽（ソンジュク）", area: "明洞・中区", desc: "キノコ・カキ・エビ粥などが人気の老舗粥専門店。伝統的な朝ごはんに", map: "https://maps.app.goo.gl/KFb1n196VjWeGB91A" }
     ]},
     { category: "グルメ：カフェ・ベーカリー", tag: "カフェ", spots: [
       { rank: 1, name: "ARTIST BAKERY（アーティストベーカリー）", area: "安国", desc: "塩パン専門。ロンドンベーグルミュージアム系列。安国駅1番出口すぐ・景福宮の前に", map: "https://maps.google.com/?q=Artist+Bakery+Anguk" },
