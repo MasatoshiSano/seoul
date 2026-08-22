@@ -7,14 +7,19 @@ window.DATA = {
     rate: "1,000ウォン ≒ 約109円（目安）。現地レートは変動します。※ホテル代は支払予定日（8/22・8/23）の当日レートで日本円に換算されます。"
   },
   schedule: [
-    { date: "2026-08-27", day: "27", weekday: "木", label: "1日目 ・ 夕方着＆東大門の夜", items: [
+    { date: "2026-08-27", day: "27", weekday: "木", label: "1日目 ・ 夕方着＆東大門の夜",
+      endPlace: { name: "ホテル ミリオレ ソウル", map: "https://maps.google.com/?q=Hotel+Migliore+Seoul+Dongdaemun" },
+      items: [
       { time: "18:00", icon: "flight", title: "仁川国際空港 到着（MM743）", place: "Incheon Airport (ICN)", map: "https://maps.google.com/?q=Incheon+International+Airport", memo: "関西16:05発→仁川18:00着。空港では大きな両替はせず、カードで移動券購入 or WOWPASS空港セット(T-money1万W入り)を受取" },
       { time: "19:00", icon: "train", title: "空港から東大門へ移動", place: "AREX＋地下鉄4号線 / リムジンバス", map: "https://maps.google.com/?q=Incheon+Airport+Railroad", memo: "【移動】AREX＋4号線でソウル駅乗換→東大門歴史文化公園駅（約60分）。楽ならリムジンバス（約90分）" },
       { time: "20:15", icon: "hotel", title: "ホテル ミリオレ ソウル チェックイン", place: "ホテル ミリオレ ソウル（東大門）", map: "https://maps.google.com/?q=Hotel+Migliore+Seoul+Dongdaemun", memo: "1泊目。到着予定20〜21時。高層階・静かな部屋をリクエスト。デラックスツイン（バスタブ有無はランダム）。予約ID 1755518948" },
       { time: "20:45", icon: "exchange", title: "両替（東大門）", place: "APM前 無人両替機（24h）/ Money Box東大門店", map: "https://maps.google.com/?q=APM+Dongdaemun", memo: "APM無人機は24時間・日本語対応。日本円→ウォン両替→WOWPASSにチャージ。少額の現金も確保" },
       { time: "21:00", icon: "restaurant", title: "夕食：竹統領サムギョプサル 東大門店（죽통령삼겹살）", place: "竹統領サムギョプサル 東大門店（東大門）", map: "https://maps.app.goo.gl/KnHUXTihXx9ii4RS8?g_st=ic", memo: "【移動】ミリオレから徒歩2〜3分（同じ장충단로沿い）。【理由】豚肉カテゴリ必須＆1位。到着初日で長距離移動できないため、ホテルと同じ通りにあるこの店が最適。11:40〜23:00・予約不要なので到着が多少ずれても安心" }
     ]},
-    { date: "2026-08-28", day: "28", weekday: "金", label: "2日目 ・ 鍾路＆明洞グルメ", items: [
+    { date: "2026-08-28", day: "28", weekday: "金", label: "2日目 ・ 鍾路＆明洞グルメ",
+      startPlace: { name: "ホテル ミリオレ ソウル", map: "https://maps.google.com/?q=Hotel+Migliore+Seoul+Dongdaemun" },
+      endPlace: { name: "ナインツリー バイ パルナス 東大門", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun" },
+      items: [
       { time: "07:00", icon: "restaurant", title: "朝食：喜粥喜粥（히죽히죽）の鮑がゆ", place: "喜粥喜粥（忠武路）", map: "https://maps.app.goo.gl/HN1puTrr6XJkkqhe7?g_st=ic", memo: "【移動】ミリオレからドア・ツー・ドアで約15分（地下鉄4号線1駅、動大門歴史文化公園→忠武路）。【理由】粥カテゴリ必須＆1位。07:00開店で朝食に唯一使える時間帯。予約不要" },
       { time: "09:00", icon: "luggage", title: "ミリオレ チェックアウト → ナインツリーへ荷物移動", place: "東大門（ミリオレ → ナインツリー）", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun", memo: "【移動】喜粥喜粥から約15分でミリオレへ戻り、荷物をまとめてナインツリーへ（徒歩約10分）。11時までにミリオレをチェックアウト。正式チェックインは夜〜" },
       { time: "10:30", icon: "cafe", title: "コーヒー休憩：ARTIST BAKERY の塩パン", place: "ARTIST BAKERY（安国）", map: "https://maps.google.com/?q=Artist+Bakery+Anguk", memo: "【移動】ナインツリーから地下鉄で約18〜20分（5号線1駅・乙支路4街→鍾路3街で3号線に乗り換え1駅・安国）。【理由】カフェ・ベーカリーカテゴリ1位。必須ではないが、この後の昼食（鍾路）へ向かう途中に立ち寄れる立地なので追加。ロンドンベーグルミュージアム系列の塩パン専門" },
@@ -23,13 +28,19 @@ window.DATA = {
       { time: "18:30", icon: "restaurant", title: "夕食：スラケジャン 明洞2号店（수라게장）", place: "スラケジャン 明洞2号店（明洞）", map: "https://maps.app.goo.gl/gCyQcUKeqb8wA68QA", memo: "【移動】부촌육회본점から地下鉄・徒歩で約15〜20分（鍾路→明洞）。【理由】ケジャンカテゴリ必須＆1位。宮中料理仕立ての上品なカンジャンケジャン。10:00〜24:00・インスタDM予約可（@sura_gejang）" },
       { time: "20:30", icon: "hotel", title: "ナインツリー 正式チェックイン", place: "ナインツリー バイ パルナス 東大門", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun", memo: "【移動】明洞から徒歩・地下鉄で約15〜20分（乙支路4街方面）。高層階・静かな部屋リクエスト。歯ブラシ等は持参。予約ID 1755517778" }
     ]},
-    { date: "2026-08-29", day: "29", weekday: "土", label: "3日目 ・ 聖水＆江南グルメ", items: [
+    { date: "2026-08-29", day: "29", weekday: "土", label: "3日目 ・ 聖水＆江南グルメ",
+      startPlace: { name: "ナインツリー バイ パルナス 東大門", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun" },
+      endPlace: { name: "ナインツリー バイ パルナス 東大門", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun" },
+      items: [
       { time: "09:30", icon: "restaurant", title: "朝食：ヌンドンミナリ 聖水店（능동미나리）", place: "ヌンドンミナリ 聖水店（聖水）", map: "https://maps.google.com/?q=능동미나리+성수", memo: "【移動】東大門（ナインツリー）から地下鉄で約20〜25分（2号線、聖水駅まで乗り換えなし）。【理由】ユッケカテゴリ必須・1位タイ。미나리곰탕＋육회비빔밥の名店。土日09:00〜24:00。予約不可・先着順なので朝早めに" },
       { time: "13:00", icon: "restaurant", title: "昼食：江南マックス＆ポッサム（강남막국수앤보쌈）", place: "江南マックス＆ポッサム（江南駅1番出口）", map: "https://maps.google.com/?q=강남+막국수+보쌈+강남역", memo: "【移動】聖水から地下鉄2号線で約25〜30分（聖水〜江南は乗り換えなしだが駅数が多い）。【理由】麺カテゴリ4位だが、この後の豚肉・ユッケの2軒も同じ江南・狎鴎亭エリアにあり、まとめて「江南グルメの日」にできる。막국수は軽めで後の肉料理と好相性" },
       { time: "16:30", icon: "restaurant", title: "小腹に：済州黒豚屋上BBQ（제주흑돈옥탑 BLACK BBQ）", place: "済州黒豚屋上BBQ（狎鴎亭・清潭）", map: "https://maps.app.goo.gl/tzTvNtXb7zGZNfrX8?g_st=ic", memo: "【移動】江南駅から地下鉄・徒歩で約15〜20分（3号線新沙経由、または狎鴎亭方面へ）。【理由】豚肉カテゴリ3位（必須は木曜の죽통령삼겹살で充足済み、江南セットのボーナス採用）。休憩15:00〜16:00明けの時間に設定" },
       { time: "19:00", icon: "restaurant", title: "夕食：ヨンチョンヨンファ（영천영화）육회・한우", place: "ヨンチョンヨンファ 清潭店（狎鴎亭ロデオ）", map: "https://maps.app.goo.gl/Jx8h24kw9fsafjtv6?g_st=ic", memo: "【移動】済州黒豚屋上BBQから徒歩・タクシーで約10〜15分（同じ狎鴎亭・清潭エリア）。【理由】ユッケカテゴリ1位タイ（朝の능동미나리と同率1位）。한우육회＆焼き＋육회비빔밥の名店（24時間）。混むので予約推奨" }
     ]},
-    { date: "2026-08-30", day: "30", weekday: "日", label: "4日目 ・ 早朝出発", items: [
+    { date: "2026-08-30", day: "30", weekday: "日", label: "4日目 ・ 早朝出発",
+      startPlace: { name: "ナインツリー バイ パルナス 東大門", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun" },
+      endPlace: { name: "仁川国際空港", map: "https://maps.google.com/?q=Incheon+International+Airport" },
+      items: [
       { time: "06:00", icon: "gift", title: "起床・お土産の買い忘れチェック", place: "ホテル / 東大門のコンビニ", map: "https://maps.google.com/?q=Dongdaemun+Convenience+Store", memo: "朝食を追加したため通常より30分早め。11:25発なので前夜までにお土産は済ませておくのが安心" },
       { time: "06:15", icon: "luggage", title: "ナインツリー チェックアウト（荷物はフロント預け）", place: "ナインツリー バイ パルナス 東大門", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun", memo: "先にチェックアウトを済ませ、荷物だけフロントに預けて身軽に朝食へ" },
       { time: "06:25", icon: "restaurant", title: "朝食：味成屋（미성옥）ソルロンタン", place: "味成屋（明洞）", map: "https://maps.app.goo.gl/ya7VqwFwBxAM8psx8?g_st=ic", memo: "【移動】ナインツリーからタクシーで約5〜8分（明洞、徒歩なら15〜20分）。【理由】鍋・煮込みカテゴリ3位だが、06:00開店で候補の中では唯一この時間に開いていて営業時間の制約をクリアできる。タクシー利用なら通常スケジュールをほぼ崩さず立ち寄れる" },
