@@ -56,9 +56,16 @@ python3 -m http.server 8000
 
 ```
 index.html / schedule.html / places.html / guide.html / packing.html / booking.html
-css/style.css   デザイン（Apple風・ライト/ダーク対応）
-js/data.js      すべてのデータ（ここを編集）
-js/app.js       表示ロジック
+css/style.css          デザイン（Apple風・ライト/ダーク対応）
+js/data.js             すべてのデータ（ここを編集）
+js/app.js              表示ロジック
+seoul_gourmet_map.csv  Google My Maps インポート用（js/data.js から自動生成）
 ```
+
+### 🗺️ Google My Maps 用CSVについて
+
+`seoul_gourmet_map.csv` は `js/data.js` の内容（グルメ・ショッピング・ホテル）を
+[Google My Maps](https://mymaps.google.com) にインポートして地図表示するためのファイルです。
+`js/data.js` を更新したら、このCSVも作り直して同期させてください。
 
 よい旅を！🇰🇷✈️
