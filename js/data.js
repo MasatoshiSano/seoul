@@ -26,14 +26,17 @@ window.DATA = {
     { date: "2026-08-29", day: "29", weekday: "土", label: "3日目 ・ 聖水＆乙支路＆西村グルメ", items: [
       { time: "09:30", icon: "restaurant", title: "朝食：ヌンドンミナリ 聖水店（능동미나리）", place: "ヌンドンミナリ 聖水店（聖水）", map: "https://maps.google.com/?q=능동미나리+성수", memo: "【移動】東大門（ナインツリー）から地下鉄で約15〜20分（2号線環乗り換えで聖水駅）。【理由】ユッケカテゴリ必須・1位タイ。미나리곰탕＋육회비빔밥の名店。土日09:00〜24:00。予約不可・先着順なので朝早めに" },
       { time: "13:00", icon: "restaurant", title: "昼食：南浦麺屋（남포면옥）", place: "南浦麺屋（中区・乙支路）", map: "https://maps.app.goo.gl/ATZkmGPyKodgxrQc7?g_st=ic", memo: "【移動】聖水から地下鉄で約15〜20分（乙支路方面）。【理由】麺カテゴリ1位（必須ではないがせっかくなので1位店を採用）。ミシュラン掲載のビビン麺。土日11:30〜21:00・電話予約可" },
-      { time: "18:00", icon: "restaurant", title: "夕食：土俗村 参鶏湯", place: "土俗村 参鶏湯（西村）", map: "https://maps.google.com/?q=Tosokchon+Samgyetang", memo: "【移動】乙支路から地下鉄で約30〜35分（3号線環乗り換えで景福宮駅・西村へ）。【理由】鍋・煮込みカテゴリ1位（必須ではないがせっかくなので1位店を採用）。10:00〜22:00(LO21:00)・電話/オンライン予約推奨（混雑時待ち対策）" }
+      { time: "15:00", icon: "restaurant", title: "小腹に：広蔵市場 食べ歩き横丁", place: "広蔵市場（鍾路）", map: "https://maps.google.com/?q=Gwangjang+Market", memo: "【移動】南浦麺屋から徒歩約5〜10分（同じ乙支路・鍾路4街エリア）。【理由】市場カテゴリ必須ではないが唯一未使用の1位カテゴリ。昼食店とほぼ同じ場所にあり動線ゼロで追加できる。食べ歩き横丁09:00〜23:00年中無休" },
+      { time: "18:00", icon: "restaurant", title: "夕食：土俗村 参鶏湯", place: "土俗村 参鶏湯（西村）", map: "https://maps.google.com/?q=Tosokchon+Samgyetang", memo: "【移動】広蔵市場から地下鉄で約25〜30分（3号線環乗り換えで景福宮駅・西村へ）。【理由】鍋・煮込みカテゴリ1位（必須ではないがせっかくなので1位店を採用）。10:00〜22:00(LO21:00)・電話/オンライン予約推奨（混雑時待ち対策）" }
     ]},
     { date: "2026-08-30", day: "30", weekday: "日", label: "4日目 ・ 早朝出発", items: [
-      { time: "06:30", icon: "gift", title: "起床・お土産の買い忘れチェック", place: "ホテル / 東大門のコンビニ", map: "https://maps.google.com/?q=Dongdaemun+Convenience+Store", memo: "11:25発と早いので前夜までにお土産は済ませておくのが安心" },
-      { time: "07:00", icon: "luggage", title: "ナインツリー チェックアウト", place: "ナインツリー バイ パルナス 東大門", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun", memo: "早朝チェックアウト（規定は12:00まで）。忘れ物に注意" },
+      { time: "06:00", icon: "gift", title: "起床・お土産の買い忘れチェック", place: "ホテル / 東大門のコンビニ", map: "https://maps.google.com/?q=Dongdaemun+Convenience+Store", memo: "朝食を追加したため通常より30分早め。11:25発なので前夜までにお土産は済ませておくのが安心" },
+      { time: "06:15", icon: "luggage", title: "ナインツリー チェックアウト（荷物はフロント預け）", place: "ナインツリー バイ パルナス 東大門", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun", memo: "先にチェックアウトを済ませ、荷物だけフロントに預けて身軽に朝食へ" },
+      { time: "06:25", icon: "restaurant", title: "朝食：味成屋（미성옥）ソルロンタン", place: "味成屋（明洞）", map: "https://maps.app.goo.gl/ya7VqwFwBxAM8psx8?g_st=ic", memo: "【移動】ナインツリーからタクシーで約5〜8分（明洞、徒歩なら15〜20分）。【理由】鍋・煮込みカテゴリ3位だが、06:00開店で候補の中では唯一この時間に開いていて営業時間の制約をクリアできる。タクシー利用なら通常スケジュールをほぼ崩さず立ち寄れる" },
+      { time: "06:55", icon: "luggage", title: "ナインツリーで荷物ピックアップ", place: "ナインツリー バイ パルナス 東大門", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun", memo: "【移動】味成屋からタクシーで約5〜8分。フロントで荷物を受け取り、そのまま空港へ" },
       { time: "07:15", icon: "train", title: "空港へ移動（東大門→仁川）", place: "AREX＋地下鉄 / リムジンバス", map: "https://maps.google.com/?q=Dongdaemun+History+Culture+Park+Station", memo: "東大門歴史文化公園駅→ソウル駅乗換→AREX（約60分）。リムジンなら約90分。始発時間に注意" },
       { time: "08:30", icon: "badge", title: "仁川空港 着・チェックイン/荷物預け", place: "Incheon Airport (ICN)", map: "https://maps.google.com/?q=Incheon+International+Airport", memo: "Peachは国際線。出発2〜2.5時間前を目安に手続き。WOWPASS残高は使い切るか調整" },
-      { time: "09:00", icon: "restaurant", title: "朝食＆免税店", place: "仁川空港内", map: "https://maps.google.com/?q=Incheon+Airport+Duty+Free", memo: "空港で軽く朝食。最後のお買い物" },
+      { time: "09:00", icon: "gift", title: "免税店", place: "仁川空港内", map: "https://maps.google.com/?q=Incheon+Airport+Duty+Free", memo: "朝食は明洞で済ませたので、ここでは最後のお買い物のみ" },
       { time: "11:25", icon: "flight", title: "仁川空港から出発（MM736）", place: "Incheon Airport (ICN)", map: "https://maps.google.com/?q=Incheon+International+Airport", memo: "仁川11:25発→関西13:10着。おつかれさま！" }
     ]}
   ],
