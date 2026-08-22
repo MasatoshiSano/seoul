@@ -19,8 +19,11 @@ function searchTextFrom(spot) {
   if (spot.map && spot.map.startsWith("https://maps.google.com/?q=")) {
     return decodeURIComponent(spot.map.replace("https://maps.google.com/?q=", "")).replace(/\+/g, " ");
   }
-  // maps.app.goo.gl の短縮リンクはこの環境から解決できないため、店名(全角括弧の前)+エリアで代用
-  const primary = spot.name.split("（")[0].trim();
+  // maps.app.goo.gl の短縮リンクはこの環境から解決できないため、店名+エリアで代用。
+  // 現地語（ハングル）の表記があればそちらを優先（Naver/Google検索の精度が上がるため）。
+  const parenMatch = spot.name.match(/（([^）]*)）/);
+  const hangulPart = parenMatch && /[가-힣]/.test(parenMatch[1]) ? parenMatch[1] : null;
+  const primary = hangulPart || spot.name.split("（")[0].trim();
   return `${primary} ${spot.area}`.trim();
 }
 
