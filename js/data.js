@@ -55,9 +55,9 @@ window.DATA = {
       { rank: 3, name: "죽통령삼겹살 東大門店（竹統領サムギョプサル）", area: "東大門", desc: "ここのサムギョプサルも美味しい", map: "https://maps.app.goo.gl/KnHUXTihXx9ii4RS8?g_st=ic" }
     ]},
     { category: "グルメ：カンジャンケジャン", tag: "ケジャン", spots: [
-      { rank: 1, name: "오다리집 간장게장 明洞直営店（オダリチプ カンジャンケジャン）", area: "明洞", desc: "チェーン店のカンジャンケジャン。日本人に人気", map: "https://maps.app.goo.gl/oDSj8qHvPZfuLRB38" },
-      { rank: 2, name: "함초간장게장（ハムチョ・カンジャンケジャン）", area: "明洞", desc: "看板は전복장（アワビ醤油漬け）。薬草と一緒に熟成。塩辛すぎず「ご飯泥棒」の異名。明洞駅5/9/10番出口 徒歩1分・11:00〜22:00(LO21:30)", map: "https://maps.app.goo.gl/Udsw9d3YZL27von39" },
-      { rank: 3, name: "수라게장 明洞2号店（スラケジャン）", area: "明洞", desc: "宮中料理仕立ての上品なカンジャンケジャン専門店。1号店より空いていて落ち着いた雰囲気。11:00〜22:00", map: "https://maps.app.goo.gl/gCyQcUKeqb8wA68QA" }
+      { rank: 1, name: "수라게장 明洞2号店（スラケジャン）", area: "明洞", desc: "宮中料理仕立ての上品なカンジャンケジャン専門店。1号店より空いていて落ち着いた雰囲気。11:00〜22:00", map: "https://maps.app.goo.gl/gCyQcUKeqb8wA68QA" },
+      { rank: 2, name: "오다리집 간장게장 明洞直営店（オダリチプ カンジャンケジャン）", area: "明洞", desc: "チェーン店のカンジャンケジャン。日本人に人気", map: "https://maps.app.goo.gl/oDSj8qHvPZfuLRB38" },
+      { rank: 3, name: "함초간장게장（ハムチョ・カンジャンケジャン）", area: "明洞", desc: "看板は전복장（アワビ醤油漬け）。薬草と一緒に熟成。塩辛すぎず「ご飯泥棒」の異名。明洞駅5/9/10番出口 徒歩1分・11:00〜22:00(LO21:30)", map: "https://maps.app.goo.gl/Udsw9d3YZL27von39" }
     ]},
     { category: "グルメ：ユッケ・육회비빔밥", tag: "ユッケ", spots: [
       { rank: 1, name: "ヨンチョンヨンファ（영천영화）", area: "江南（狎鴎亭）", desc: "한우 육회＆육회비빔밥の名店（24時間）。“韓牛の聖地”とも称される。混むので予約推奨", map: "https://maps.app.goo.gl/Jx8h24kw9fsafjtv6?g_st=ic" },
