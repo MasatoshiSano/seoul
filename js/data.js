@@ -65,8 +65,10 @@ window.DATA = {
       { rank: 3, name: "부촌육회본점（プチョン ユッケ本店）", area: "鍾路", desc: "超人気店 ユッケ", map: "https://maps.app.goo.gl/BBz1g5j47iXw9k8Y7?g_st=ic" }
     ]},
     { category: "グルメ：ポッサム", tag: "ポッサム", spots: [
-      { rank: 1, name: "패밀리손칼국수보쌈（ファミリーソン カルグクスポッサム）", area: "聖水", desc: "ポッサム！カルグクスとの組み合わせも楽しめる", map: "https://maps.app.goo.gl/XRqRPmWxiHKoXX666?g_st=ic" },
-      { rank: 2, name: "송정보쌈 鍾路店（ソンジョン ポッサム）", area: "鍾路", desc: "ポッサム！", map: "https://maps.app.goo.gl/v27FHS1rSDW5wDqf7?g_st=ic" }
+      { rank: 1, name: "송정보쌈 鍾路店（ソンジョン ポッサム）", area: "鍾路", desc: "ポッサム！", map: "https://maps.app.goo.gl/v27FHS1rSDW5wDqf7?g_st=ic" },
+      { rank: 2, name: "패밀리손칼국수보쌈（ファミリーソン カルグクスポッサム）", area: "聖水", desc: "ポッサム！カルグクスとの組み合わせも楽しめる", map: "https://maps.app.goo.gl/XRqRPmWxiHKoXX666?g_st=ic" },
+      { rank: 3, name: "정담은보쌈 北村店（チョンダムンポッサム）", area: "北村（安国）", desc: "韓屋座敷のポッサム専門店。文魚(タコ)ポッサム・カキポッサムが名物。伝統酒とのペアリングも人気。安国駅すぐ", map: "https://maps.app.goo.gl/gNMkDc89G4x66V8d7" },
+      { rank: 4, name: "천하보쌈（チョンハポッサム）", area: "北村（三清洞）", desc: "北村・三清洞のポッサム名店。“ソウル三大ポッサム”の一つとも称される。カキポッサムが名物", map: "https://maps.app.goo.gl/7RJthTLYZgBGbYbG8" }
     ]},
     { category: "グルメ：鍋・煮込み", tag: "鍋", spots: [
       { rank: 1, name: "土俗村 参鶏湯", area: "西村", desc: "行列必至の参鶏湯名店。全国的にも屈指の知名度", map: "https://maps.google.com/?q=Tosokchon+Samgyetang" },
