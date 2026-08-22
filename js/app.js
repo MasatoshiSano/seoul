@@ -26,14 +26,16 @@
   }
 
   function buildDayRoute(d) {
+    const geo = D.geo || {};
+    const withGeo = (label, map) => ({ label, query: queryFromMapField(map, label), map, geo: geo[label] || null });
     const stops = [];
-    if (d.startPlace) stops.push({ label: d.startPlace.name, query: queryFromMapField(d.startPlace.map, d.startPlace.name), map: d.startPlace.map });
+    if (d.startPlace) stops.push(withGeo(d.startPlace.name, d.startPlace.map));
     for (const it of d.items) {
       if (it.icon !== "restaurant" && it.icon !== "cafe") continue;
       const label = it.place || it.title;
-      stops.push({ label, query: queryFromMapField(it.map, label), map: it.map });
+      stops.push(withGeo(label, it.map));
     }
-    if (d.endPlace) stops.push({ label: d.endPlace.name, query: queryFromMapField(d.endPlace.map, d.endPlace.name), map: d.endPlace.map });
+    if (d.endPlace) stops.push(withGeo(d.endPlace.name, d.endPlace.map));
     return stops;
   }
 
@@ -47,11 +49,41 @@
     return url;
   }
 
+  function initRouteMap(mapId, stops) {
+    const el = document.getElementById(mapId);
+    const withGeo = stops.filter((s) => s.geo);
+    if (!el || !window.L || withGeo.length < 2) { if (el) el.remove(); return; }
+    const map = L.map(mapId, { scrollWheelZoom: false });
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 19
+    }).addTo(map);
+    const latlngs = withGeo.map((s) => s.geo);
+    const line = L.polyline(latlngs, { color: "#3a6df0", weight: 3.5, opacity: 0.85 }).addTo(map);
+    if (window.L.polylineDecorator) {
+      L.polylineDecorator(line, {
+        patterns: [{ offset: "8%", repeat: "12%", symbol: L.Symbol.arrowHead({ pixelSize: 11, pathOptions: { color: "#3a6df0", fillOpacity: 0.9, weight: 0 } }) }]
+      }).addTo(map);
+    }
+    withGeo.forEach((s, i) => {
+      const isEnd = i === 0 || i === withGeo.length - 1;
+      const icon = L.divIcon({
+        className: "",
+        html: `<div class="day-route-pin${isEnd ? " day-route-pin-hotel" : ""}">${isEnd ? "🏨" : i}</div>`,
+        iconSize: [26, 26], iconAnchor: [13, 13]
+      });
+      L.marker(s.geo, { icon }).addTo(map).bindPopup(esc(s.label));
+    });
+    map.fitBounds(line.getBounds(), { padding: [24, 24] });
+  }
+
   function renderSchedule() {
     const wrap = $("#schedule"); if (!wrap) return;
-    wrap.innerHTML = D.schedule.map((d) => {
-      const stops = buildDayRoute(d);
+    const dayRoutes = D.schedule.map(buildDayRoute);
+    wrap.innerHTML = D.schedule.map((d, di) => {
+      const stops = dayRoutes[di];
       const allUrl = directionsUrl(stops);
+      const mapId = `day-route-map-${d.day}`;
       return `
       <div class="day">
         <div class="day-head">
@@ -62,13 +94,14 @@
           </div>
         </div>
         ${stops.length >= 2 ? `
-        <div class="route">
-          <div class="route-head">
+        <div class="day-route">
+          <div class="day-route-head">
             <span>${window.ICON("place")} この日のルート（ホテル→お店→ホテル）</span>
-            ${allUrl ? `<a class="route-all" href="${esc(allUrl)}" target="_blank" rel="noopener">まとめて地図で見る ›</a>` : ""}
+            ${allUrl ? `<a class="day-route-all" href="${esc(allUrl)}" target="_blank" rel="noopener">アプリで開く ›</a>` : ""}
           </div>
-          <div class="route-chain">
-            ${stops.map((s, i) => `${i > 0 ? '<span class="route-arrow">→</span>' : ""}<a class="route-chip" href="${esc(s.map || "#")}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join("")}
+          <div class="day-route-map" id="${mapId}"></div>
+          <div class="day-route-chain">
+            ${stops.map((s, i) => `${i > 0 ? '<span class="day-route-arrow">→</span>' : ""}<a class="day-route-chip" href="${esc(s.map || "#")}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join("")}
           </div>
         </div>` : ""}
         <div class="tl">
@@ -85,6 +118,7 @@
         </div>
       </div>`;
     }).join("");
+    D.schedule.forEach((d, di) => initRouteMap(`day-route-map-${d.day}`, dayRoutes[di]));
   }
 
   function renderPlaces() {
