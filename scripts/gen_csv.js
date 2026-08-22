@@ -88,12 +88,12 @@ const dayHeader = ["ピン表示名（タイトルに選択）", "時刻", "名�
 
 DATA.schedule.forEach((day, di) => {
   const stops = [];
-  if (day.startPlace) stops.push({ hotel: true, label: day.startPlace.name, map: day.startPlace.map, memo: "この日の出発地点" });
+  if (day.startPlace && !day.startPlace.name.includes("空港")) stops.push({ hotel: true, label: day.startPlace.name, map: day.startPlace.map, memo: "この日の出発地点" });
   for (const it of day.items) {
     if (it.icon !== "restaurant" && it.icon !== "cafe") continue;
     stops.push({ hotel: false, label: it.place || it.title, map: it.map, time: it.time, memo: it.memo, title: it.title });
   }
-  if (day.endPlace) stops.push({ hotel: true, label: day.endPlace.name, map: day.endPlace.map, memo: "この日の到着地点" });
+  if (day.endPlace && !day.endPlace.name.includes("空港")) stops.push({ hotel: true, label: day.endPlace.name, map: day.endPlace.map, memo: "この日の到着地点" });
 
   let order = 0;
   const rows = stops.map((st) => {
