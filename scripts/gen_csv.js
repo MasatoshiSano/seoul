@@ -33,12 +33,12 @@ function csvEscape(v) {
   return v;
 }
 
-const rows = [["店名", "カテゴリ", "エリア", "順位", "メモ", "検索用住所", "Naverで開く", "Googleで開く"]];
+const rows = [["店名", "カテゴリ", "エリア", "順位", "メモ", "営業時間", "予約可否", "検索用住所", "Naverで開く", "Googleで開く"]];
 
 for (const cat of DATA.places) {
   for (const s of cat.spots) {
     const q = searchTextFrom(s);
-    rows.push([s.name, cat.category, s.area, s.rank ? `No.${s.rank}` : "", s.desc, q, naverLink(q), googleLink(q)]);
+    rows.push([s.name, cat.category, s.area, s.rank ? `No.${s.rank}` : "", s.desc, s.hours || "", s.reserve || "", q, naverLink(q), googleLink(q)]);
   }
 }
 
@@ -47,7 +47,7 @@ for (const h of DATA.hotels) {
     ? decodeURIComponent(h.map.replace("https://maps.google.com/?q=", "")).replace(/\+/g, " ")
     : h.name;
   const memo = `${h.short}。${h.room}。${h.requests}。予約ID ${h.id}`;
-  rows.push([h.name, "🏨 ホテル", h.checkin.split("（")[0] + "〜", "", memo, q, naverLink(q), googleLink(q)]);
+  rows.push([h.name, "🏨 ホテル", h.checkin.split("（")[0] + "〜", "", memo, "", "", q, naverLink(q), googleLink(q)]);
 }
 
 const csv = rows.map((r) => r.map(csvEscape).join(",")).join("\n") + "\n";
