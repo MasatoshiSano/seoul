@@ -57,7 +57,8 @@ window.DATA = {
     { category: "グルメ：カンジャンケジャン", tag: "ケジャン", spots: [
       { rank: 1, name: "진미식당（真味食堂／チンミシクタン）", area: "麻浦・孔徳", desc: "カンジャンケジャンの“通の一択”。ミシュラン掲載の老舗。게장정식 約₩45,000。Day3(弘大)と好相性", map: "https://maps.google.com/?q=진미식당+마포+공덕+간장게장" },
       { rank: 2, name: "큰기와집（クンギワジプ）", area: "鍾路・安国", desc: "自家仕込み朝鮮醤油の高級カンジャンケジャン。ミシュラン掲載。安国駅すぐでDay2(景福宮・北村)の動線上", map: "https://maps.google.com/?q=큰기와집+안국+간장게장" },
-      { rank: 3, name: "오다리집 간장게장 明洞直営店（オダリチプ カンジャンケジャン）", area: "明洞", desc: "チェーン店のカンジャンケジャン。日本人に人気", map: "https://maps.app.goo.gl/oDSj8qHvPZfuLRB38" }
+      { rank: 3, name: "오다리집 간장게장 明洞直営店（オダリチプ カンジャンケジャン）", area: "明洞", desc: "チェーン店のカンジャンケジャン。日本人に人気", map: "https://maps.app.goo.gl/oDSj8qHvPZfuLRB38" },
+      { rank: 4, name: "함초간장게장（ハムチョ・カンジャンケジャン）", area: "明洞", desc: "看板は전복장（アワビ醤油漬け）。薬草と一緒に熟成。塩辛すぎず「ご飯泥棒」の異名。明洞駅5/9/10番出口 徒歩1分・11:00〜22:00(LO21:30)", map: "https://maps.google.com/?q=함초간장게장+명동" }
     ]},
     { category: "グルメ：ユッケ・육회비빔밥", tag: "ユッケ", spots: [
       { rank: 1, name: "ヨンチョンヨンファ（영천영화）", area: "江南（狎鴎亭）", desc: "한우 육회＆육회비빔밥の名店（24時間）。“韓牛の聖地”とも称される。混むので予約推奨", map: "https://maps.app.goo.gl/Jx8h24kw9fsafjtv6?g_st=ic" },
