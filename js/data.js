@@ -50,9 +50,9 @@ window.DATA = {
       { rank: 4, name: "강남 막국수앤보쌈（江南マックス＆ポッサム）", area: "江南駅1番出口", desc: "エゴマ(荏胡麻)막국수＋ポッサム。Day3昼食で訪問予定", map: "https://maps.google.com/?q=강남+막국수+보쌈+강남역" }
     ]},
     { category: "グルメ：サムギョプサル・豚肉", tag: "豚肉", spots: [
-      { rank: 1, name: "금돼지식당（金豚食堂／クムテジシッタン）", area: "中区", desc: "ミシュラン・ビブグルマンの名店。17時ごろに予約だけ行かないと入れない人気店。日本人に人気で行く価値あり", map: "https://maps.app.goo.gl/CA5cfhqYQsac7GXG9?g_st=ic" },
-      { rank: 2, name: "제주흑돈옥탑 BLACK BBQ（済州黒豚屋上BBQ）", area: "江南", desc: "豚肉ショルダーラックがよき。行くならキャッチテーブルで予約すべし！", map: "https://maps.app.goo.gl/tzTvNtXb7zGZNfrX8?g_st=ic" },
-      { rank: 3, name: "죽통령삼겹살 東大門店（竹統領サムギョプサル）", area: "東大門", desc: "ここのサムギョプサルも美味しい", map: "https://maps.app.goo.gl/KnHUXTihXx9ii4RS8?g_st=ic" }
+      { rank: 2, name: "금돼지식당（金豚食堂／クムテジシッタン）", area: "中区", desc: "ミシュラン・ビブグルマンの名店。17時ごろに予約だけ行かないと入れない人気店。日本人に人気で行く価値あり", map: "https://maps.app.goo.gl/CA5cfhqYQsac7GXG9?g_st=ic" },
+      { rank: 3, name: "제주흑돈옥탑 BLACK BBQ（済州黒豚屋上BBQ）", area: "江南", desc: "豚肉ショルダーラックがよき。行くならキャッチテーブルで予約すべし！", map: "https://maps.app.goo.gl/tzTvNtXb7zGZNfrX8?g_st=ic" },
+      { rank: 1, name: "죽통령삼겹살 東大門店（竹統領サムギョプサル）", area: "東大門", desc: "ここのサムギョプサルも美味しい", map: "https://maps.app.goo.gl/KnHUXTihXx9ii4RS8?g_st=ic" }
     ]},
     { category: "グルメ：カンジャンケジャン", tag: "ケジャン", spots: [
       { rank: 1, name: "수라게장 明洞2号店（スラケジャン）", area: "明洞", desc: "宮中料理仕立ての上品なカンジャンケジャン専門店。1号店より空いていて落ち着いた雰囲気。11:00〜22:00", map: "https://maps.app.goo.gl/gCyQcUKeqb8wA68QA" },
