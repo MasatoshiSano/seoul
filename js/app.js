@@ -57,6 +57,7 @@
             return `<div class="row">
               <button class="check" data-id="${esc(id)}" aria-pressed="${done}" aria-label="訪問済みにする">${done ? "✓" : ""}</button>
               <div class="row-body">
+                ${s.rank ? `<span class="rank-badge rank-${s.rank <= 3 ? s.rank : "n"}">No.${s.rank}</span>` : ""}
                 <span class="row-name ${done ? "done" : ""}">${esc(s.name)}</span><span class="row-area">${esc(s.area)}</span>
                 <div class="row-desc">${esc(s.desc)}</div>
                 <a class="maplink" href="${esc(s.map)}" target="_blank" rel="noopener">地図で見る</a>
