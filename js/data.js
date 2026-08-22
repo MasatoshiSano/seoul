@@ -50,9 +50,9 @@ window.DATA = {
       { rank: 4, name: "강남 막국수앤보쌈（江南マックス＆ポッサム）", area: "江南駅1番出口", desc: "エゴマ(荏胡麻)막국수＋ポッサム。Day3昼食で訪問予定", map: "https://maps.google.com/?q=강남+막국수+보쌈+강남역", hours: "10:30〜21:00", reserve: "不要（CatchTable予約も可）" }
     ]},
     { category: "グルメ：サムギョプサル・豚肉", tag: "豚肉", spots: [
+      { rank: 1, name: "죽통령삼겹살 東大門店（竹統領サムギョプサル）", area: "東大門", desc: "ここのサムギョプサルも美味しい", map: "https://maps.app.goo.gl/KnHUXTihXx9ii4RS8?g_st=ic", hours: "11:40〜23:00", reserve: "不要" },
       { rank: 2, name: "금돼지식당（金豚食堂／クムテジシッタン）", area: "中区", desc: "ミシュラン・ビブグルマンの名店。17時ごろに予約だけ行かないと入れない人気店。日本人に人気で行く価値あり", map: "https://maps.app.goo.gl/CA5cfhqYQsac7GXG9?g_st=ic", hours: "11:30〜23:00(LO22:15頃)", reserve: "電話・オンライン予約不可。現地整理券／CatchTable・에그다이닝アプリで受付、웨이팅約2時間の人気店" },
-      { rank: 3, name: "제주흑돈옥탑 BLACK BBQ（済州黒豚屋上BBQ）", area: "江南", desc: "豚肉ショルダーラックがよき。行くならキャッチテーブルで予約すべし！", map: "https://maps.app.goo.gl/tzTvNtXb7zGZNfrX8?g_st=ic", hours: "11:00〜翌2:00(休憩15:00〜16:00)", reserve: "推奨・CatchTable予約可" },
-      { rank: 1, name: "죽통령삼겹살 東大門店（竹統領サムギョプサル）", area: "東大門", desc: "ここのサムギョプサルも美味しい", map: "https://maps.app.goo.gl/KnHUXTihXx9ii4RS8?g_st=ic", hours: "11:40〜23:00", reserve: "不要" }
+      { rank: 3, name: "제주흑돈옥탑 BLACK BBQ（済州黒豚屋上BBQ）", area: "江南", desc: "豚肉ショルダーラックがよき。行くならキャッチテーブルで予約すべし！", map: "https://maps.app.goo.gl/tzTvNtXb7zGZNfrX8?g_st=ic", hours: "11:00〜翌2:00(休憩15:00〜16:00)", reserve: "推奨・CatchTable予約可" }
     ]},
     { category: "グルメ：カンジャンケジャン", tag: "ケジャン", spots: [
       { rank: 1, name: "수라게장 明洞2号店（スラケジャン）", area: "明洞", desc: "宮中料理仕立ての上品なカンジャンケジャン専門店。1号店より空いていて落ち着いた雰囲気。11:00〜22:00", map: "https://maps.app.goo.gl/gCyQcUKeqb8wA68QA", hours: "10:00〜24:00", reserve: "インスタDM予約可（@sura_gejang）" },
