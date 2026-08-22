@@ -78,7 +78,7 @@ window.DATA = {
       { rank: 5, name: "테낙식당（テナッ食堂）聖水直営店", area: "聖水", desc: "ホルモンと鶏肉鍋 おすすめ！", map: "https://maps.app.goo.gl/HRGWETSTT8dBSWxX9?g_st=ic" }
     ]},
     { category: "グルメ：タコ・ホルモン系", tag: "ホルモン", spots: [
-      { rank: 1, name: "대한곱창 明洞店（大韓コプチャン）", area: "明洞", desc: "コプチャン！人気店", map: "https://maps.app.goo.gl/tngzxThRkVnZNLV48?g_st=ic" },
+      { rank: 1, name: "부촌육회본점（プチョン ユッケ本店）", area: "鍾路", desc: "超人気店 ユッケ", map: "https://maps.app.goo.gl/BBz1g5j47iXw9k8Y7?g_st=ic" },
       { rank: 2, name: "해남낙지（ヘナムナクチ）", area: "中区", desc: "チュクミとかタコ料理", map: "https://maps.app.goo.gl/o7kjpNQPxBV1tCMHA?g_st=ic" }
     ]},
     { category: "グルメ：粥", tag: "粥", spots: [
