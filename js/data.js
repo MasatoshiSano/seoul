@@ -9,29 +9,32 @@ window.DATA = {
   schedule: [
     { date: "2026-08-27", day: "27", weekday: "木", label: "1日目 ・ 夕方着＆東大門の夜", items: [
       { time: "18:00", icon: "flight", title: "仁川国際空港 到着（MM743）", place: "Incheon Airport (ICN)", map: "https://maps.google.com/?q=Incheon+International+Airport", memo: "関西16:05発→仁川18:00着。空港では大きな両替はせず、カードで移動券購入 or WOWPASS空港セット(T-money1万W入り)を受取" },
-      { time: "19:00", icon: "train", title: "空港から東大門へ移動", place: "AREX＋地下鉄4号線 / リムジンバス", map: "https://maps.google.com/?q=Incheon+Airport+Railroad", memo: "AREX＋4号線でソウル駅乗換→東大門歴史文化公園駅（約60分）。楽ならリムジンバス（約90分）" },
+      { time: "19:00", icon: "train", title: "空港から東大門へ移動", place: "AREX＋地下鉄4号線 / リムジンバス", map: "https://maps.google.com/?q=Incheon+Airport+Railroad", memo: "【移動】AREX＋4号線でソウル駅乗換→東大門歴史文化公園駅（約60分）。楽ならリムジンバス（約90分）" },
       { time: "20:15", icon: "hotel", title: "ホテル ミリオレ ソウル チェックイン", place: "ホテル ミリオレ ソウル（東大門）", map: "https://maps.google.com/?q=Hotel+Migliore+Seoul+Dongdaemun", memo: "1泊目。到着予定20〜21時。高層階・静かな部屋をリクエスト。デラックスツイン（バスタブ有無はランダム）。予約ID 1755518948" },
       { time: "20:45", icon: "exchange", title: "両替（東大門）", place: "APM前 無人両替機（24h）/ Money Box東大門店", map: "https://maps.google.com/?q=APM+Dongdaemun", memo: "APM無人機は24時間・日本語対応。日本円→ウォン両替→WOWPASSにチャージ。少額の現金も確保" },
-      { time: "21:00", icon: "restaurant", title: "夕食：대성식당 の なっこぷせ", place: "대성식당（鍾路3街）", map: "https://maps.google.com/?q=대성식당+낙곱새+종로3가", memo: "낙곱새（タコ・ホルモン・エビの辛鍋）の人気店。東大門から地下鉄で近い。予約不要だが閉店時間に注意して早めに🍲" },
-      { time: "22:30", icon: "nightlife", title: "東大門ナイトショッピング（任意）", place: "東大門ファッションタウン / DDP", map: "https://maps.google.com/?q=Dongdaemun+Design+Plaza", memo: "元気があれば深夜まで営業のショッピングモールやDDPの夜景へ" }
+      { time: "21:00", icon: "restaurant", title: "夕食：竹統領サムギョプサル 東大門店（죽통령삼겹살）", place: "竹統領サムギョプサル 東大門店（東大門）", map: "https://maps.app.goo.gl/KnHUXTihXx9ii4RS8?g_st=ic", memo: "【移動】ミリオレから徒歩2〜3分（同じ장충단로沿い）。【理由】豚肉カテゴリ必須＆1位。到着初日で長距離移動できないため、ホテルと同じ通りにあるこの店が最適。11:40〜23:00・予約不要なので到着が多少ずれても安心" },
+      { time: "22:30", icon: "nightlife", title: "東大門ナイトショッピング（任意）", place: "東大門ファッションタウン / DDP", map: "https://maps.google.com/?q=Dongdaemun+Design+Plaza", memo: "【移動】夕食店から徒歩5分圏内。元気があれば深夜まで営業のショッピングモールやDDPの夜景へ" }
     ]},
-    { date: "2026-08-28", day: "28", weekday: "金", label: "2日目 ・ 王宮＆安国グルメ", items: [
-      { time: "09:00", icon: "luggage", title: "ミリオレ チェックアウト → ナインツリーへ荷物移動", place: "東大門（ミリオレ → ナインツリー）", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun", memo: "11時までにミリオレをチェックアウト。荷物をナインツリーに預けて身軽に（正式チェックインは15時〜）" },
-      { time: "09:45", icon: "cafe", title: "朝食：ARTIST BAKERY の 塩パン", place: "ARTIST BAKERY（安国駅1番出口すぐ）", map: "https://maps.google.com/?q=Artist+Bakery+Anguk", memo: "ロンドンベーグルミュージアム系列の塩パン専門。景福宮の前に安国で朝パン＆コーヒー" },
-      { time: "10:30", icon: "temple", title: "景福宮（韓服レンタル）", place: "Gyeongbokgung Palace", map: "https://maps.google.com/?q=Gyeongbokgung+Palace", memo: "韓服で入場無料＆写真映え。守門将交代式もチェック" },
-      { time: "12:30", icon: "restaurant", title: "昼食：큰기와집 カンジャンケジャン ★要予約", place: "큰기와집（安国）", map: "https://maps.google.com/?q=큰기와집+안국+간장게장", memo: "ミシュラン掲載・自家仕込み朝鮮醤油の名店。安国＝景福宮の動線上。事前予約を!" },
-      { time: "14:30", icon: "camera", title: "北村韓屋村・仁寺洞さんぽ", place: "Bukchon / Insadong", map: "https://maps.google.com/?q=Bukchon+Hanok+Village", memo: "伝統家屋と雑貨・伝統茶。安国からそのまま徒歩圏" },
-      { time: "16:30", icon: "hotel", title: "ナインツリー チェックイン・小休憩", place: "ナインツリー バイ パルナス 東大門", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun", memo: "高層階・静かな部屋リクエスト。歯ブラシ等は持参。予約ID 1755517778" },
-      { time: "18:30", icon: "restaurant", title: "夕食：금돼지식당 サムギョプサル ★要予約", place: "금돼지식당（薬水）", map: "https://maps.google.com/?q=금돼지식당+약수", memo: "ミシュラン・ビブグルマンの名店。薬水は東大門から地下鉄近め。CatchTableで予約 or 17時に受付を!" }
+    { date: "2026-08-28", day: "28", weekday: "金", label: "2日目 ・ 王宮＆安国＋明洞グルメ", items: [
+      { time: "07:15", icon: "restaurant", title: "朝食：喜粥喜粥（히죽히죽）の鮑がゆ", place: "喜粥喜粥（忠武路）", map: "https://maps.app.goo.gl/HN1puTrr6XJkkqhe7?g_st=ic", memo: "【移動】ミリオレから徒歩約10分（忠武路方面）。【理由】粥カテゴリ必須＆1位。07:00開店で朝食に唯一使える時間帯、かつ徒歩圏。予約不要なので並ばず入店可" },
+      { time: "09:00", icon: "luggage", title: "ミリオレ チェックアウト → ナインツリーへ荷物移動", place: "東大門（ミリオレ → ナインツリー）", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun", memo: "【移動】喜粥喜粥から徒歩約10分でミリオレへ戻り、荷物をまとめてナインツリーへ（徒歩約10分）。11時までにミリオレをチェックアウト。正式チェックインは夜〜" },
+      { time: "10:30", icon: "temple", title: "景福宮（韓服レンタル）", place: "Gyeongbokgung Palace", map: "https://maps.google.com/?q=Gyeongbokgung+Palace", memo: "【移動】東大門から地下鉄で約20〜25分（3号線 景福宮駅）。韓服で入場無料＆写真映え。守門将交代式もチェック。コーヒー休憩したければ安国のARTIST BAKERYへ立ち寄りも" },
+      { time: "12:30", icon: "restaurant", title: "昼食：チョンダムンポッサム 北村店（정담은보쌈）", place: "チョンダムンポッサム 北村店（北村・安国）", map: "https://maps.app.goo.gl/gNMkDc89G4x66V8d7", memo: "【移動】景福宮から徒歩約10〜15分（北村方面へ）。【理由】ポッサムカテゴリ必須。1位の손정보쌈（鍾路）は景福宮から徒歩15〜20分かかり北村と逆方向で寄り道になるため、景福宮→北村→仁寺洞の動線上で寄り道ゼロの3位店を採用。11:00〜14:30(LO13:30)・CatchTable予約可" },
+      { time: "14:30", icon: "camera", title: "北村韓屋村・仁寺洞さんぽ", place: "Bukchon / Insadong", map: "https://maps.google.com/?q=Bukchon+Hanok+Village", memo: "【移動】昼食店から徒歩0〜5分（同じ北村エリア）。伝統家屋と雑貨・伝統茶。安国からそのまま徒歩圏" },
+      { time: "16:00", icon: "shopping", title: "明洞ショッピング", place: "オリーブヤング明洞本店 / 明洞通り", map: "https://maps.google.com/?q=Olive+Young+Myeongdong", memo: "【移動】北村・仁寺洞から地下鉄で約15〜20分（3号線→4号線などで明洞駅へ）。【理由】この後のケジャン・タコの2軒がどちらも明洞〜乙支路エリアにあるため、ショッピングと食事を同じエリアでまとめて移動を最小化" },
+      { time: "17:30", icon: "restaurant", title: "夕食（1次）：スラケジャン 明洞2号店（수라게장）", place: "スラケジャン 明洞2号店（明洞）", map: "https://maps.app.goo.gl/gCyQcUKeqb8wA68QA", memo: "【移動】明洞ショッピングから徒歩5分以内（同じ明洞エリア）。【理由】ケジャンカテゴリ必須＆1位。宮中料理仕立ての上品なカンジャンケジャン。10:00〜24:00・インスタDM予約可（@sura_gejang）" },
+      { time: "19:00", icon: "restaurant", title: "夕食（2次）：ヘナムナクチ（해남낙지）", place: "ヘナムナクチ（中区・乙支路）", map: "https://maps.app.goo.gl/o7kjpNQPxBV1tCMHA?g_st=ic", memo: "【移動】수라게장から徒歩約15分（明洞→乙支路方面）。【理由】タコカテゴリ必須。候補2店とも中区・乙支路系エリアで明洞から歩ける範囲。LO20:30なので余裕を持って入店。軽めの一品シェアでもOK" },
+      { time: "20:30", icon: "hotel", title: "ナインツリー 正式チェックイン", place: "ナインツリー バイ パルナス 東大門", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun", memo: "【移動】해남낙지から徒歩約10分（乙支路4街周辺）。高層階・静かな部屋リクエスト。歯ブラシ等は持参。予約ID 1755517778" }
     ]},
     { date: "2026-08-29", day: "29", weekday: "土", label: "3日目 ・ 聖水＆江南グルメ", items: [
-      { time: "09:30", icon: "restaurant", title: "朝食：능동미나리 聖水店（セリユッケ）", place: "능동미나리 聖水店（聖水）", map: "https://maps.google.com/?q=능동미나리+성수", memo: "미나리곰탕＋육회비빔밥の名店（09:30〜24:00）。東大門から2号線で近い。朝から육회＆さっぱり곰탕" },
-      { time: "11:00", icon: "cafe", title: "聖水カフェ通りさんぽ（任意）", place: "Seongsu Cafe Street", map: "https://maps.google.com/?q=Seongsu+Cafe+Street", memo: "話題のカフェ密集エリアでコーヒー" },
-      { time: "12:30", icon: "train", title: "江南エリアへ移動", place: "聖水 → 江南（地下鉄2号線）", map: "https://maps.google.com/?q=Gangnam+Station", memo: "2号線で江南へ。フード＆ショッピング" },
-      { time: "13:30", icon: "restaurant", title: "遅め昼：강남막국수앤보쌈（エゴママックス＆ポッサム）", place: "강남 막국수앤보쌈（江南駅1番出口）", map: "https://maps.google.com/?q=강남+막국수+보쌈+강남역", memo: "話題のエゴマ(荏胡麻)막국수＋ポッサム。막국수は軽いので곰탕の後でもOK" },
-      { time: "15:30", icon: "shopping", title: "가로수길・オリーブヤングで買い物", place: "가로수길 / オリーブヤング江南", map: "https://maps.google.com/?q=Olive+Young+Gangnam", memo: "K-コスメまとめ買い（オリーブヤング）＋가로수길さんぽ" },
-      { time: "18:00", icon: "restaurant", title: "夕食：영천영화（よんちょんふぁ）육회・한우 ★予約推奨", place: "영천영화 清潭店（狎鴎亭ロデオ）", map: "https://maps.google.com/?q=영천영화+청담", memo: "한우육회＆焼き（살치살・갈비살）＋육회비빔밥の名店（24時間）。混むので予約推奨" },
-      { time: "20:30", icon: "shopping", title: "東大門へ戻ってナイトショッピング（任意）", place: "東大門ファッションタウン", map: "https://maps.google.com/?q=Dongdaemun+Market", memo: "深夜まで営業。最終日前の買い物" }
+      { time: "09:30", icon: "restaurant", title: "朝食：ヌンドンミナリ 聖水店（능동미나리）", place: "ヌンドンミナリ 聖水店（聖水）", map: "https://maps.google.com/?q=능동미나리+성수", memo: "【移動】東大門（ナインツリー）から地下鉄で約15〜20分（2号線環乗り換えで聖水駅）。【理由】ユッケカテゴリ必須・1位タイ。미나리곰탕＋육회비빔밥の名店。土日09:00〜24:00。予約不可・先着順なので朝早めに" },
+      { time: "11:00", icon: "cafe", title: "聖水カフェ通りさんぽ（任意）", place: "Seongsu Cafe Street", map: "https://maps.google.com/?q=Seongsu+Cafe+Street", memo: "【移動】朝食店から徒歩0〜5分（同じ聖水エリア）。話題のカフェ密集エリアでコーヒー" },
+      { time: "12:30", icon: "train", title: "江南エリアへ移動", place: "聖水 → 江南（地下鉄2号線）", map: "https://maps.google.com/?q=Gangnam+Station", memo: "【移動】地下鉄2号線で約25〜30分（聖水→江南）。フード＆ショッピング" },
+      { time: "13:30", icon: "restaurant", title: "遅め昼：江南マックス＆ポッサム（강남막국수앤보쌈）", place: "江南マックス＆ポッサム（江南駅1番出口）", map: "https://maps.google.com/?q=강남+막국수+보쌈+강남역", memo: "【移動】江南駅から徒歩すぐ（1番出口）。【理由】必須カテゴリではないが、江南到着直後に立ち寄れる唯一の候補（麺4位）。1位の남포면옥は乙支路にあり江南から遠いため不採用。막국수は軽いので곰탕の後でもOK" },
+      { time: "15:30", icon: "shopping", title: "가로수길・オリーブヤングで買い物", place: "가로수길 / オリーブヤング江南", map: "https://maps.google.com/?q=Olive+Young+Gangnam", memo: "【移動】江南駅から徒歩・バスで約10〜15分（新沙洞方面）。K-コスメまとめ買い（オリーブヤング）＋가로수길さんぽ" },
+      { time: "18:00", icon: "restaurant", title: "夕食：ヨンチョンヨンファ（영천영화）육회・한우", place: "ヨンチョンヨンファ 清潭店（狎鴎亭ロデオ）", map: "https://maps.app.goo.gl/Jx8h24kw9fsafjtv6?g_st=ic", memo: "【移動】가로수길から徒歩・タクシーで約10〜15分（狎鴎亭ロデオ方面）。【理由】ユッケカテゴリの1位タイ（必須は朝の능동미나리で充足済み、ボーナス採用）。かつ가로수길ショッピングの動線上。한우육회＆焼き＋육회비빔밥の名店（24時間）。混むので予約推奨" },
+      { time: "20:30", icon: "shopping", title: "東大門へ戻ってナイトショッピング", place: "東大門ファッションタウン", map: "https://maps.google.com/?q=Dongdaemun+Market", memo: "【移動】狎鴎亭から地下鉄で約30〜40分（3号線環乗り換えで東大門歴史文化公園駅）。深夜まで営業。最終日前の買い物" },
+      { time: "21:00", icon: "restaurant", title: "夜食：広蔵市場 食べ歩き横丁", place: "広蔵市場（鍾路）", map: "https://maps.google.com/?q=Gwangjang+Market", memo: "【移動】東大門から徒歩・地下鉄で約10〜15分（鍾路5街方面）。【理由】市場カテゴリのボーナス採用（1位）。東大門ナイトショッピングとほぼ同じ動線上にあり、食べ歩き横丁は09:00〜23:00年中無休で夜食にちょうど良い" }
     ]},
     { date: "2026-08-30", day: "30", weekday: "日", label: "4日目 ・ 早朝出発", items: [
       { time: "06:30", icon: "gift", title: "起床・お土産の買い忘れチェック", place: "ホテル / 東大門のコンビニ", map: "https://maps.google.com/?q=Dongdaemun+Convenience+Store", memo: "11:25発と早いので前夜までにお土産は済ませておくのが安心" },
