@@ -60,7 +60,7 @@
 2. 構文チェック：`node --check js/data.js`
 3. 見た目確認：`python3 -m http.server <port>` でローカル起動 → Playwright (`/opt/pw-browsers/chromium-1194/chrome-linux/chrome`) でスクリーンショット・エラーチェック
    （過去のセッションで使ったスクリプト例は git 履歴のコミットメッセージ・本ファイルの記述を参照。新規に書いてよい）
-4. CSVを同期：`node scripts/gen_csv.js`（`seoul_gourmet_map.csv` を再生成）
+4. CSVを同期：`node scripts/gen_csv.js`（`seoul_map_day1_0827.csv`〜`day4_0830.csv`・`seoul_map_wishlist.csv` を再生成）
 5. コミット & push：`main` ブランチと `claude/korea-trip-dates-fqoh5l` ブランチの**両方**に push する
    （GitHub Pages は `main` を参照。作業ブランチも常に `main` と同じ内容に揃えている）
 
