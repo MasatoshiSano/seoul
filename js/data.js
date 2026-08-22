@@ -78,7 +78,12 @@ window.DATA = {
       { name: "明洞", area: "中区", desc: "コスメ＆ファッションの定番", map: "https://maps.google.com/?q=Myeongdong" },
       { name: "東大門ファッションタウン", area: "東大門", desc: "深夜まで営業の卸＆小売天国", map: "https://maps.google.com/?q=Dongdaemun+Market" },
       { name: "オリーブヤング 明洞本店", area: "明洞", desc: "K-コスメまとめ買いはここ", map: "https://maps.google.com/?q=Olive+Young+Myeongdong" },
-      { name: "ザ・現代ソウル", area: "汝矣島", desc: "映えるデパート。屋内庭園あり", map: "https://maps.google.com/?q=The+Hyundai+Seoul" }
+      { name: "ザ・現代ソウル", area: "汝矣島", desc: "2021年開業、ソウル最大級の百貨店（売場面積 約8.9万㎡・約600店舗）。ドラマ『涙の女王』ロケ地で近年大人気。タンバリンズ・ジェントルモンスターなど日本人に人気のブランドも", map: "https://maps.google.com/?q=The+Hyundai+Seoul" },
+      { name: "LOTTE FITIN（ロッテフィッティン）", area: "東大門", desc: "東大門駅直結。1-4Fファッション、5Fボウリング等の娯楽、6F化粧品、7-8Fレストラン。デパート感覚で買いやすい", map: "https://maps.google.com/?q=Lotte+Fitin+Dongdaemun" },
+      { name: "DOOTA MALL（トゥータモール）", area: "東大門", desc: "10:30〜24:00営業の老舗ファッションビル。K-デザイナーブランドが集結（4F）。トレンド重視派に人気", map: "https://maps.google.com/?q=Doota+Mall+Dongdaemun" },
+      { name: "Migliore（ミリオレ東大門）", area: "東大門", desc: "老舗の卸＆小売ビル。3万ウォン以上の購入でパスポート提示の即時免税OK", map: "https://maps.google.com/?q=Migliore+Dongdaemun" },
+      { name: "nyu nyu（ニューニュー）", area: "東大門", desc: "元はアクセサリー特化だったが、今は服・バッグ・雑貨まで扱うファッションビル。個人購入もしやすい", map: "https://maps.google.com/?q=nyu+nyu+Dongdaemun" },
+      { name: "スターフィールド COEXモール", area: "三成", desc: "地下鉄2号線 三成駅直結。300以上の店舗・グルメが入る大型複合施設。新世界系の免税店も併設。雨天・猛暑日でも屋内で楽しめる。Day3の江南〜三成の動線上", map: "https://maps.google.com/?q=Starfield+COEX+Mall" }
     ]},
     { category: "観光", tag: "みる", spots: [
       { name: "景福宮", area: "鍾路", desc: "朝鮮王朝の正宮。韓服で映え", map: "https://maps.google.com/?q=Gyeongbokgung+Palace" },
