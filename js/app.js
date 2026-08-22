@@ -121,8 +121,30 @@
     D.schedule.forEach((d, di) => initRouteMap(`day-route-map-${d.day}`, dayRoutes[di]));
   }
 
+  function scheduleHitsForPlaces() {
+    const hits = [];
+    for (const day of D.schedule || []) {
+      for (const it of day.items) {
+        if (it.icon !== "restaurant" && it.icon !== "cafe") continue;
+        hits.push({ text: it.title, date: day.date, time: it.time });
+      }
+    }
+    return hits;
+  }
+
+  function scheduleInfoForSpot(spot, hits) {
+    const readable = spot.name.split("（")[0].trim();
+    const hangulMatch = spot.name.match(/（([^）]*)）/);
+    const hangul = hangulMatch && /[가-힣]/.test(hangulMatch[1]) ? hangulMatch[1] : null;
+    const hit = hits.find((h) => (readable.length >= 2 && h.text.includes(readable)) || (hangul && h.text.includes(hangul)));
+    if (!hit) return null;
+    const md = hit.date.slice(5).replace(/^0?(\d+)-0?(\d+)$/, "$1/$2");
+    return { date: md, time: hit.time };
+  }
+
   function renderPlaces() {
     const wrap = $("#places"); if (!wrap) return;
+    const hits = scheduleHitsForPlaces();
     const draw = () => {
       const st = store.get("seoul-places");
       wrap.innerHTML = D.places.map((c) => `
@@ -131,10 +153,12 @@
           <div class="card">
           ${c.spots.map((s) => {
             const id = c.category + "::" + s.name, done = !!st[id];
-            return `<div class="row">
+            const sched = c.category.startsWith("グルメ") ? scheduleInfoForSpot(s, hits) : null;
+            return `<div class="row${sched ? " scheduled" : ""}">
               <button class="check" data-id="${esc(id)}" aria-pressed="${done}" aria-label="訪問済みにする">${done ? "✓" : ""}</button>
               <div class="row-body">
                 ${s.rank ? `<span class="rank-badge rank-${s.rank <= 3 ? s.rank : "n"}">No.${s.rank}</span>` : ""}
+                ${sched ? `<span class="sched-badge">📅 ${esc(sched.date)} ${esc(sched.time)}</span>` : ""}
                 <span class="row-name ${done ? "done" : ""}">${esc(s.name)}</span><span class="row-area">${esc(s.area)}</span>
                 <div class="row-desc">${esc(s.desc)}</div>
                 ${s.hours || s.reserve ? `<div class="row-meta">${s.hours ? `<span>🕐 ${esc(s.hours)}</span>` : ""}${s.reserve ? `<span>📅 予約: ${esc(s.reserve)}</span>` : ""}</div>` : ""}
