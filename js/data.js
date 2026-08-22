@@ -74,22 +74,20 @@ window.DATA = {
       { name: "ARTIST BAKERY（アーティストベーカリー）", area: "安国", desc: "塩パン専門。ロンドンベーグルミュージアム系列。安国駅1番出口すぐ・景福宮の前に", map: "https://maps.google.com/?q=Artist+Bakery+Anguk" },
       { name: "능동미나리 聖水店（ヌンドンミナリ）", area: "聖水", desc: "セリユッケ＝미나리곰탕＋육회비빔밥の名店。09:30〜24:00。東大門から2号線で近い", map: "https://maps.google.com/?q=능동미나리+성수" }
     ]},
-    { category: "ショッピング", tag: "買う", spots: [
-      { name: "明洞", area: "中区", desc: "コスメ＆ファッションの定番", map: "https://maps.google.com/?q=Myeongdong" },
-      { name: "東大門ファッションタウン", area: "東大門", desc: "深夜まで営業の卸＆小売天国", map: "https://maps.google.com/?q=Dongdaemun+Market" },
-      { name: "オリーブヤング 明洞本店", area: "明洞", desc: "K-コスメまとめ買いはここ", map: "https://maps.google.com/?q=Olive+Young+Myeongdong" },
-      { name: "ザ・現代ソウル", area: "汝矣島", desc: "2021年開業、ソウル最大級の百貨店（売場面積 約8.9万㎡・約600店舗）。ドラマ『涙の女王』ロケ地で近年大人気。タンバリンズ・ジェントルモンスターなど日本人に人気のブランドも", map: "https://maps.google.com/?q=The+Hyundai+Seoul" },
-      { name: "LOTTE FITIN（ロッテフィッティン）", area: "東大門", desc: "東大門駅直結。1-4Fファッション、5Fボウリング等の娯楽、6F化粧品、7-8Fレストラン。デパート感覚で買いやすい", map: "https://maps.google.com/?q=Lotte+Fitin+Dongdaemun" },
+    { category: "ショッピング：東大門（宿から徒歩圏）", tag: "至近", spots: [
+      { name: "東大門ファッションタウン", area: "東大門", desc: "深夜まで営業の卸＆小売天国。エリア一帯の総称", map: "https://maps.google.com/?q=Dongdaemun+Market" },
+      { name: "LOTTE FITIN（ロッテフィッティン）", area: "東大門", desc: "東大門駅直結。1-4Fファッション／5Fボウリング等の娯楽／6F化粧品／7-8Fレストラン。デパート感覚で買いやすい", map: "https://maps.google.com/?q=Lotte+Fitin+Dongdaemun" },
       { name: "DOOTA MALL（トゥータモール）", area: "東大門", desc: "10:30〜24:00営業の老舗ファッションビル。K-デザイナーブランドが集結（4F）。トレンド重視派に人気", map: "https://maps.google.com/?q=Doota+Mall+Dongdaemun" },
       { name: "Migliore（ミリオレ東大門）", area: "東大門", desc: "老舗の卸＆小売ビル。3万ウォン以上の購入でパスポート提示の即時免税OK", map: "https://maps.google.com/?q=Migliore+Dongdaemun" },
-      { name: "nyu nyu（ニューニュー）", area: "東大門", desc: "元はアクセサリー特化だったが、今は服・バッグ・雑貨まで扱うファッションビル。個人購入もしやすい", map: "https://maps.google.com/?q=nyu+nyu+Dongdaemun" },
-      { name: "スターフィールド COEXモール", area: "三成", desc: "地下鉄2号線 三成駅直結。300以上の店舗・グルメが入る大型複合施設。新世界系の免税店も併設。雨天・猛暑日でも屋内で楽しめる。Day3の江南〜三成の動線上", map: "https://maps.google.com/?q=Starfield+COEX+Mall" }
+      { name: "nyu nyu（ニューニュー）", area: "東大門", desc: "元はアクセサリー特化だったが、今は服・バッグ・雑貨まで扱うファッションビル。個人購入もしやすい", map: "https://maps.google.com/?q=nyu+nyu+Dongdaemun" }
     ]},
-    { category: "観光", tag: "みる", spots: [
-      { name: "景福宮", area: "鍾路", desc: "朝鮮王朝の正宮。韓服で映え", map: "https://maps.google.com/?q=Gyeongbokgung+Palace" },
-      { name: "北村韓屋村", area: "三清洞", desc: "伝統家屋が並ぶ路地", map: "https://maps.google.com/?q=Bukchon+Hanok+Village" },
-      { name: "Nソウルタワー", area: "南山", desc: "南山の夜景スポット", map: "https://maps.google.com/?q=N+Seoul+Tower" },
-      { name: "東大門デザインプラザ(DDP)", area: "東大門", desc: "近未来建築＆LEDバラ園", map: "https://maps.google.com/?q=Dongdaemun+Design+Plaza" }
+    { category: "ショッピング：明洞（コスメ定番）", tag: "定番", spots: [
+      { name: "明洞", area: "中区", desc: "コスメ＆ファッション街歩きの定番エリア", map: "https://maps.google.com/?q=Myeongdong" },
+      { name: "オリーブヤング 明洞本店", area: "明洞", desc: "K-コスメまとめ買いはここ", map: "https://maps.google.com/?q=Olive+Young+Myeongdong" }
+    ]},
+    { category: "ショッピング：郊外の大型モール", tag: "遠出", spots: [
+      { name: "ザ・現代ソウル", area: "汝矣島", desc: "2021年開業、ソウル最大級の百貨店（売場面積 約8.9万㎡・約600店舗）。ドラマ『涙の女王』ロケ地で近年大人気。タンバリンズ・ジェントルモンスターなど日本人に人気のブランドも", map: "https://maps.google.com/?q=The+Hyundai+Seoul" },
+      { name: "スターフィールド COEXモール", area: "三成", desc: "地下鉄2号線 三成駅直結。300以上の店舗・グルメが入る大型複合施設。新世界系の免税店も併設。雨天・猛暑日でも屋内で楽しめる。Day3の江南〜三成の動線上", map: "https://maps.google.com/?q=Starfield+COEX+Mall" }
     ]}
   ],
   packing: [
