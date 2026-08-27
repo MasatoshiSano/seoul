@@ -26,7 +26,8 @@
     storefront: '<path d="M4.5 9l1-4h13l1 4"/><path d="M4.5 9a2.1 2.1 0 0 0 4.1 0 2.1 2.1 0 0 0 4.1 0 2.1 2.1 0 0 0 4.1 0"/><path d="M5.5 11v8.5h13V11"/><path d="M10 19.5V14h4v5.5"/>',
     warning: '<path d="M12 4.5 21 19H3z"/><path d="M12 10v4"/><path d="M12 16.8v.1"/>',
     info: '<circle cx="12" cy="12" r="8.5"/><path d="M12 11v5"/><path d="M12 8.2v.1"/>',
-    check: '<circle cx="12" cy="12" r="8.5"/><path d="M8.4 12.2l2.4 2.4 4.7-4.9"/>'
+    check: '<circle cx="12" cy="12" r="8.5"/><path d="M8.4 12.2l2.4 2.4 4.7-4.9"/>',
+    log: '<path d="M4 5.5h16"/><path d="M4 10.5h16"/><path d="M4 15.5h10"/><path d="M4 19.5h6"/>'
   };
   function icon(name) {
     const inner = INNER[name];
