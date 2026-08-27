@@ -264,6 +264,22 @@
     wrap.innerHTML = flights + hotel + budget;
   }
 
+  function renderLog() {
+    const wrap = $("#log"); if (!wrap) return;
+    if (!D.log || !D.log.length) {
+      wrap.innerHTML = `<p class="sec-sub" style="text-align:center">まだ更新はありません。</p>`;
+      return;
+    }
+    wrap.innerHTML = `<div class="tl">${D.log.map((e) => `
+      <div class="tl-item">
+        <div class="tl-time">${esc(e.time)}</div>
+        <div class="tl-body">
+          <div class="tl-title">${window.ICON("log")} ${esc(e.date)}</div>
+          <div class="tl-memo">${esc(e.text)}</div>
+        </div>
+      </div>`).join("")}</div>`;
+  }
+
   function themeToggle() {
     const btn = $("#themebtn"); if (!btn) return;
     const root = document.documentElement;
@@ -280,6 +296,7 @@
     renderPlaces();
     renderPacking();
     renderBooking();
+    renderLog();
     if (window.injectIcons) window.injectIcons();
     themeToggle();
   });
