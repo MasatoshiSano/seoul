@@ -12,7 +12,7 @@ window.DATA = {
   geo: {
     "ホテル ミリオレ ソウル": [37.5689316, 127.0087977],
     "ナインツリー バイ パルナス 東大門": [37.5667347, 127.0028485],
-    "仁川国際空港": [37.4634593, 126.4417093],
+    "金浦国際空港": [37.5590078, 126.7942403],
     "竹統領サムギョプサル 東大門店（東大門）": [37.5683219, 127.0083106],
     "喜粥喜粥（忠武路）": [37.5617898, 126.9877129],
     "ARTIST BAKERY（安国）": [37.5772100, 126.9836300],
@@ -30,8 +30,8 @@ window.DATA = {
     { date: "2026-08-27", day: "27", weekday: "木", label: "1日目 ・ 夕方着＆東大門の夜",
       endPlace: { name: "ホテル ミリオレ ソウル", map: "https://maps.google.com/?q=Hotel+Migliore+Seoul+Dongdaemun" },
       items: [
-      { time: "18:00", icon: "flight", title: "仁川国際空港 到着（MM743）", place: "Incheon Airport (ICN)", map: "https://maps.google.com/?q=Incheon+International+Airport", memo: "関西16:05発→仁川18:00着。空港では大きな両替はせず、カードで移動券購入 or WOWPASS空港セット(T-money1万W入り)を受取" },
-      { time: "19:00", icon: "train", title: "空港から東大門へ移動", place: "AREX＋地下鉄4号線 / リムジンバス", map: "https://maps.google.com/?q=Incheon+Airport+Railroad", memo: "【移動】AREX＋4号線でソウル駅乗換→東大門歴史文化公園駅（約60分）。楽ならリムジンバス（約90分）" },
+      { time: "18:00", icon: "flight", title: "金浦国際空港 到着（MM743）", place: "Gimpo Airport (GMP)", map: "https://maps.google.com/?q=Gimpo+International+Airport", memo: "関西16:05発→金浦18:00着。空港では大きな両替はせず、地下鉄運賃分だけ現金かカードで用意。両替・WOWPASSチャージは東大門で" },
+      { time: "19:00", icon: "train", title: "空港から東大門へ移動", place: "地下鉄5号線（乗り換えなし） / リムジンバス", map: "https://maps.google.com/?q=Gimpo+Airport+Station", memo: "【移動】金浦空港駅から地下鉄5号線で東大門歴史文化公園駅まで乗り換えなし約47〜55分（運賃約1,650W）。国際線ターミナルから空港駅までは徒歩か無料循環バス。楽なら空港リムジン6001/6002番（東大門経由・要時刻確認）" },
       { time: "20:15", icon: "hotel", title: "ホテル ミリオレ ソウル チェックイン", place: "ホテル ミリオレ ソウル（東大門）", map: "https://maps.google.com/?q=Hotel+Migliore+Seoul+Dongdaemun", memo: "1泊目。到着予定20〜21時。高層階・静かな部屋をリクエスト。デラックスツイン（バスタブ有無はランダム）。予約ID 1755518948" },
       { time: "20:45", icon: "exchange", title: "両替（東大門）", place: "APM前 無人両替機（24h）/ Money Box東大門店", map: "https://maps.google.com/?q=APM+Dongdaemun", memo: "APM無人機は24時間・日本語対応。日本円→ウォン両替→WOWPASSにチャージ。少額の現金も確保" },
       { time: "21:00", icon: "restaurant", title: "夕食：竹統領サムギョプサル 東大門店（죽통령삼겹살）", place: "竹統領サムギョプサル 東大門店（東大門）", map: "https://maps.app.goo.gl/KnHUXTihXx9ii4RS8?g_st=ic", memo: "【移動】ミリオレから徒歩2〜3分（同じ장충단로沿い）。【理由】豚肉カテゴリ必須＆1位。到着初日で長距離移動できないため、ホテルと同じ通りにあるこの店が最適。11:40〜23:00・予約不要なので到着が多少ずれても安心" }
@@ -60,16 +60,16 @@ window.DATA = {
     ]},
     { date: "2026-08-30", day: "30", weekday: "日", label: "4日目 ・ 早朝出発",
       startPlace: { name: "ナインツリー バイ パルナス 東大門", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun" },
-      endPlace: { name: "仁川国際空港", map: "https://maps.google.com/?q=Incheon+International+Airport" },
+      endPlace: { name: "金浦国際空港", map: "https://maps.google.com/?q=Gimpo+International+Airport" },
       items: [
       { time: "06:00", icon: "gift", title: "起床・お土産の買い忘れチェック", place: "ホテル / 東大門のコンビニ", map: "https://maps.google.com/?q=Dongdaemun+Convenience+Store", memo: "朝食を追加したため通常より30分早め。11:25発なので前夜までにお土産は済ませておくのが安心" },
       { time: "06:15", icon: "luggage", title: "ナインツリー チェックアウト（荷物はフロント預け）", place: "ナインツリー バイ パルナス 東大門", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun", memo: "先にチェックアウトを済ませ、荷物だけフロントに預けて身軽に朝食へ" },
       { time: "06:25", icon: "restaurant", title: "朝食：味成屋（미성옥）ソルロンタン", place: "味成屋（明洞）", map: "https://maps.app.goo.gl/ya7VqwFwBxAM8psx8?g_st=ic", memo: "【移動】ナインツリーからタクシーで約5〜8分（明洞、徒歩なら15〜20分）。【理由】鍋・煮込みカテゴリ3位だが、06:00開店で候補の中では唯一この時間に開いていて営業時間の制約をクリアできる。タクシー利用なら通常スケジュールをほぼ崩さず立ち寄れる" },
       { time: "06:55", icon: "luggage", title: "ナインツリーで荷物ピックアップ", place: "ナインツリー バイ パルナス 東大門", map: "https://maps.google.com/?q=Nine+Tree+by+Parnas+Seoul+Dongdaemun", memo: "【移動】味成屋からタクシーで約5〜8分。フロントで荷物を受け取り、そのまま空港へ" },
-      { time: "07:15", icon: "train", title: "空港へ移動（東大門→仁川）", place: "AREX＋地下鉄 / リムジンバス", map: "https://maps.google.com/?q=Dongdaemun+History+Culture+Park+Station", memo: "東大門歴史文化公園駅→ソウル駅乗換→AREX（約60分）。リムジンなら約90分。始発時間に注意" },
-      { time: "08:30", icon: "badge", title: "仁川空港 着・チェックイン/荷物預け", place: "Incheon Airport (ICN)", map: "https://maps.google.com/?q=Incheon+International+Airport", memo: "Peachは国際線。出発2〜2.5時間前を目安に手続き。WOWPASS残高は使い切るか調整" },
-      { time: "09:00", icon: "gift", title: "免税店", place: "仁川空港内", map: "https://maps.google.com/?q=Incheon+Airport+Duty+Free", memo: "朝食は明洞で済ませたので、ここでは最後のお買い物のみ" },
-      { time: "11:25", icon: "flight", title: "仁川空港から出発（MM736）", place: "Incheon Airport (ICN)", map: "https://maps.google.com/?q=Incheon+International+Airport", memo: "仁川11:25発→関西13:10着。おつかれさま！" }
+      { time: "07:15", icon: "train", title: "空港へ移動（東大門→金浦）", place: "地下鉄5号線（乗り換えなし） / リムジンバス", map: "https://maps.google.com/?q=Dongdaemun+History+Culture+Park+Station", memo: "東大門歴史文化公園駅から地下鉄5号線で金浦空港駅まで乗り換えなし約47〜55分（運賃約1,650W）。空港駅から国際線ターミナルは徒歩か無料循環バス。始発時間に注意" },
+      { time: "08:15", icon: "badge", title: "金浦空港 着・チェックイン/荷物預け", place: "Gimpo Airport (GMP)", map: "https://maps.google.com/?q=Gimpo+International+Airport", memo: "Peachは国際線。金浦はコンパクトな空港なので出発2時間前を目安に手続き。WOWPASS残高は使い切るか調整" },
+      { time: "09:00", icon: "gift", title: "免税店", place: "金浦空港内", map: "https://maps.google.com/?q=Gimpo+International+Airport", memo: "朝食は明洞で済ませたので、ここでは最後のお買い物のみ" },
+      { time: "11:25", icon: "flight", title: "金浦空港から出発（MM736）", place: "Gimpo Airport (GMP)", map: "https://maps.google.com/?q=Gimpo+International+Airport", memo: "金浦11:25発→関西13:10着。おつかれさま！" }
     ]}
   ],
   places: [
@@ -147,8 +147,8 @@ window.DATA = {
     { category: "あると便利", items: ["エコバッグ（お土産用）", "ウェットティッシュ", "マスク", "ジップ袋", "翻訳アプリ（Papago）をインストール"] }
   ],
   flights: [
-    { type: "往路", route: "大阪 関西(KIX) → ソウル 仁川(ICN)", date: "2026-08-27", time: "16:05 → 18:00", airline: "Peach (MM)", no: "MM743" },
-    { type: "復路", route: "ソウル 仁川(ICN) → 大阪 関西(KIX)", date: "2026-08-30", time: "11:25 → 13:10", airline: "Peach (MM)", no: "MM736" }
+    { type: "往路", route: "大阪 関西(KIX) → ソウル 金浦(GMP)", date: "2026-08-27", time: "16:05 → 18:00", airline: "Peach (MM)", no: "MM743" },
+    { type: "復路", route: "ソウル 金浦(GMP) → 大阪 関西(KIX)", date: "2026-08-30", time: "11:25 → 13:10", airline: "Peach (MM)", no: "MM736" }
   ],
   hotels: [
     { name: "ホテル ミリオレ ソウル", short: "1泊目（8/27）", checkin: "2026-08-27（15:00〜）", checkout: "2026-08-28（11:00まで）", room: "デラックスツイン（バスタブ有無はランダム）", guests: "大人2名", requests: "高層階・静かな部屋／到着予定 20:00-21:00", id: "1755518948", price: "₩116,729（税・サ込）", payDate: "2026-08-22（当日レートで円換算）", map: "https://maps.google.com/?q=Hotel+Migliore+Seoul+Dongdaemun" },
