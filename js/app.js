@@ -27,15 +27,15 @@
 
   function buildDayRoute(d) {
     const geo = D.geo || {};
-    const withGeo = (label, map) => ({ label, query: queryFromMapField(map, label), map, geo: geo[label] || null });
+    const withGeo = (label, map, isPlace) => ({ label, query: queryFromMapField(map, label), map, geo: geo[label] || null, isPlace: !!isPlace });
     const stops = [];
-    if (d.startPlace) stops.push(withGeo(d.startPlace.name, d.startPlace.map));
+    if (d.startPlace) stops.push(withGeo(d.startPlace.name, d.startPlace.map, true));
     for (const it of d.items) {
       if (it.icon !== "restaurant" && it.icon !== "cafe") continue;
       const label = it.place || it.title;
-      stops.push(withGeo(label, it.map));
+      stops.push(withGeo(label, it.map, false));
     }
-    if (d.endPlace) stops.push(withGeo(d.endPlace.name, d.endPlace.map));
+    if (d.endPlace) stops.push(withGeo(d.endPlace.name, d.endPlace.map, true));
     return stops;
   }
 
@@ -65,11 +65,11 @@
         patterns: [{ offset: "8%", repeat: "12%", symbol: L.Symbol.arrowHead({ pixelSize: 11, pathOptions: { color: "#3a6df0", fillOpacity: 0.9, weight: 0 } }) }]
       }).addTo(map);
     }
-    withGeo.forEach((s, i) => {
-      const isEnd = i === 0 || i === withGeo.length - 1;
+    let order = 0;
+    withGeo.forEach((s) => {
       const icon = L.divIcon({
         className: "",
-        html: `<div class="day-route-pin${isEnd ? " day-route-pin-hotel" : ""}">${isEnd ? "🏨" : i}</div>`,
+        html: `<div class="day-route-pin${s.isPlace ? " day-route-pin-hotel" : ""}">${s.isPlace ? "🏨" : ++order}</div>`,
         iconSize: [26, 26], iconAnchor: [13, 13]
       });
       L.marker(s.geo, { icon }).addTo(map).bindPopup(esc(s.label));
