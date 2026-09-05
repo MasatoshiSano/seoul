@@ -261,7 +261,32 @@
         </table>
         <p class="rate">💱 ${esc(D.trip.rate)}</p>
       </div>`;
-    wrap.innerHTML = flights + hotel + budget;
+    const expenseDays = {};
+    (D.expenses || []).forEach((e) => { (expenseDays[e.date] = expenseDays[e.date] || []).push(e); });
+    const grandTotal = (D.expenses || []).reduce((n, e) => n + e.krw, 0);
+    const expenses = (D.expenses && D.expenses.length) ? `
+      <div class="ticket">
+        <h3>${window.ICON("payments")} 実際の支出（レシート記録）</h3>
+        ${Object.keys(expenseDays).map((date) => {
+          const items = expenseDays[date];
+          const subtotal = items.reduce((n, e) => n + e.krw, 0);
+          return `
+          <table class="budget">
+            <thead><tr><th colspan="2">${esc(date)}</th><th>${won(subtotal)}</th></tr></thead>
+            <tbody>
+              ${items.map((e) => `<tr>
+                <td>${esc(e.time)}</td>
+                <td>${esc(e.place)}<br><span class="sub">${esc(e.desc)}</span></td>
+                <td>${e.krw < 0 ? "−" + won(Math.abs(e.krw)) : won(e.krw)}</td>
+              </tr>`).join("")}
+            </tbody>
+          </table>`;
+        }).join("")}
+        <table class="budget">
+          <tbody><tr class="total"><td colspan="2">総合計</td><td>${won(grandTotal)}</td></tr></tbody>
+        </table>
+      </div>` : "";
+    wrap.innerHTML = flights + hotel + budget + expenses;
   }
 
   function renderLog() {
